@@ -19,7 +19,6 @@ import SideMenu
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-   
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var btnTvShow: UIButton!
     @IBOutlet weak var btnMovie: UIButton!
