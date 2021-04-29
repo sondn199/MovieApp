@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-MovieAPP2_demo/Pods-MovieAPP2_demo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework
+${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework
+${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework
