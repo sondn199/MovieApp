@@ -209,19 +209,24 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         case 1:
             lblHeader.text = "Movie Genre"
             lblHeader.textColor = .white
+            btnNext.addTarget(self, action: #selector(NextGenre), for: .touchUpInside)
         case 2:
             
             lblHeader.text = "Top Rated"
             lblHeader.textColor = .white
+            btnNext.addTarget(self, action: #selector(NextTopRated), for: .touchUpInside)
         case 3:
             lblHeader.text = "Popular"
             lblHeader.textColor = .white
+            btnNext.addTarget(self, action: #selector(NextPopular), for: .touchUpInside)
         case 4:
             lblHeader.text = "Now Playing"
             lblHeader.textColor = .white
+            btnNext.addTarget(self, action: #selector(NextNowLaying), for: .touchUpInside)
         case 5:
             lblHeader.text = "Up Coming"
             lblHeader.textColor = .white
+            btnNext.addTarget(self, action: #selector(NextUpComing), for: .touchUpInside)
         default:
             break
         }
@@ -230,6 +235,27 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         myView.addSubview(btnNext)
         return myView
     }
+    @objc func NextGenre(){
+        let vc = HomeGenre()
+        present(vc, animated: true, completion: nil)
+    }
+    @objc func NextTopRated(){
+        let vc = HomeTopRated()
+        present(vc, animated: true, completion: nil)
+    }
+    @objc func NextPopular(){
+        let vc = HomePopular()
+        present(vc, animated: true, completion: nil)
+    }
+    @objc func NextNowLaying(){
+        let vc = HomeNowPlaying()
+        present(vc, animated: true, completion: nil)
+    }
+    @objc func NextUpComing(){
+        let vc = HomeUpComing()
+        present(vc, animated: true, completion: nil)
+    }
+    
 }
 
 

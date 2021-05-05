@@ -25,11 +25,12 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-fx-Xtd">
                                 <rect key="frame" x="10" y="0.0" width="282" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.22731270695364239" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="bgP-fx-Xtd" secondAttribute="bottom" id="2li-8J-0ic"/>
                             <constraint firstItem="bgP-fx-Xtd" firstAttribute="leading" secondItem="lK8-mK-Dgx" secondAttribute="leading" constant="10" id="5Up-tz-PyP"/>
