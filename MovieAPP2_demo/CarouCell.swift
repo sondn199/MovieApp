@@ -19,6 +19,7 @@ class CarouCell: UITableViewCell,iCarouselDataSource {
         super.awakeFromNib()
         myCarousel.dataSource = self
         myCarousel.frame = CGRect(x: 30, y: 20, width: contentView.frame.size.width, height: contentView.frame.size.height - 10)
+        myCarousel.isPagingEnabled = true
         contentView.backgroundColor = UIColor.init(hex: "200F37")
         contentView.addSubview(myCarousel)
     }
