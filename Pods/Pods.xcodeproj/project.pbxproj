@@ -7,135 +7,159 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08B5B89F28224381711F45A680C292D9 /* SideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39164D433B87EACF49966E6FF3324919 /* SideMenu-dummy.m */; };
-		09A0A5D3733F69E93F553ABBCF02FB77 /* SideMenuTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956EF81392AC4C42EC5EC27FFFD05A4 /* SideMenuTransitionController.swift */; };
-		0B7AA9DE5B5F63D414B017F3F38C306F /* FSPagerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F276BEE660FD9B2BAD3ED7D32E312FF /* FSPagerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		162A3D0B5F025871F109D2354F9EDF16 /* FSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1152D14313D46909370FC5C35D4D0B /* FSPagerViewCell.swift */; };
-		27D830F1CAC60B99CC0A135F583BFFF2 /* SideMenuPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0C5E9978CAB224DF2A75267AFA398 /* SideMenuPresentationController.swift */; };
-		2ED518A3FA8DCBE08E621AC5C32844A9 /* SideMenuPushCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220D111AAC820E0A302F90399859EC3B /* SideMenuPushCoordinator.swift */; };
-		3846AFE38D1B63A9F0D9073C4ABC6DAA /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287A7B460FAD31F0AC95C4A015E8E6C /* SideMenuNavigationController.swift */; };
-		3E18B004D34ED5441A193684EEB25BD3 /* SideMenuPresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF1739EF12FFC279FE4C17A106EC0F /* SideMenuPresentationStyle.swift */; };
-		451FFD533287853F01BD7D6E3908DE8E /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = E58C277E25013006BE66AA85EFE72287 /* iCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E88B70410F6837FBD463EA4B6C33155 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C98F8CE651AAF23D5126CB2F48C7E7 /* Extensions.swift */; };
+		05DBC5A4A0411FC0868B1355180CD35D /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 543DEDC973C44377AE6CEC4D04045921 /* YTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08B5B89F28224381711F45A680C292D9 /* SideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C253A23D7893C3FA594F79CA37CA0F /* SideMenu-dummy.m */; };
+		09A0A5D3733F69E93F553ABBCF02FB77 /* SideMenuTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5583DA4015BF6CE52C59BA8674E91003 /* SideMenuTransitionController.swift */; };
+		0B7AA9DE5B5F63D414B017F3F38C306F /* FSPagerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD0CD16F920586564424A1524AFE7B4D /* FSPagerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		162A3D0B5F025871F109D2354F9EDF16 /* FSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61C0240D3EB42EA61ECFC9AFBF572AA /* FSPagerViewCell.swift */; };
+		27D830F1CAC60B99CC0A135F583BFFF2 /* SideMenuPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90937DED4E9DAA4E702AE4443047AAE8 /* SideMenuPresentationController.swift */; };
+		2D78D289FF4CEAE9DFD14BA520B7F679 /* Pods-MovieAPP2_demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B992AD634E2386291D135EDD991955 /* Pods-MovieAPP2_demo-dummy.m */; };
+		2ED518A3FA8DCBE08E621AC5C32844A9 /* SideMenuPushCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AD8856D96BD1F6BC09FDCAA81FA345 /* SideMenuPushCoordinator.swift */; };
+		3846AFE38D1B63A9F0D9073C4ABC6DAA /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A5C7E5431AC2AAE55DC03E77B5DDC3 /* SideMenuNavigationController.swift */; };
+		3E18B004D34ED5441A193684EEB25BD3 /* SideMenuPresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6D53BCE2BA6A6444D670DDA1E2B86 /* SideMenuPresentationStyle.swift */; };
+		451FFD533287853F01BD7D6E3908DE8E /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 35C7D68FC7BDBDA42717A8403F77DFAD /* iCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B5BB21E43D9FC927FEEFA7B65909C39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		4E88B70410F6837FBD463EA4B6C33155 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FF1D4D51950CCFDFF57E6258AE577 /* Extensions.swift */; };
 		4E8F350D123B702A7F6AC971A74B6D8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */; };
-		5405240B3B74BEACCD4820595881CB61 /* FSPageViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B178673C6D3E208765F8A8FA3EA60122 /* FSPageViewTransformer.swift */; };
-		5E4C2A42908C2EA5B5F759646F72FB80 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05876E8C318A48ACC60CF7AA4308F045 /* iCarousel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		674354090507B3319EBC2FC18690EC5B /* FSPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D3974A81ECDAD95FB30DE2E7D8A527 /* FSPagerView.swift */; };
-		702D69BF03EA44844FEAD648C0249E88 /* FSPagerViewObjcCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E3C89C204626E53C051AF23384A06F /* FSPagerViewObjcCompat.m */; };
+		5405240B3B74BEACCD4820595881CB61 /* FSPageViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21353A20E5C4285E316D5024B39631F /* FSPageViewTransformer.swift */; };
+		5E4C2A42908C2EA5B5F759646F72FB80 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 058494ED5983AC0224F99AF165B883D8 /* iCarousel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		674354090507B3319EBC2FC18690EC5B /* FSPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49882BF06C3215C3242FEDD9AB2ED6 /* FSPagerView.swift */; };
+		702D69BF03EA44844FEAD648C0249E88 /* FSPagerViewObjcCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 4902F9CCDD874B6666CCE50777A36D0C /* FSPagerViewObjcCompat.m */; };
 		7031A35615F9DC064632760D2A2BDE2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
-		77AF2098DDCCAAE0CE4A20725C466905 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788A9F34EFD56A88C209A1A9EFA38C0A /* SideMenuManager.swift */; };
-		781328660DE3DBD4C1DEECBCBAEBAB25 /* FSPageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B702FEE066A40E49712A7AC36428CA /* FSPageViewLayout.swift */; };
+		77AF2098DDCCAAE0CE4A20725C466905 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CE44054D0EE1AA1414C204C1AD1CE0 /* SideMenuManager.swift */; };
+		781328660DE3DBD4C1DEECBCBAEBAB25 /* FSPageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3946D7E2A3FD3082147B63807299CAA9 /* FSPageViewLayout.swift */; };
+		7C26616F5BE513C02CEE9ACE7049EFD1 /* Pods-MovieAPP2_demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FFB61F030EC24A30CE72C233E830F43 /* Pods-MovieAPP2_demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CB62474AFF64CE4647E67F4916360C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
-		88176AA690DE1EBD2F8318DD4B8CB676 /* FSPagerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F10B8517BC06970A2846B00D0C548E /* FSPagerView-dummy.m */; };
-		890FF25D0CCFF9BADECBA64DCCEFF4FF /* SideMenuAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672A3870C1F110C82ADC505D863FC67 /* SideMenuAnimationController.swift */; };
-		8C06632AA14D12278B1277AC0CC6A0B2 /* SideMenuInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07E92F277B64D31F98F24B4760C7D8 /* SideMenuInteractionController.swift */; };
-		8C42431CDCC587FEFD994A6CFDA6396B /* iCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E254466328FE03F88578DE02F49E1C46 /* iCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		905A503F069C27E841BAD9F4EFD4F1AF /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B877BFCB49EFB5AAB87D3ED07E6AFF /* Protected.swift */; };
-		9B7C7ABEC9C3B3647A671B274EC8F10F /* Pods-MovieAPP2_demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B992AD634E2386291D135EDD991955 /* Pods-MovieAPP2_demo-dummy.m */; };
-		9E63F9C0F14AF9E64470F10B66ABC207 /* iCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A96CA993D79288753807F374F76605C3 /* iCarousel-dummy.m */; };
-		A0AF38BD964E04E88586B10151404B8C /* FSPagerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF671CBAAB1D739BA83F836AEEE711 /* FSPagerCollectionView.swift */; };
+		7D8C05366F87C046219EDCB835447400 /* youtube-ios-player-helper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 569D3D934981FFFA3A9EDBA2908459CF /* youtube-ios-player-helper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88176AA690DE1EBD2F8318DD4B8CB676 /* FSPagerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C93DF0482B107A055CF0950BCA8B28 /* FSPagerView-dummy.m */; };
+		890FF25D0CCFF9BADECBA64DCCEFF4FF /* SideMenuAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A4C15B578B18B75C2BF16E86AD8F4 /* SideMenuAnimationController.swift */; };
+		8C06632AA14D12278B1277AC0CC6A0B2 /* SideMenuInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3C1E57C736DAF7838C0374A91CA16 /* SideMenuInteractionController.swift */; };
+		8C42431CDCC587FEFD994A6CFDA6396B /* iCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8E524270F999060E3263B8FB38FCD11 /* iCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		905A503F069C27E841BAD9F4EFD4F1AF /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCFD6146241DC0A9B905F021F5B816 /* Protected.swift */; };
+		95360566E941F235D6B8CE1C4C3035D1 /* youtube-ios-player-helper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B679C07B67385A407E2DE4A14284AD /* youtube-ios-player-helper-dummy.m */; };
+		9E63F9C0F14AF9E64470F10B66ABC207 /* iCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E072069708E7B13B61DDD9CBE190AF32 /* iCarousel-dummy.m */; };
+		A0AF38BD964E04E88586B10151404B8C /* FSPagerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5CAC1DD54837B9BC2D5514ED0C1B98 /* FSPagerCollectionView.swift */; };
+		A8C22822FA929E89335F959F79BD29D2 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC07050E7D381B9904F16E9E13A49F4C /* Assets.bundle */; };
 		AD42B158EA8D302DA980C9A31EA487C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */; };
-		C798DA148F7F666F393F2009DDF73E35 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5114DD835CF8EBC00C698EF4CED0076E /* Initializable.swift */; };
-		C7D742D3A2506298403F6974F4DEFC2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
-		C96A55C2A869A97AC4CA628A7F2A2A21 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AB49A481E6FA3D8F4F59477EE668EA /* UITableViewVibrantCell.swift */; };
-		D1BD7393C7934049B3E51D9C5A5CD8A0 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6F1B86C4F847DE3141872A4AF7533 /* Print.swift */; };
-		D3D22BB8C279DC03EA91BFE3F5412477 /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA61EE8D97FC2D9C5DF9A2098C4986B /* Deprecations.swift */; };
-		D59017E8BFDABCA2E0049B5E4819085F /* Pods-MovieAPP2_demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FFB61F030EC24A30CE72C233E830F43 /* Pods-MovieAPP2_demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D777716F0B6C0754B7B0230531743BC4 /* SideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 627E9945128B53BD1A4C6DD45D16A139 /* SideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4D526DCF32314F78F832AF8750DCBAA /* FSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC63B8E65BDC496E4C84AD0E5E37F89 /* FSPageControl.swift */; };
-		F1906A44D6C430B8944B317F9E7651A2 /* FSPagerViewObjcCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = EB599551737E11A94EBBA91DD5BD364F /* FSPagerViewObjcCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2A3B4CFD7ED1812AF44330CCC7E7622 /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C5FD93FAFF45BD2DBDABBDFF391578 /* FSPagerViewLayoutAttributes.swift */; };
+		C798DA148F7F666F393F2009DDF73E35 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC266F2553A5D58641B72F50F439F96E /* Initializable.swift */; };
+		C96A55C2A869A97AC4CA628A7F2A2A21 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6DC6E2A66AC90DF07603EFC0C95ED /* UITableViewVibrantCell.swift */; };
+		CF54FBC044CC3EFEC4309420EE774826 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		D03B6BD25AEC918C55C1A092C4ED472B /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E1C1F4A1A50CA04EA175C02C5E5BEA /* YTPlayerView.m */; };
+		D1BD7393C7934049B3E51D9C5A5CD8A0 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D10BEB7A8639534820BF99958CD018 /* Print.swift */; };
+		D3D22BB8C279DC03EA91BFE3F5412477 /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E56CD138D3FE3B7E52E673304B9371 /* Deprecations.swift */; };
+		D777716F0B6C0754B7B0230531743BC4 /* SideMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB1E1658C5B8BA0D0D7A6242DD9144D /* SideMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4D526DCF32314F78F832AF8750DCBAA /* FSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAF6ACB0955B214C231BD53A9806D69 /* FSPageControl.swift */; };
+		F1906A44D6C430B8944B317F9E7651A2 /* FSPagerViewObjcCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF038E9D97363EFAA91D2DE0110D48A /* FSPagerViewObjcCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2A3B4CFD7ED1812AF44330CCC7E7622 /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9DF6775841F0521444C2BC07E3185B /* FSPagerViewLayoutAttributes.swift */; };
 		F313925EFA1264F29E31F91EDE5187D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D6EBACD285BEF131EC62D0C1837A787 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 548E0F26A10990707D8D4870D2490ACC;
-			remoteInfo = iCarousel;
-		};
-		9EE02D5EFAED01F938538673EAAA9895 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4F8239FB329387A8476B964D92D92E7;
-			remoteInfo = FSPagerView;
-		};
-		E00253DD1DE00D1076448B1C128E0614 /* PBXContainerItemProxy */ = {
+		0839FBAAA9992597F6437D4C1FB54F5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C4A0A7D8591B67FB75E2E8D215E3735B;
 			remoteInfo = SideMenu;
 		};
+		32F0E7EE0D1F1F909A82742720A9DF08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 548E0F26A10990707D8D4870D2490ACC;
+			remoteInfo = iCarousel;
+		};
+		7B1B9DD3EE233C7189E7FD6D1EAB8B60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4F8239FB329387A8476B964D92D92E7;
+			remoteInfo = FSPagerView;
+		};
+		EE9B01EF923EB87CF06404EB0B6D5C23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1A7AF186BE136DE56FD5699070589B8;
+			remoteInfo = "youtube-ios-player-helper";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0520B9B5229D4A024897A3F35FD2894B /* FSPagerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.debug.xcconfig; sourceTree = "<group>"; };
-		05876E8C318A48ACC60CF7AA4308F045 /* iCarousel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = iCarousel/iCarousel.m; sourceTree = "<group>"; };
-		0BA61EE8D97FC2D9C5DF9A2098C4986B /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Pod/Classes/Deprecations.swift; sourceTree = "<group>"; };
+		058494ED5983AC0224F99AF165B883D8 /* iCarousel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = iCarousel/iCarousel.m; sourceTree = "<group>"; };
 		0D12AE1CC8460F9A71865D8349A66038 /* Pods-MovieAPP2_demo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieAPP2_demo-Info.plist"; sourceTree = "<group>"; };
 		0E95585DD5C7F6167AC5EEC9CE3C97A3 /* Pods-MovieAPP2_demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MovieAPP2_demo.modulemap"; sourceTree = "<group>"; };
-		0EAF1739EF12FFC279FE4C17A106EC0F /* SideMenuPresentationStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPresentationStyle.swift; path = Pod/Classes/SideMenuPresentationStyle.swift; sourceTree = "<group>"; };
-		0F276BEE660FD9B2BAD3ED7D32E312FF /* FSPagerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-umbrella.h"; sourceTree = "<group>"; };
 		0F47FB5E28EE8C8342B1776D813D1A4C /* FSPagerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSPagerView.framework; path = FSPagerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		17873ACD4584C9596E79F15978A68D40 /* SideMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.release.xcconfig; sourceTree = "<group>"; };
-		1822E06C338FAEA50F7657C94ADA639C /* SideMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.debug.xcconfig; sourceTree = "<group>"; };
-		1956EF81392AC4C42EC5EC27FFFD05A4 /* SideMenuTransitionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuTransitionController.swift; path = Pod/Classes/SideMenuTransitionController.swift; sourceTree = "<group>"; };
-		220D111AAC820E0A302F90399859EC3B /* SideMenuPushCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPushCoordinator.swift; path = Pod/Classes/SideMenuPushCoordinator.swift; sourceTree = "<group>"; };
-		22B877BFCB49EFB5AAB87D3ED07E6AFF /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Pod/Classes/Protected.swift; sourceTree = "<group>"; };
-		26AA14EE3A254809C6DB1CEF824746BF /* iCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iCarousel.modulemap; sourceTree = "<group>"; };
-		28BF671CBAAB1D739BA83F836AEEE711 /* FSPagerCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerCollectionView.swift; path = Sources/FSPagerCollectionView.swift; sourceTree = "<group>"; };
+		11C93DF0482B107A055CF0950BCA8B28 /* FSPagerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSPagerView-dummy.m"; sourceTree = "<group>"; };
+		1CBD81B97756193C37886917979DFAB5 /* iCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iCarousel-Info.plist"; sourceTree = "<group>"; };
+		218BEC2F5FFEBB69DA9A0BA66F53B9C8 /* youtube-ios-player-helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "youtube-ios-player-helper.release.xcconfig"; sourceTree = "<group>"; };
+		26FCFD6146241DC0A9B905F021F5B816 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Pod/Classes/Protected.swift; sourceTree = "<group>"; };
+		2F9DF6775841F0521444C2BC07E3185B /* FSPagerViewLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewLayoutAttributes.swift; path = Sources/FSPagerViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		319D06AA0D1D0BA345459C039040A1ED /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SideMenu.framework; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31AE3B663BA34BFFC28C295FA32ED2A2 /* iCarousel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.release.xcconfig; sourceTree = "<group>"; };
-		35B702FEE066A40E49712A7AC36428CA /* FSPageViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewLayout.swift; path = Sources/FSPageViewLayout.swift; sourceTree = "<group>"; };
-		39164D433B87EACF49966E6FF3324919 /* SideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenu-dummy.m"; sourceTree = "<group>"; };
-		3A1D5B918A66F0E3D1F1F8576DDB6DD9 /* SideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideMenu.modulemap; sourceTree = "<group>"; };
-		41D3974A81ECDAD95FB30DE2E7D8A527 /* FSPagerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerView.swift; path = Sources/FSPagerView.swift; sourceTree = "<group>"; };
-		41E6F1B86C4F847DE3141872A4AF7533 /* Print.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Print.swift; path = Pod/Classes/Print.swift; sourceTree = "<group>"; };
-		4287A7B460FAD31F0AC95C4A015E8E6C /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuNavigationController.swift; path = Pod/Classes/SideMenuNavigationController.swift; sourceTree = "<group>"; };
+		35C7D68FC7BDBDA42717A8403F77DFAD /* iCarousel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = iCarousel/iCarousel.h; sourceTree = "<group>"; };
+		3946D7E2A3FD3082147B63807299CAA9 /* FSPageViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewLayout.swift; path = Sources/FSPageViewLayout.swift; sourceTree = "<group>"; };
+		42C76443EB92C3938FCC5D18A3EC3696 /* SideMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.debug.xcconfig; sourceTree = "<group>"; };
+		42D10BEB7A8639534820BF99958CD018 /* Print.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Print.swift; path = Pod/Classes/Print.swift; sourceTree = "<group>"; };
+		43A9C852DB8133493944233F286ED8EB /* youtube-ios-player-helper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-prefix.pch"; sourceTree = "<group>"; };
+		44A5C7E5431AC2AAE55DC03E77B5DDC3 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuNavigationController.swift; path = Pod/Classes/SideMenuNavigationController.swift; sourceTree = "<group>"; };
+		462A4C15B578B18B75C2BF16E86AD8F4 /* SideMenuAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuAnimationController.swift; path = Pod/Classes/SideMenuAnimationController.swift; sourceTree = "<group>"; };
+		47F6907FC9AF563BB72AFD5F34CE7738 /* youtube-ios-player-helper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "youtube-ios-player-helper-Info.plist"; sourceTree = "<group>"; };
+		4902F9CCDD874B6666CCE50777A36D0C /* FSPagerViewObjcCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSPagerViewObjcCompat.m; path = Sources/FSPagerViewObjcCompat.m; sourceTree = "<group>"; };
 		4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4FFB61F030EC24A30CE72C233E830F43 /* Pods-MovieAPP2_demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieAPP2_demo-umbrella.h"; sourceTree = "<group>"; };
-		5114DD835CF8EBC00C698EF4CED0076E /* Initializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Initializable.swift; path = Pod/Classes/Initializable.swift; sourceTree = "<group>"; };
-		5AF0C5E9978CAB224DF2A75267AFA398 /* SideMenuPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPresentationController.swift; path = Pod/Classes/SideMenuPresentationController.swift; sourceTree = "<group>"; };
+		5428782EA2FA24D5E61CBFA7998F116A /* FSPagerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FSPagerView-Info.plist"; sourceTree = "<group>"; };
+		543DEDC973C44377AE6CEC4D04045921 /* YTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTPlayerView.h; path = Classes/YTPlayerView.h; sourceTree = "<group>"; };
+		557DDE59E662FE921B76AC294E3079C0 /* FSPagerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.release.xcconfig; sourceTree = "<group>"; };
+		5583DA4015BF6CE52C59BA8674E91003 /* SideMenuTransitionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuTransitionController.swift; path = Pod/Classes/SideMenuTransitionController.swift; sourceTree = "<group>"; };
+		569D3D934981FFFA3A9EDBA2908459CF /* youtube-ios-player-helper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-umbrella.h"; sourceTree = "<group>"; };
+		58CE44054D0EE1AA1414C204C1AD1CE0 /* SideMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuManager.swift; path = Pod/Classes/SideMenuManager.swift; sourceTree = "<group>"; };
+		5D3EB5E6E5629F71AA1B0AC1C61CC65A /* FSPagerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.debug.xcconfig; sourceTree = "<group>"; };
 		61B992AD634E2386291D135EDD991955 /* Pods-MovieAPP2_demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieAPP2_demo-dummy.m"; sourceTree = "<group>"; };
-		627E9945128B53BD1A4C6DD45D16A139 /* SideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-umbrella.h"; sourceTree = "<group>"; };
-		64D127BCCF4E8C27E0E8432A1DD355F2 /* FSPagerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-prefix.pch"; sourceTree = "<group>"; };
+		6DA6D53BCE2BA6A6444D670DDA1E2B86 /* SideMenuPresentationStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPresentationStyle.swift; path = Pod/Classes/SideMenuPresentationStyle.swift; sourceTree = "<group>"; };
 		6FE8E8492C891C4F6E1819D5D25F8ECC /* Pods-MovieAPP2_demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieAPP2_demo-frameworks.sh"; sourceTree = "<group>"; };
-		736783C7771FB0AC9811E0BED8EFCA7D /* iCarousel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.debug.xcconfig; sourceTree = "<group>"; };
-		788A9F34EFD56A88C209A1A9EFA38C0A /* SideMenuManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuManager.swift; path = Pod/Classes/SideMenuManager.swift; sourceTree = "<group>"; };
-		81B6B84D9DD6F837D4BECE5E389E62DB /* SideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-prefix.pch"; sourceTree = "<group>"; };
+		75C253A23D7893C3FA594F79CA37CA0F /* SideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenu-dummy.m"; sourceTree = "<group>"; };
+		7B60E75AA304A3F7E6C600804969374B /* SideMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SideMenu-Info.plist"; sourceTree = "<group>"; };
+		7F8D6008E3393DA23ACEA1F730D49795 /* iCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iCarousel.modulemap; sourceTree = "<group>"; };
+		8498A1B2C60117E181CA67921DDAE0B6 /* youtube_ios_player_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = youtube_ios_player_helper.framework; path = "youtube-ios-player-helper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FA5B95116CE44CEE0BC97920B2BD83 /* SideMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenu.release.xcconfig; sourceTree = "<group>"; };
+		86A48220991A974C3DB344F4F19921E0 /* youtube-ios-player-helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "youtube-ios-player-helper.debug.xcconfig"; sourceTree = "<group>"; };
 		8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		90937DED4E9DAA4E702AE4443047AAE8 /* SideMenuPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPresentationController.swift; path = Pod/Classes/SideMenuPresentationController.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E0FF1D4D51950CCFDFF57E6258AE577 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Pod/Classes/Extensions.swift; sourceTree = "<group>"; };
 		9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		A96CA993D79288753807F374F76605C3 /* iCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iCarousel-dummy.m"; sourceTree = "<group>"; };
+		A1AD8856D96BD1F6BC09FDCAA81FA345 /* SideMenuPushCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuPushCoordinator.swift; path = Pod/Classes/SideMenuPushCoordinator.swift; sourceTree = "<group>"; };
+		A8E524270F999060E3263B8FB38FCD11 /* iCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-umbrella.h"; sourceTree = "<group>"; };
+		AB5CAC1DD54837B9BC2D5514ED0C1B98 /* FSPagerCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerCollectionView.swift; path = Sources/FSPagerCollectionView.swift; sourceTree = "<group>"; };
+		AD0CD16F920586564424A1524AFE7B4D /* FSPagerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-umbrella.h"; sourceTree = "<group>"; };
 		AE2F0BB31C627615A95098DBC500B959 /* Pods_MovieAPP2_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieAPP2_demo.framework; path = "Pods-MovieAPP2_demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B178673C6D3E208765F8A8FA3EA60122 /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewTransformer.swift; path = Sources/FSPageViewTransformer.swift; sourceTree = "<group>"; };
+		B8E1C1F4A1A50CA04EA175C02C5E5BEA /* YTPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YTPlayerView.m; path = Classes/YTPlayerView.m; sourceTree = "<group>"; };
+		B95E5160B7082B3FEB94084CDA8EB299 /* SideMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideMenu.modulemap; sourceTree = "<group>"; };
 		B9D3C98A5A9825A62DF03BB1E37DE74A /* Pods-MovieAPP2_demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieAPP2_demo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BF1152D14313D46909370FC5C35D4D0B /* FSPagerViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewCell.swift; path = Sources/FSPagerViewCell.swift; sourceTree = "<group>"; };
+		BD97DBF680FC2C47473B2AB63B6221AE /* FSPagerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-prefix.pch"; sourceTree = "<group>"; };
+		BE49882BF06C3215C3242FEDD9AB2ED6 /* FSPagerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerView.swift; path = Sources/FSPagerView.swift; sourceTree = "<group>"; };
+		BEF038E9D97363EFAA91D2DE0110D48A /* FSPagerViewObjcCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSPagerViewObjcCompat.h; path = Sources/FSPagerViewObjcCompat.h; sourceTree = "<group>"; };
 		C16AE2B885285A83957D7D74A6B80D29 /* Pods-MovieAPP2_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieAPP2_demo.release.xcconfig"; sourceTree = "<group>"; };
-		C1C98F8CE651AAF23D5126CB2F48C7E7 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Pod/Classes/Extensions.swift; sourceTree = "<group>"; };
-		C672A3870C1F110C82ADC505D863FC67 /* SideMenuAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuAnimationController.swift; path = Pod/Classes/SideMenuAnimationController.swift; sourceTree = "<group>"; };
+		C21353A20E5C4285E316D5024B39631F /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewTransformer.swift; path = Sources/FSPageViewTransformer.swift; sourceTree = "<group>"; };
+		C4B6DC6E2A66AC90DF07603EFC0C95ED /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = Pod/Classes/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
+		C61C0240D3EB42EA61ECFC9AFBF572AA /* FSPagerViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewCell.swift; path = Sources/FSPagerViewCell.swift; sourceTree = "<group>"; };
 		C8217EB109A6A34051F09192C29B676F /* iCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iCarousel.framework; path = iCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8306CD8B292C0CEB32FE12D40CFAC68 /* iCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-prefix.pch"; sourceTree = "<group>"; };
 		CAA3ED10901C13D98776333C4F1BB3DF /* Pods-MovieAPP2_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieAPP2_demo.debug.xcconfig"; sourceTree = "<group>"; };
-		CE5B89FC6726ADF47E2516CB23CACDAE /* FSPagerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FSPagerView-Info.plist"; sourceTree = "<group>"; };
-		D2AB49A481E6FA3D8F4F59477EE668EA /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = Pod/Classes/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
-		D2B5EED59BA7F1D0F31C79C7D0C61A3C /* FSPagerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.release.xcconfig; sourceTree = "<group>"; };
-		DE07E92F277B64D31F98F24B4760C7D8 /* SideMenuInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuInteractionController.swift; path = Pod/Classes/SideMenuInteractionController.swift; sourceTree = "<group>"; };
-		DEC63B8E65BDC496E4C84AD0E5E37F89 /* FSPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageControl.swift; path = Sources/FSPageControl.swift; sourceTree = "<group>"; };
-		DF5A09AD5AE4A28AE21D7DDDDBFB14E7 /* iCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-prefix.pch"; sourceTree = "<group>"; };
-		E1C5FD93FAFF45BD2DBDABBDFF391578 /* FSPagerViewLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPagerViewLayoutAttributes.swift; path = Sources/FSPagerViewLayoutAttributes.swift; sourceTree = "<group>"; };
-		E254466328FE03F88578DE02F49E1C46 /* iCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-umbrella.h"; sourceTree = "<group>"; };
-		E3E3C89C204626E53C051AF23384A06F /* FSPagerViewObjcCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSPagerViewObjcCompat.m; path = Sources/FSPagerViewObjcCompat.m; sourceTree = "<group>"; };
-		E56457D32C392357E1FABABCA3DF872F /* SideMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SideMenu-Info.plist"; sourceTree = "<group>"; };
-		E58C277E25013006BE66AA85EFE72287 /* iCarousel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = iCarousel/iCarousel.h; sourceTree = "<group>"; };
-		E843BD766C5F114A645603EA9989B8EF /* iCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iCarousel-Info.plist"; sourceTree = "<group>"; };
-		E9A3E2A40CABF931928712F274195486 /* FSPagerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSPagerView.modulemap; sourceTree = "<group>"; };
+		CFB1E1658C5B8BA0D0D7A6242DD9144D /* SideMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-umbrella.h"; sourceTree = "<group>"; };
+		DB8E1E4D2CD7449CF910016217365F5F /* iCarousel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.debug.xcconfig; sourceTree = "<group>"; };
+		DBEFDBA7C2B3AC653E49D9BB6A309DF7 /* iCarousel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.release.xcconfig; sourceTree = "<group>"; };
+		DC266F2553A5D58641B72F50F439F96E /* Initializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Initializable.swift; path = Pod/Classes/Initializable.swift; sourceTree = "<group>"; };
+		E0593BD6C00AF12D73CEBF4D4810897A /* FSPagerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSPagerView.modulemap; sourceTree = "<group>"; };
+		E072069708E7B13B61DDD9CBE190AF32 /* iCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iCarousel-dummy.m"; sourceTree = "<group>"; };
+		E0E357FA99A5B8150B424A0F225F5DD2 /* SideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenu-prefix.pch"; sourceTree = "<group>"; };
+		E5F3C1E57C736DAF7838C0374A91CA16 /* SideMenuInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuInteractionController.swift; path = Pod/Classes/SideMenuInteractionController.swift; sourceTree = "<group>"; };
 		EAEBAC1B83AE4F9A5A726B9A60EE469A /* Pods-MovieAPP2_demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieAPP2_demo-acknowledgements.plist"; sourceTree = "<group>"; };
-		EB599551737E11A94EBBA91DD5BD364F /* FSPagerViewObjcCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSPagerViewObjcCompat.h; path = Sources/FSPagerViewObjcCompat.h; sourceTree = "<group>"; };
-		F5F10B8517BC06970A2846B00D0C548E /* FSPagerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSPagerView-dummy.m"; sourceTree = "<group>"; };
+		F2B679C07B67385A407E2DE4A14284AD /* youtube-ios-player-helper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "youtube-ios-player-helper-dummy.m"; sourceTree = "<group>"; };
+		F3E56CD138D3FE3B7E52E673304B9371 /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Pod/Classes/Deprecations.swift; sourceTree = "<group>"; };
+		FBAF6ACB0955B214C231BD53A9806D69 /* FSPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageControl.swift; path = Sources/FSPageControl.swift; sourceTree = "<group>"; };
+		FC07050E7D381B9904F16E9E13A49F4C /* Assets.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Assets.bundle; path = "youtube-ios-player-helper/Assets.bundle"; sourceTree = "<group>"; };
+		FFB5CEBD771A46D7F67DC47CF703817D /* youtube-ios-player-helper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "youtube-ios-player-helper.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,11 +172,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28E5DC4476C9C407999F046CB3D922FB /* Frameworks */ = {
+		533A2FDA4C487691F4E092B38B22EB8F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7D742D3A2506298403F6974F4DEFC2F /* Foundation.framework in Frameworks */,
+				4B5BB21E43D9FC927FEEFA7B65909C39 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5595812EFC47AA249A0B8193A0B1F932 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF54FBC044CC3EFEC4309420EE774826 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +208,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B7E6938A8C0E9236EB7FDDB477ADA9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0593BD6C00AF12D73CEBF4D4810897A /* FSPagerView.modulemap */,
+				11C93DF0482B107A055CF0950BCA8B28 /* FSPagerView-dummy.m */,
+				5428782EA2FA24D5E61CBFA7998F116A /* FSPagerView-Info.plist */,
+				BD97DBF680FC2C47473B2AB63B6221AE /* FSPagerView-prefix.pch */,
+				AD0CD16F920586564424A1524AFE7B4D /* FSPagerView-umbrella.h */,
+				5D3EB5E6E5629F71AA1B0AC1C61CC65A /* FSPagerView.debug.xcconfig */,
+				557DDE59E662FE921B76AC294E3079C0 /* FSPagerView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FSPagerView";
+			sourceTree = "<group>";
+		};
 		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,19 +231,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		18A9E57D0CDCE19F0AE091AC5815AE3B /* Support Files */ = {
+		10E0C713EE1E8888212F7680F2BAFF28 /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				26AA14EE3A254809C6DB1CEF824746BF /* iCarousel.modulemap */,
-				A96CA993D79288753807F374F76605C3 /* iCarousel-dummy.m */,
-				E843BD766C5F114A645603EA9989B8EF /* iCarousel-Info.plist */,
-				DF5A09AD5AE4A28AE21D7DDDDBFB14E7 /* iCarousel-prefix.pch */,
-				E254466328FE03F88578DE02F49E1C46 /* iCarousel-umbrella.h */,
-				736783C7771FB0AC9811E0BED8EFCA7D /* iCarousel.debug.xcconfig */,
-				31AE3B663BA34BFFC28C295FA32ED2A2 /* iCarousel.release.xcconfig */,
+				35C7D68FC7BDBDA42717A8403F77DFAD /* iCarousel.h */,
+				058494ED5983AC0224F99AF165B883D8 /* iCarousel.m */,
+				C654A88F4152864A67F4A1139B8E4A85 /* Support Files */,
+			);
+			name = iCarousel;
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		158FD41B55A43CC60889216A5ABF2A8B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B95E5160B7082B3FEB94084CDA8EB299 /* SideMenu.modulemap */,
+				75C253A23D7893C3FA594F79CA37CA0F /* SideMenu-dummy.m */,
+				7B60E75AA304A3F7E6C600804969374B /* SideMenu-Info.plist */,
+				E0E357FA99A5B8150B424A0F225F5DD2 /* SideMenu-prefix.pch */,
+				CFB1E1658C5B8BA0D0D7A6242DD9144D /* SideMenu-umbrella.h */,
+				42C76443EB92C3938FCC5D18A3EC3696 /* SideMenu.debug.xcconfig */,
+				84FA5B95116CE44CEE0BC97920B2BD83 /* SideMenu.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/iCarousel";
+			path = "../Target Support Files/SideMenu";
 			sourceTree = "<group>";
 		};
 		23DF1EA8F91CC609D85E7E828E067729 /* Pods-MovieAPP2_demo */ = {
@@ -216,19 +274,24 @@
 			path = "Target Support Files/Pods-MovieAPP2_demo";
 			sourceTree = "<group>";
 		};
-		33B218FD7F9272C3E3F8F0A8A404BF47 /* Support Files */ = {
+		3698DFB653F004EB660C1EAE6E5FD547 /* youtube-ios-player-helper */ = {
 			isa = PBXGroup;
 			children = (
-				E9A3E2A40CABF931928712F274195486 /* FSPagerView.modulemap */,
-				F5F10B8517BC06970A2846B00D0C548E /* FSPagerView-dummy.m */,
-				CE5B89FC6726ADF47E2516CB23CACDAE /* FSPagerView-Info.plist */,
-				64D127BCCF4E8C27E0E8432A1DD355F2 /* FSPagerView-prefix.pch */,
-				0F276BEE660FD9B2BAD3ED7D32E312FF /* FSPagerView-umbrella.h */,
-				0520B9B5229D4A024897A3F35FD2894B /* FSPagerView.debug.xcconfig */,
-				D2B5EED59BA7F1D0F31C79C7D0C61A3C /* FSPagerView.release.xcconfig */,
+				543DEDC973C44377AE6CEC4D04045921 /* YTPlayerView.h */,
+				B8E1C1F4A1A50CA04EA175C02C5E5BEA /* YTPlayerView.m */,
+				593B181F64A85E716EB7E8F30BA2CE52 /* Resources */,
+				E6D11C8D93A01033DC4211A14E5297EE /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FSPagerView";
+			name = "youtube-ios-player-helper";
+			path = "youtube-ios-player-helper";
+			sourceTree = "<group>";
+		};
+		593B181F64A85E716EB7E8F30BA2CE52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC07050E7D381B9904F16E9E13A49F4C /* Assets.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		7391B2AAF1A4F2D2B59B4C910BE80701 /* Targets Support Files */ = {
@@ -239,58 +302,83 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		75F0E7A1E09A5149108074BC3DD1CC98 /* Pods */ = {
+		7AA513A7F6F1A854E602FC8135225910 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7A4C16AD46FDDABB5DE3D378812B4AC1 /* FSPagerView */,
-				B2372C0F10957FF164FCEAAF212ACEA2 /* iCarousel */,
-				E053C374F4995AC3A46508064C92B6F2 /* SideMenu */,
+				9EFCDF6D75FFD1C9DC8222CDABE57B1C /* FSPagerView */,
+				10E0C713EE1E8888212F7680F2BAFF28 /* iCarousel */,
+				7B0907B4F9F839DD4D28D00F2E4F670B /* SideMenu */,
+				3698DFB653F004EB660C1EAE6E5FD547 /* youtube-ios-player-helper */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7A4C16AD46FDDABB5DE3D378812B4AC1 /* FSPagerView */ = {
+		7B0907B4F9F839DD4D28D00F2E4F670B /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				DEC63B8E65BDC496E4C84AD0E5E37F89 /* FSPageControl.swift */,
-				28BF671CBAAB1D739BA83F836AEEE711 /* FSPagerCollectionView.swift */,
-				41D3974A81ECDAD95FB30DE2E7D8A527 /* FSPagerView.swift */,
-				BF1152D14313D46909370FC5C35D4D0B /* FSPagerViewCell.swift */,
-				E1C5FD93FAFF45BD2DBDABBDFF391578 /* FSPagerViewLayoutAttributes.swift */,
-				EB599551737E11A94EBBA91DD5BD364F /* FSPagerViewObjcCompat.h */,
-				E3E3C89C204626E53C051AF23384A06F /* FSPagerViewObjcCompat.m */,
-				35B702FEE066A40E49712A7AC36428CA /* FSPageViewLayout.swift */,
-				B178673C6D3E208765F8A8FA3EA60122 /* FSPageViewTransformer.swift */,
-				33B218FD7F9272C3E3F8F0A8A404BF47 /* Support Files */,
+				F3E56CD138D3FE3B7E52E673304B9371 /* Deprecations.swift */,
+				9E0FF1D4D51950CCFDFF57E6258AE577 /* Extensions.swift */,
+				DC266F2553A5D58641B72F50F439F96E /* Initializable.swift */,
+				42D10BEB7A8639534820BF99958CD018 /* Print.swift */,
+				26FCFD6146241DC0A9B905F021F5B816 /* Protected.swift */,
+				462A4C15B578B18B75C2BF16E86AD8F4 /* SideMenuAnimationController.swift */,
+				E5F3C1E57C736DAF7838C0374A91CA16 /* SideMenuInteractionController.swift */,
+				58CE44054D0EE1AA1414C204C1AD1CE0 /* SideMenuManager.swift */,
+				44A5C7E5431AC2AAE55DC03E77B5DDC3 /* SideMenuNavigationController.swift */,
+				90937DED4E9DAA4E702AE4443047AAE8 /* SideMenuPresentationController.swift */,
+				6DA6D53BCE2BA6A6444D670DDA1E2B86 /* SideMenuPresentationStyle.swift */,
+				A1AD8856D96BD1F6BC09FDCAA81FA345 /* SideMenuPushCoordinator.swift */,
+				5583DA4015BF6CE52C59BA8674E91003 /* SideMenuTransitionController.swift */,
+				C4B6DC6E2A66AC90DF07603EFC0C95ED /* UITableViewVibrantCell.swift */,
+				158FD41B55A43CC60889216A5ABF2A8B /* Support Files */,
+			);
+			name = SideMenu;
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		9EFCDF6D75FFD1C9DC8222CDABE57B1C /* FSPagerView */ = {
+			isa = PBXGroup;
+			children = (
+				FBAF6ACB0955B214C231BD53A9806D69 /* FSPageControl.swift */,
+				AB5CAC1DD54837B9BC2D5514ED0C1B98 /* FSPagerCollectionView.swift */,
+				BE49882BF06C3215C3242FEDD9AB2ED6 /* FSPagerView.swift */,
+				C61C0240D3EB42EA61ECFC9AFBF572AA /* FSPagerViewCell.swift */,
+				2F9DF6775841F0521444C2BC07E3185B /* FSPagerViewLayoutAttributes.swift */,
+				BEF038E9D97363EFAA91D2DE0110D48A /* FSPagerViewObjcCompat.h */,
+				4902F9CCDD874B6666CCE50777A36D0C /* FSPagerViewObjcCompat.m */,
+				3946D7E2A3FD3082147B63807299CAA9 /* FSPageViewLayout.swift */,
+				C21353A20E5C4285E316D5024B39631F /* FSPageViewTransformer.swift */,
+				01B7E6938A8C0E9236EB7FDDB477ADA9 /* Support Files */,
 			);
 			name = FSPagerView;
 			path = FSPagerView;
 			sourceTree = "<group>";
 		};
-		8E40EB466BFF3AFF7E1584B7DA0A834D /* Support Files */ = {
+		A4D2589D48C4A9697B5AAFD7E7F89898 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A1D5B918A66F0E3D1F1F8576DDB6DD9 /* SideMenu.modulemap */,
-				39164D433B87EACF49966E6FF3324919 /* SideMenu-dummy.m */,
-				E56457D32C392357E1FABABCA3DF872F /* SideMenu-Info.plist */,
-				81B6B84D9DD6F837D4BECE5E389E62DB /* SideMenu-prefix.pch */,
-				627E9945128B53BD1A4C6DD45D16A139 /* SideMenu-umbrella.h */,
-				1822E06C338FAEA50F7657C94ADA639C /* SideMenu.debug.xcconfig */,
-				17873ACD4584C9596E79F15978A68D40 /* SideMenu.release.xcconfig */,
+				0F47FB5E28EE8C8342B1776D813D1A4C /* FSPagerView.framework */,
+				C8217EB109A6A34051F09192C29B676F /* iCarousel.framework */,
+				AE2F0BB31C627615A95098DBC500B959 /* Pods_MovieAPP2_demo.framework */,
+				319D06AA0D1D0BA345459C039040A1ED /* SideMenu.framework */,
+				8498A1B2C60117E181CA67921DDAE0B6 /* youtube_ios_player_helper.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SideMenu";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		B2372C0F10957FF164FCEAAF212ACEA2 /* iCarousel */ = {
+		C654A88F4152864A67F4A1139B8E4A85 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E58C277E25013006BE66AA85EFE72287 /* iCarousel.h */,
-				05876E8C318A48ACC60CF7AA4308F045 /* iCarousel.m */,
-				18A9E57D0CDCE19F0AE091AC5815AE3B /* Support Files */,
+				7F8D6008E3393DA23ACEA1F730D49795 /* iCarousel.modulemap */,
+				E072069708E7B13B61DDD9CBE190AF32 /* iCarousel-dummy.m */,
+				1CBD81B97756193C37886917979DFAB5 /* iCarousel-Info.plist */,
+				C8306CD8B292C0CEB32FE12D40CFAC68 /* iCarousel-prefix.pch */,
+				A8E524270F999060E3263B8FB38FCD11 /* iCarousel-umbrella.h */,
+				DB8E1E4D2CD7449CF910016217365F5F /* iCarousel.debug.xcconfig */,
+				DBEFDBA7C2B3AC653E49D9BB6A309DF7 /* iCarousel.release.xcconfig */,
 			);
-			name = iCarousel;
-			path = iCarousel;
+			name = "Support Files";
+			path = "../Target Support Files/iCarousel";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -298,44 +386,25 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
-				75F0E7A1E09A5149108074BC3DD1CC98 /* Pods */,
-				DD11EDF0F3A238DF07AEE5C11400816F /* Products */,
+				7AA513A7F6F1A854E602FC8135225910 /* Pods */,
+				A4D2589D48C4A9697B5AAFD7E7F89898 /* Products */,
 				7391B2AAF1A4F2D2B59B4C910BE80701 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		DD11EDF0F3A238DF07AEE5C11400816F /* Products */ = {
+		E6D11C8D93A01033DC4211A14E5297EE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F47FB5E28EE8C8342B1776D813D1A4C /* FSPagerView.framework */,
-				C8217EB109A6A34051F09192C29B676F /* iCarousel.framework */,
-				AE2F0BB31C627615A95098DBC500B959 /* Pods_MovieAPP2_demo.framework */,
-				319D06AA0D1D0BA345459C039040A1ED /* SideMenu.framework */,
+				FFB5CEBD771A46D7F67DC47CF703817D /* youtube-ios-player-helper.modulemap */,
+				F2B679C07B67385A407E2DE4A14284AD /* youtube-ios-player-helper-dummy.m */,
+				47F6907FC9AF563BB72AFD5F34CE7738 /* youtube-ios-player-helper-Info.plist */,
+				43A9C852DB8133493944233F286ED8EB /* youtube-ios-player-helper-prefix.pch */,
+				569D3D934981FFFA3A9EDBA2908459CF /* youtube-ios-player-helper-umbrella.h */,
+				86A48220991A974C3DB344F4F19921E0 /* youtube-ios-player-helper.debug.xcconfig */,
+				218BEC2F5FFEBB69DA9A0BA66F53B9C8 /* youtube-ios-player-helper.release.xcconfig */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E053C374F4995AC3A46508064C92B6F2 /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				0BA61EE8D97FC2D9C5DF9A2098C4986B /* Deprecations.swift */,
-				C1C98F8CE651AAF23D5126CB2F48C7E7 /* Extensions.swift */,
-				5114DD835CF8EBC00C698EF4CED0076E /* Initializable.swift */,
-				41E6F1B86C4F847DE3141872A4AF7533 /* Print.swift */,
-				22B877BFCB49EFB5AAB87D3ED07E6AFF /* Protected.swift */,
-				C672A3870C1F110C82ADC505D863FC67 /* SideMenuAnimationController.swift */,
-				DE07E92F277B64D31F98F24B4760C7D8 /* SideMenuInteractionController.swift */,
-				788A9F34EFD56A88C209A1A9EFA38C0A /* SideMenuManager.swift */,
-				4287A7B460FAD31F0AC95C4A015E8E6C /* SideMenuNavigationController.swift */,
-				5AF0C5E9978CAB224DF2A75267AFA398 /* SideMenuPresentationController.swift */,
-				0EAF1739EF12FFC279FE4C17A106EC0F /* SideMenuPresentationStyle.swift */,
-				220D111AAC820E0A302F90399859EC3B /* SideMenuPushCoordinator.swift */,
-				1956EF81392AC4C42EC5EC27FFFD05A4 /* SideMenuTransitionController.swift */,
-				D2AB49A481E6FA3D8F4F59477EE668EA /* UITableViewVibrantCell.swift */,
-				8E40EB466BFF3AFF7E1584B7DA0A834D /* Support Files */,
-			);
-			name = SideMenu;
-			path = SideMenu;
+			name = "Support Files";
+			path = "../Target Support Files/youtube-ios-player-helper";
 			sourceTree = "<group>";
 		};
 		F0A778C0229E9BF1FD97896B93F3272B /* iOS */ = {
@@ -351,11 +420,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		21531A4B3FCB0C10AE1AFFC13A5E2DC4 /* Headers */ = {
+		1E382B2E9E63F1A5ABCCB26818E90CB1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D59017E8BFDABCA2E0049B5E4819085F /* Pods-MovieAPP2_demo-umbrella.h in Headers */,
+				7C26616F5BE513C02CEE9ACE7049EFD1 /* Pods-MovieAPP2_demo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +454,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A3D9B7803829D42680BA215A141625F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D8C05366F87C046219EDCB835447400 /* youtube-ios-player-helper-umbrella.h in Headers */,
+				05DBC5A4A0411FC0868B1355180CD35D /* YTPlayerView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -408,19 +486,20 @@
 		};
 		C2C460C99D4FEA66D1D1E439CB24879B /* Pods-MovieAPP2_demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FBB5DCA245263047AB52D39213DA1297 /* Build configuration list for PBXNativeTarget "Pods-MovieAPP2_demo" */;
+			buildConfigurationList = 2D9E50EF814F165932D2CB354B12E08E /* Build configuration list for PBXNativeTarget "Pods-MovieAPP2_demo" */;
 			buildPhases = (
-				21531A4B3FCB0C10AE1AFFC13A5E2DC4 /* Headers */,
-				A27CF637C51526B644A4DFA39B9F3361 /* Sources */,
-				28E5DC4476C9C407999F046CB3D922FB /* Frameworks */,
-				2C43A87D73F8F47821DE4AC9DF2E284F /* Resources */,
+				1E382B2E9E63F1A5ABCCB26818E90CB1 /* Headers */,
+				4604796109ED03C67EC3A1AF2C61E803 /* Sources */,
+				533A2FDA4C487691F4E092B38B22EB8F /* Frameworks */,
+				9994B548EB9A87FA1E545D0A55BA8413 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B65B7A08A02072F3D5CD63665296616F /* PBXTargetDependency */,
-				9B6B5331284477FE747916EE2665BFC7 /* PBXTargetDependency */,
-				39BF3DDF957E4226FC7D4293DF3C4F4B /* PBXTargetDependency */,
+				990583AB0F00FE53FDF56A29949B21DA /* PBXTargetDependency */,
+				9D43D92E9FD4034707F24426AEB14201 /* PBXTargetDependency */,
+				C1CE900704E640551753A70A7A6408A8 /* PBXTargetDependency */,
+				8A8FDDBC4D26EFC3422BB549595E4332 /* PBXTargetDependency */,
 			);
 			name = "Pods-MovieAPP2_demo";
 			productName = "Pods-MovieAPP2_demo";
@@ -443,6 +522,24 @@
 			name = SideMenu;
 			productName = SideMenu;
 			productReference = 319D06AA0D1D0BA345459C039040A1ED /* SideMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D1A7AF186BE136DE56FD5699070589B8 /* youtube-ios-player-helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20122DD765B62B4CDEF3E8EF198B58FD /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */;
+			buildPhases = (
+				A3D9B7803829D42680BA215A141625F6 /* Headers */,
+				1D0FE5D1FA457436D50E3286E7C355B5 /* Sources */,
+				5595812EFC47AA249A0B8193A0B1F932 /* Frameworks */,
+				5D870BFFEC56FA6BCB0BD3F7C619A53D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "youtube-ios-player-helper";
+			productName = "youtube-ios-player-helper";
+			productReference = 8498A1B2C60117E181CA67921DDAE0B6 /* youtube_ios_player_helper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D4F8239FB329387A8476B964D92D92E7 /* FSPagerView */ = {
@@ -481,7 +578,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = DD11EDF0F3A238DF07AEE5C11400816F /* Products */;
+			productRefGroup = A4D2589D48C4A9697B5AAFD7E7F89898 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -489,12 +586,21 @@
 				548E0F26A10990707D8D4870D2490ACC /* iCarousel */,
 				C2C460C99D4FEA66D1D1E439CB24879B /* Pods-MovieAPP2_demo */,
 				C4A0A7D8591B67FB75E2E8D215E3735B /* SideMenu */,
+				D1A7AF186BE136DE56FD5699070589B8 /* youtube-ios-player-helper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C43A87D73F8F47821DE4AC9DF2E284F /* Resources */ = {
+		5D870BFFEC56FA6BCB0BD3F7C619A53D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8C22822FA929E89335F959F79BD29D2 /* Assets.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9994B548EB9A87FA1E545D0A55BA8413 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -525,6 +631,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1D0FE5D1FA457436D50E3286E7C355B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95360566E941F235D6B8CE1C4C3035D1 /* youtube-ios-player-helper-dummy.m in Sources */,
+				D03B6BD25AEC918C55C1A092C4ED472B /* YTPlayerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4604796109ED03C67EC3A1AF2C61E803 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D78D289FF4CEAE9DFD14BA520B7F679 /* Pods-MovieAPP2_demo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B35506D347717001114F114BE3AF9CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -556,14 +679,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A27CF637C51526B644A4DFA39B9F3361 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B7C7ABEC9C3B3647A671B274EC8F10F /* Pods-MovieAPP2_demo-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C4484A10068696C80FF01E1E3C8CE558 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,30 +698,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		39BF3DDF957E4226FC7D4293DF3C4F4B /* PBXTargetDependency */ = {
+		8A8FDDBC4D26EFC3422BB549595E4332 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = iCarousel;
-			target = 548E0F26A10990707D8D4870D2490ACC /* iCarousel */;
-			targetProxy = 3D6EBACD285BEF131EC62D0C1837A787 /* PBXContainerItemProxy */;
+			name = "youtube-ios-player-helper";
+			target = D1A7AF186BE136DE56FD5699070589B8 /* youtube-ios-player-helper */;
+			targetProxy = EE9B01EF923EB87CF06404EB0B6D5C23 /* PBXContainerItemProxy */;
 		};
-		9B6B5331284477FE747916EE2665BFC7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SideMenu;
-			target = C4A0A7D8591B67FB75E2E8D215E3735B /* SideMenu */;
-			targetProxy = E00253DD1DE00D1076448B1C128E0614 /* PBXContainerItemProxy */;
-		};
-		B65B7A08A02072F3D5CD63665296616F /* PBXTargetDependency */ = {
+		990583AB0F00FE53FDF56A29949B21DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FSPagerView;
 			target = D4F8239FB329387A8476B964D92D92E7 /* FSPagerView */;
-			targetProxy = 9EE02D5EFAED01F938538673EAAA9895 /* PBXContainerItemProxy */;
+			targetProxy = 7B1B9DD3EE233C7189E7FD6D1EAB8B60 /* PBXContainerItemProxy */;
+		};
+		9D43D92E9FD4034707F24426AEB14201 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SideMenu;
+			target = C4A0A7D8591B67FB75E2E8D215E3735B /* SideMenu */;
+			targetProxy = 0839FBAAA9992597F6437D4C1FB54F5E /* PBXContainerItemProxy */;
+		};
+		C1CE900704E640551753A70A7A6408A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iCarousel;
+			target = 548E0F26A10990707D8D4870D2490ACC /* iCarousel */;
+			targetProxy = 32F0E7EE0D1F1F909A82742720A9DF08 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0B1CC7BD6B8F30F1CF4BA13B3D1F66C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2B5EED59BA7F1D0F31C79C7D0C61A3C /* FSPagerView.release.xcconfig */;
+			baseConfigurationReference = 557DDE59E662FE921B76AC294E3079C0 /* FSPagerView.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -641,7 +762,7 @@
 		};
 		0FC98422908F1DD0D387A15F641DABCA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17873ACD4584C9596E79F15978A68D40 /* SideMenu.release.xcconfig */;
+			baseConfigurationReference = 84FA5B95116CE44CEE0BC97920B2BD83 /* SideMenu.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -675,46 +796,9 @@
 			};
 			name = Release;
 		};
-		1F51979C59511C127F68FAE0C6C20201 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAA3ED10901C13D98776333C4F1BB3DF /* Pods-MovieAPP2_demo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieAPP2_demo/Pods-MovieAPP2_demo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieAPP2_demo/Pods-MovieAPP2_demo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		296B6A122D4DDB50F57AD87F217DE7A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1822E06C338FAEA50F7657C94ADA639C /* SideMenu.debug.xcconfig */;
+			baseConfigurationReference = 42C76443EB92C3938FCC5D18A3EC3696 /* SideMenu.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -747,9 +831,44 @@
 			};
 			name = Debug;
 		};
+		662C3C259C2E0C9A56499E6981E210B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86A48220991A974C3DB344F4F19921E0 /* youtube-ios-player-helper.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper.modulemap";
+				PRODUCT_MODULE_NAME = youtube_ios_player_helper;
+				PRODUCT_NAME = youtube_ios_player_helper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		6BBDB5179B7EB533C4CDE7F0C2647E7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0520B9B5229D4A024897A3F35FD2894B /* FSPagerView.debug.xcconfig */;
+			baseConfigurationReference = 5D3EB5E6E5629F71AA1B0AC1C61CC65A /* FSPagerView.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -845,7 +964,7 @@
 		};
 		750008C71AC0775A0448E4C1CC989748 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 736783C7771FB0AC9811E0BED8EFCA7D /* iCarousel.debug.xcconfig */;
+			baseConfigurationReference = DB8E1E4D2CD7449CF910016217365F5F /* iCarousel.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -945,7 +1064,7 @@
 		};
 		85349D66D9CCF0AA62B5AF0E0B465937 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31AE3B663BA34BFFC28C295FA32ED2A2 /* iCarousel.release.xcconfig */;
+			baseConfigurationReference = DBEFDBA7C2B3AC653E49D9BB6A309DF7 /* iCarousel.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -978,7 +1097,44 @@
 			};
 			name = Release;
 		};
-		E76D71821AEFDCD93DA5070D5647B3B5 /* Release */ = {
+		95D2C90C0BE692A69660E774FA25B592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAA3ED10901C13D98776333C4F1BB3DF /* Pods-MovieAPP2_demo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieAPP2_demo/Pods-MovieAPP2_demo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieAPP2_demo/Pods-MovieAPP2_demo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7C0D3C517DAC923D717FC4BEBF33AA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C16AE2B885285A83957D7D74A6B80D29 /* Pods-MovieAPP2_demo.release.xcconfig */;
 			buildSettings = {
@@ -1016,9 +1172,63 @@
 			};
 			name = Release;
 		};
+		BB64F5420FB9C8E240944385F9C679AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 218BEC2F5FFEBB69DA9A0BA66F53B9C8 /* youtube-ios-player-helper.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper.modulemap";
+				PRODUCT_MODULE_NAME = youtube_ios_player_helper;
+				PRODUCT_NAME = youtube_ios_player_helper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		20122DD765B62B4CDEF3E8EF198B58FD /* Build configuration list for PBXNativeTarget "youtube-ios-player-helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662C3C259C2E0C9A56499E6981E210B9 /* Debug */,
+				BB64F5420FB9C8E240944385F9C679AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D9E50EF814F165932D2CB354B12E08E /* Build configuration list for PBXNativeTarget "Pods-MovieAPP2_demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D2C90C0BE692A69660E774FA25B592 /* Debug */,
+				B7C0D3C517DAC923D717FC4BEBF33AA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1051,15 +1261,6 @@
 			buildConfigurations = (
 				6BBDB5179B7EB533C4CDE7F0C2647E7D /* Debug */,
 				0B1CC7BD6B8F30F1CF4BA13B3D1F66C2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FBB5DCA245263047AB52D39213DA1297 /* Build configuration list for PBXNativeTarget "Pods-MovieAPP2_demo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1F51979C59511C127F68FAE0C6C20201 /* Debug */,
-				E76D71821AEFDCD93DA5070D5647B3B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

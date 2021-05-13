@@ -82,5 +82,53 @@ class FetchData {
             }.resume()
         }
     }
+    func getDataDetail(url : String, completed: @escaping (MovieDetail?, Bool, Error?)->Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+                
+                guard let data =  data else {return}
+                
+                do{
+                    
+                    let postsData = try JSONDecoder().decode(MovieDetail.self,from: data)
+                    DispatchQueue.main.async {
+                        completed(postsData, true, nil)
+                    }
+                    
+                    
+                }catch{
+                    completed(nil, false, error)
+                }
+            }.resume()
+        }
+    }
+    func getDataDetail2(url : String, completed: @escaping (MovieDetails?, Bool, Error?)->Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+                
+                guard let data =  data else {return}
+                
+                do{
+                    
+                    let postsData = try JSONDecoder().decode(MovieDetails.self,from: data)
+                    DispatchQueue.main.async {
+                        completed(postsData, true, nil)
+                    }
+                    
+                    
+                }catch{
+                    completed(nil, false, error)
+                }
+            }.resume()
+        }
+    }
 }
 

@@ -94,11 +94,6 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
   
             }
         }
-
-//        DispatchQueue.main.async {
-//            self.myCollection.reloadData()
-//
-//        }
         
     }
     
@@ -106,6 +101,17 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
+    }
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return 6
+    }
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        let view  = UIView(frame: CGRect(x: 20, y: 0, width: 150 , height: 150))
+        let myImage = UIImageView(frame: view.bounds)
+        view.addSubview(myImage)
+        myImage.contentMode = .scaleAspectFill
+        myImage.image = UIImage(named: "\(index+1)")
+        return view
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if index == 1{
@@ -129,17 +135,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
         }
         return 0
     }
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return 6
-    }
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let view  = UIView(frame: CGRect(x: 20, y: 0, width: 150 , height: 150))
-        let myImage = UIImageView(frame: view.bounds)
-        view.addSubview(myImage)
-        myImage.contentMode = .scaleAspectFill
-        myImage.image = UIImage(named: "\(index+1)")
-        return view
-    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
      
@@ -246,7 +242,32 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = HomeDetailViewController()
+        
+        if index == 2 {
+            let movie = myDataPopular?.results[indexPath.row]
+            vc.mydataPopular = movie
+            vc.DetailID = movie!.id
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+        }else if index == 3 {
+            let movie = myDataPopular?.results[indexPath.row]
+            vc.mydataPopular = movie
+            vc.DetailID = movie!.id
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+        }else if index == 4 {
+            let movie = myDataNowLaying?.results[indexPath.row]
+            vc.mydataNowPlaying = movie
+            vc.DetailID = movie!.id
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+        }else if index == 5 {
+            let movie = myDataNowLaying?.results[indexPath.row]
+            vc.mydataNowPlaying = movie
+            vc.DetailID = movie!.id
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+    }
     
+}
 }
 
 

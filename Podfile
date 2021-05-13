@@ -9,5 +9,6 @@ target 'MovieAPP2_demo' do
 	pod 'FSPagerView'
 	pod 'iCarousel'
 	pod 'SideMenu'
+	pod 'youtube-ios-player-helper'
 
 end
