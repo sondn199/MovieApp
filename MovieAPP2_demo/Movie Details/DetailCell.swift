@@ -83,7 +83,8 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
         }else if index == 2 {
             let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! CollectionViewOfSecssion2
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listCast1[indexPath.row].profilePath ?? "")"), completed: nil)
-          
+            cell.lblNameReal.text = listCast1[indexPath.row].name
+            cell.lblNameFake.text = listCast1[indexPath.row].character
             cell.layer.cornerRadius = 10
             cell.layer.masksToBounds = true
             return cell

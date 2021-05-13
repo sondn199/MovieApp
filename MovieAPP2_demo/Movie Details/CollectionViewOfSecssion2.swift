@@ -25,8 +25,12 @@ class CollectionViewOfSecssion2: UICollectionViewCell {
         view.backgroundColor = UIColor.init(hex: "200F37")
         lblNameReal.textColor = .white
         lblNameFake.textColor = UIColor.init(hex: "FFD0F3")
-        myImage.makeRounded()
-        // Initialization code
+        //myImage.makeRounded()
+        myImage.layer.borderWidth = 0.0
+        myImage.layer.masksToBounds = false
+        myImage.layer.borderColor = UIColor.white.cgColor
+        myImage.layer.cornerRadius = myImage.frame.size.height/2
+        myImage.clipsToBounds = true
     }
 
 }
