@@ -119,7 +119,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
             let cell = myTable.dequeueReusableCell(withIdentifier: "cell0", for: indexPath) as! CellOfSecsion0
             cell.lblNameFilm.text = nameFilm
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(image)"), completed: nil)
-            cell.lblDateOfYear.text = String(year.suffix(4))
+            cell.lblDateOfYear.text = String(year.prefix(4))
             cell.lblTime.text = String(time/60 ) + "h" + String(time%60) + "mins"
             cell.txtOverView.text = overview
             
