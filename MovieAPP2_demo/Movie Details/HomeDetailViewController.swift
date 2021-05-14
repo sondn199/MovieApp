@@ -153,7 +153,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
         case 1:
             return 200
         case 2:
-            return 200
+            return 250
         case 3:
             return 230
         case 4:

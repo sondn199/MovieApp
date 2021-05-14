@@ -85,8 +85,7 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listCast1[indexPath.row].profilePath ?? "")"), completed: nil)
             cell.lblNameReal.text = listCast1[indexPath.row].name
             cell.lblNameFake.text = listCast1[indexPath.row].character
-            cell.layer.cornerRadius = 10
-            cell.layer.masksToBounds = true
+            
             return cell
         }else if index == 4 {
             let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! CollectionCellOfSecsion4
@@ -127,7 +126,9 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
             return CGSize(width: myCollection.frame.size.width/2, height: myCollection.frame.size.height )
         }else if index == 4 {
             return CGSize(width: myCollection.frame.size.width - 100 , height: myCollection.frame.size.height )
+        }else if index == 2 {
+            return CGSize(width: 160  , height: 240 )
         }
-        return CGSize(width: myCollection.frame.size.width/3, height: myCollection.frame.size.height )
+        return CGSize(width: myCollection.frame.size.width/3 + 5, height: myCollection.frame.size.height )
     }
 }
