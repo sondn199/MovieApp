@@ -17,7 +17,8 @@ class CollectionCellOfSecsion35: UICollectionViewCell {
         super.awakeFromNib()
         myview.backgroundColor = UIColor.init(hex: "200F37")
         lblName.textColor = .white
-        lblRated.textColor = .white
+       // lblRated.textColor = .orange
+        
     }
 
 }
