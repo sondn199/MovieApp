@@ -131,4 +131,13 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
         }
         return CGSize(width: myCollection.frame.size.width/3 + 5, height: myCollection.frame.size.height )
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if index == 5 {
+            let vc = HomeDetailViewController()
+            let movie = myDataPopular?.results[indexPath.row]
+            vc.mydataPopular = movie
+            vc.DetailID = movie!.id
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+        }
+    }
 }
