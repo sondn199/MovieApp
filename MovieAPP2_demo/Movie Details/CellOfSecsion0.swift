@@ -14,6 +14,8 @@ class CellOfSecsion0: UITableViewCell {
 
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var btnPlay: UIButton!
+  
+    @IBOutlet weak var btnHeart: UIButton!
     @IBOutlet weak var lblNameFilm: UILabel!
     @IBOutlet weak var lblDateOfYear: UILabel!
     @IBOutlet weak var lblTime: UILabel!
@@ -26,6 +28,8 @@ class CellOfSecsion0: UITableViewCell {
         lblNameFilm.textColor = .white
         lblTime.textColor = .white
         lblDateOfYear.textColor = .white
+        btnHeart.setImage(UIImage(named: "Vector-9"), for: .normal)
+        
         
     }
 
@@ -34,6 +38,13 @@ class CellOfSecsion0: UITableViewCell {
 
         
     }
-    @IBOutlet weak var btnHeart: UIImageView!
+    @IBAction func btnHeart(_ sender: Any) {
+        if btnHeart.image(for: .normal) == UIImage(named: "Vector-9"){
+            btnHeart.setImage(UIImage(named: "Vector-10"), for: .normal)
+        }else{
+            btnHeart.setImage(UIImage(named: "Vector-9"), for: .normal)
+        }
+    }
+    
     
 }

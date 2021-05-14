@@ -30,6 +30,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
     
     
    
+    @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var lblNameFilm: UILabel!
     @IBOutlet weak var myTable: UITableView!
     
@@ -39,6 +40,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
    
         view.backgroundColor = UIColor.init(hex: "18072A")
         myTable.backgroundColor = UIColor.init(hex: "200F37")
+        titleView.backgroundColor = UIColor.init(hex: "200F37")
         setupData()
         setupUI()
       
@@ -142,7 +144,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
         
     }
     @IBAction func btnBack(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
