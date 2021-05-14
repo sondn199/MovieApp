@@ -66,4 +66,11 @@ class HomeNowPlaying: UIViewController,UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: myCollection.frame.width/2 - 10, height: myCollection.frame.height/3 + 30 )
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = HomeDetailViewController()
+        let movie = myDataNowLaying?.results[indexPath.row]
+        vc.mydataNowPlaying = movie
+        vc.DetailID = movie!.id
+        UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+    }
 }

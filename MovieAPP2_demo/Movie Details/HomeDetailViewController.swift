@@ -41,6 +41,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
         view.backgroundColor = UIColor.init(hex: "18072A")
         myTable.backgroundColor = UIColor.init(hex: "200F37")
         titleView.backgroundColor = UIColor.init(hex: "200F37")
+        self.lblNameFilm.textColor = .white
         setupData()
         setupUI()
       
@@ -75,7 +76,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
                 cellDetail.listCast1 = self.listCast
                 self.myTable.reloadData()
                 self.lblNameFilm.text = self.myDataDetail?.originalTitle
-                self.lblNameFilm.textColor = .red
+                
                 
             }
             } else  {
@@ -96,7 +97,6 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
                         cellDetail.listCast1 = self.listCast
                         self.myTable.reloadData()
                         self.lblNameFilm.text = self.myDataDetail2?.originalTitle
-                        self.lblNameFilm.textColor = .red
                         
                     }
                 }
