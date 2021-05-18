@@ -20,6 +20,7 @@ class CellOfSecsion0: UITableViewCell {
     @IBOutlet weak var lblDateOfYear: UILabel!
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var txtOverView: UITextView!
+    @IBOutlet weak var heightForOververView: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.backgroundColor = UIColor.init(hex: "200F37")
@@ -30,8 +31,9 @@ class CellOfSecsion0: UITableViewCell {
         lblDateOfYear.textColor = .white
         btnHeart.setImage(UIImage(named: "Vector-9"), for: .normal)
         
-        
+       
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -108,6 +108,9 @@
                                     <constraint firstAttribute="width" constant="30" id="rj5-tQ-L8w"/>
                                 </constraints>
                                 <state key="normal" image="Vector-3"/>
+                                <connections>
+                                    <action selector="didTapButtonSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gxr-9o-aGp"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

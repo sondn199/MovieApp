@@ -65,6 +65,14 @@ class HomeGenre: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: myCollection.frame.size.width/3 - 15, height: myCollection.frame.size.height/6)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vcGenre = ListMovieByGenreView()
+        let movie = listGenre[indexPath.row]
+        vcGenre.dataGenre = movie
+        vcGenre.id = movie.id 
+      //  vcGenre.NameFilm = "List Movie \(movie?.name ?? "")"
+        UIApplication.getTopViewController()?.present(vcGenre, animated: true, completion: nil)
+    }
    
 
 }

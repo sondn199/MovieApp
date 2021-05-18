@@ -130,5 +130,25 @@ class FetchData {
             }.resume()
         }
     }
+    func getDataSearchMovie (urlString: String, completion : @escaping (_ data : SearchMovieByTitle?,_ sucsses : Bool) -> Void){
+        if let url = URL(string: urlString){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: request) { (data, reponse, error) in
+                
+                guard let data = data else {return}
+                do{
+                    let postData = try JSONDecoder().decode(SearchMovieByTitle.self, from: data)
+                    DispatchQueue.main.async {
+                        completion(postData,true)
+                    }
+                }catch{
+                    completion(nil,false)
+                }
+            }.resume()
+        }
+    }
 }
 

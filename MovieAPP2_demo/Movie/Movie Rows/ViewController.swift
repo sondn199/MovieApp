@@ -19,6 +19,7 @@ import SideMenu
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var btnSearch: UIButton!
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var btnTvShow: UIButton!
     @IBOutlet weak var btnMovie: UIButton!
@@ -58,6 +59,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         setupData()
         setupUI()
     }
+    
+    @IBAction func didTapButtonSearch(_ sender: Any) {
+        let vc = SearchViewController()
+        vc.modalPresentationStyle = .fullScreen
+        UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+    }
+    
+    
     class MenuList : UITableViewController {
         
         var items = ["Home","Favorite","Setting"]
@@ -88,6 +97,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             cell.backgroundColor = UIColor.init(hex: "2B1462")
             return cell
         }
+        @IBAction func btnSearch(_ sender: Any) {
+            let vc = SearchViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
+        
+
+        
         override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             let headerview = UIView()
             headerview.backgroundColor = UIColor.clear

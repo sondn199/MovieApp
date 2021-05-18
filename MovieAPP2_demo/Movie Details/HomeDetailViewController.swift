@@ -143,6 +143,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
           //  return UITableViewCell()
         
     }
+   
     @IBAction func btnBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

@@ -265,7 +265,14 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
             vc.mydataNowPlaying = movie
             vc.DetailID = movie!.id
             UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
-    }
+        }else if index == 1{
+            let vcGenre = ListMovieByGenreView()
+            let movie = myDataGenre?.genres[indexPath.row]
+            vcGenre.dataGenre = movie
+            vcGenre.id = movie?.id ?? 0
+          //  vcGenre.NameFilm = "List Movie \(movie?.name ?? "")"
+            UIApplication.getTopViewController()?.present(vcGenre, animated: true, completion: nil)
+        }
     
 }
 }
