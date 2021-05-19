@@ -26,6 +26,9 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
     var listCast = [Cast]()
     var thumbnailYTB = [Result1]()
     
+    var myDataMovieImage : MovieImages?
+    var listImageforMovie = [Backdrop]()
+    
     
     
     
@@ -129,6 +132,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
         }else{
             let cell = myTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DetailCell
             cell.index = indexPath.section
+            cell.id = self.DetailID
             cell.listCast1 = self.listCast
             cell.backdrop_path = self.drop_path
             cell.poter_path1 = self.poter_path
@@ -168,7 +172,9 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: myTable.frame.width, height: 200))
-        let title = UILabel(frame: CGRect(x: 10, y: 0, width: 300, height: 20))
+        let title = UILabel(frame: CGRect(x: 10, y: 0, width: 200, height: 20))
+        let countImage = UILabel(frame: CGRect(x: 80, y: 0, width: 100, height: 15))
+        countImage.textColor = UIColor.init(hex: "#CBB5FF")
         title.textColor = .white
         switch section {
         case 1:
@@ -180,12 +186,20 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
             title.text = "Cusrent Seasion"
         case 4:
             title.text = "Images"
+            FetchData.shared.getDataMovieImages(url: "https://api.themoviedb.org/3/movie/\(DetailID)/images?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
+                self.myDataMovieImage = data
+                self.listImageforMovie = self.myDataMovieImage?.backdrops ?? []
+            
+                countImage.text = String(self.listImageforMovie.count)
+            }
+            
         case 5:
             title.text = "Related"
         default:
             break
         }
         view.addSubview(title)
+        view.addSubview(countImage)
         return view
     }
 

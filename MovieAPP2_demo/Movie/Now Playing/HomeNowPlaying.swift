@@ -49,7 +49,7 @@ class HomeNowPlaying: UIViewController,UICollectionViewDelegate,UICollectionView
             cell.lblTop.isHidden = true
             cell.layer.cornerRadius = 8
             cell.layer.masksToBounds = true
-            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listNowPlaying[indexPath.row].posterPath)"), completed: nil)
+            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listNowPlaying[indexPath.row].posterPath ?? "")"), completed: nil)
             cell.lblNameFilm.text = listNowPlaying[indexPath.row].originalTitle
             cell.lblRated.text = String(Double(listNowPlaying[indexPath.row].voteAverage))
             return cell

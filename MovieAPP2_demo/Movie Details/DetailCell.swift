@@ -10,6 +10,7 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
    
     @IBOutlet weak var myCollection: UICollectionView!
     
+    var id : Int = 0
     var index : Int = 0
     var listCast1 = [Cast]()
     var myDataPopular : Popular?
@@ -19,6 +20,8 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
     var vote_average1 : Double = 0.0
     var nameTitle1 : String = ""
     var ThumbnailYoutube = [Result1]()
+    var myDataMovieImage : MovieImages?
+    var listImageforMovie = [Backdrop]()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +33,16 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
     
     }
     func setupData(){
-        if index == 5 {
+        if index == 4{
+            FetchData.shared.getDataMovieImages(url: "https://api.themoviedb.org/3/movie/\(id)/images?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
+                self.myDataMovieImage = data
+                self.listImageforMovie = self.myDataMovieImage?.backdrops ?? []
+                DispatchQueue.main.async {
+                    self.myCollection.reloadData()
+                }
+            }
+        }
+       else if index == 5 {
             FetchData.shared.getDataPopular(url: "https://api.themoviedb.org/3/discover/movie?api_key=3956f50a726a2f785334c24759b97dc6&with_genres=28&page=1") { (data, success, error) in
                 self.myDataPopular = data
                 self.popular2 = self.myDataPopular?.results ?? []
@@ -61,10 +73,12 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if index == 5{
             return popular2.count
-        }else if index == 3 || index == 4 {
+        }else if index == 3  {
             return 1
         }else if index == 1 {
             return ThumbnailYoutube.count
+        }else if index == 4{
+            return listImageforMovie.count
         }
         return listCast1.count
     }
@@ -89,13 +103,12 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
             return cell
         }else if index == 4 {
             let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! CollectionCellOfSecsion4
-            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(poter_path1)"), completed: nil)
-            cell.layer.cornerRadius = 10
-            cell.layer.masksToBounds = true
+            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listImageforMovie[indexPath.row].filePath)"), completed: nil)
+            
             return cell
         }else if index == 3 {
             let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell35", for: indexPath) as! CollectionCellOfSecsion35
-            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(backdrop_path)"), completed: nil)
+            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(poter_path1)"), completed: nil)
             cell.lblName.text = nameTitle1
             cell.lblRated.text = String(Double(vote_average1))
             cell.layer.cornerRadius = 10
@@ -107,7 +120,7 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
                 
             
             
-            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydata.results[indexPath.row].posterPath)"), completed: nil)
+                cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydata.results[indexPath.row].posterPath ?? "")"), completed: nil)
             cell.lblName.text = mydata.results[indexPath.row].originalTitle
                 cell.lblRated.text = String(Double(mydata.results[indexPath.row].voteAverage ))
                 cell.layer.cornerRadius = 10
@@ -135,8 +148,13 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
         if index == 5 {
             let vc = HomeDetailViewController()
             let movie = myDataPopular?.results[indexPath.row]
-            vc.mydataPopular = movie
+         //   vc.mydataPopular = movie
             vc.DetailID = movie!.id
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+        }else if index == 2 {
+            let vc = CastDetailViewController()
+            let movie = listCast1[indexPath.row]
+            vc.person_id = movie.id
             UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
         }
     }

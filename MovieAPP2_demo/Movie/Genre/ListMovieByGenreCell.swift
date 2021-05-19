@@ -16,6 +16,7 @@ class ListMovieByGenreCell: UITableViewCell {
     @IBOutlet weak var footerView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        contentView.backgroundColor = UIColor.init(hex: "200F37")
         lblNameFilm.textColor = .white
         lblDate.textColor = .white
         footerView.backgroundColor = UIColor.init(hex: "200F37")

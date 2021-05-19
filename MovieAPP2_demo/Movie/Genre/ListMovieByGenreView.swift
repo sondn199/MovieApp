@@ -65,7 +65,7 @@ class ListMovieByGenreView: UIViewController, UITableViewDelegate,UITableViewDat
         if let cell = myTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListMovieByGenreCell{
             if listGenre.count != 0 {
             
-                    cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(data1[indexPath.row].backdropPath)"), completed: nil)
+                cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(data1[indexPath.row].backdropPath ?? "")"), completed: nil)
                 cell.myImage.layer.cornerRadius = 10
                     cell.lblNameFilm.text = data1[indexPath.row].originalTitle
                     cell.lblDate.text = data1[indexPath.row].releaseDate

@@ -50,7 +50,7 @@ class HomePopular: UIViewController,UICollectionViewDelegate,UICollectionViewDat
             cell.lblTop.isHidden = true
             cell.layer.cornerRadius = 8
             cell.layer.masksToBounds = true
-            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listPopular[indexPath.row].posterPath)"), completed: nil)
+            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listPopular[indexPath.row].posterPath ?? "")"), completed: nil)
             cell.lblNameFilm.text = listPopular[indexPath.row].originalTitle
             cell.lblRated.text = String(Double(listPopular[indexPath.row].voteAverage))
             return cell

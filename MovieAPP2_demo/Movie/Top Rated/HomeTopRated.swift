@@ -48,7 +48,7 @@ class HomeTopRated: UIViewController,UICollectionViewDelegate,UICollectionViewDa
         if let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? myCollectionCell{
             cell.layer.cornerRadius = 8
             cell.layer.masksToBounds = true
-            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listTopRated[indexPath.row].posterPath)"), completed: nil)
+            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listTopRated[indexPath.row].posterPath ?? "")"), completed: nil)
             cell.lblNameFilm.text = listTopRated[indexPath.row].originalTitle
             cell.lblRated.text = String(Double(listTopRated[indexPath.row].voteAverage))
             return cell

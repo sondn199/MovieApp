@@ -50,7 +50,7 @@ class HomeUpComing: UIViewController,UICollectionViewDelegate,UICollectionViewDa
         if let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? UpComingCell{
             cell.layer.cornerRadius = 15
             cell.layer.masksToBounds = true
-            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listUpComing[indexPath.row].posterPath)"), completed: nil)
+            cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listUpComing[indexPath.row].posterPath ?? "")"), completed: nil)
             cell.lblName.text = listUpComing[indexPath.row].originalTitle
             return cell
         }

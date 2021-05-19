@@ -136,8 +136,7 @@ class FetchData {
             request.httpMethod = "GET"
             request.timeoutInterval = 120
             
-            URLSession.shared.dataTask(with: request) { (data, reponse, error) in
-                
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
                 guard let data = data else {return}
                 do{
                     let postData = try JSONDecoder().decode(SearchMovieByTitle.self, from: data)
@@ -146,6 +145,78 @@ class FetchData {
                     }
                 }catch{
                     completion(nil,false)
+                }
+            }.resume()
+        }
+    }
+    func getDataMovieImages(url : String, completed: @escaping (MovieImages?, Bool, Error?)->Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+                
+                guard let data =  data else {return}
+                
+                do{
+                    
+                    let postsData = try JSONDecoder().decode(MovieImages.self,from: data)
+                    DispatchQueue.main.async {
+                        completed(postsData, true, nil)
+                    }
+                    
+                    
+                }catch{
+                    completed(nil, false, error)
+                }
+            }.resume()
+        }
+    }
+    func getDataCastImages(url : String, completed: @escaping (CastImages?, Bool, Error?)->Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+                
+                guard let data =  data else {return}
+                
+                do{
+                    
+                    let postsData = try JSONDecoder().decode(CastImages.self,from: data)
+                    DispatchQueue.main.async {
+                        completed(postsData, true, nil)
+                    }
+                    
+                    
+                }catch{
+                    completed(nil, false, error)
+                }
+            }.resume()
+        }
+    }
+    func getDataCastDetail(url : String, completed: @escaping (Person?, Bool, Error?)->Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+                
+                guard let data =  data else {return}
+                
+                do{
+                    
+                    let postsData = try JSONDecoder().decode(Person.self,from: data)
+                    DispatchQueue.main.async {
+                        completed(postsData, true, nil)
+                    }
+                    
+                }catch{
+                    completed(nil, false, error)
+                    
                 }
             }.resume()
         }

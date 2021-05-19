@@ -160,7 +160,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                     cell.layer.cornerRadius = 8
                    
                     cell.layer.masksToBounds = true
-                    cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataPopular.results[indexPath.row].posterPath)"), completed: nil)
+                    cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataPopular.results[indexPath.row].posterPath ?? "")"), completed: nil)
                     cell.lblNameFilm.text = mydataPopular.results[indexPath.row].originalTitle
                     cell.lblRated.text = String(Double(mydataPopular.results[indexPath.row].voteAverage))
                 }
@@ -175,7 +175,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                     cell.layer.cornerRadius = 8
                    
                     cell.layer.masksToBounds = true
-                    cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataPopular.results[indexPath.row].posterPath)"), completed: nil)
+                    cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataPopular.results[indexPath.row].posterPath ?? "")"), completed: nil)
                     cell.lblNameFilm.text = mydataPopular.results[indexPath.row].originalTitle
                     cell.lblRated.text = String(Double((mydataPopular.results[indexPath.row].voteAverage)))
                 }
@@ -190,7 +190,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                    
                     cell.layer.masksToBounds = true
                     cell.lblTop.isHidden = true
-                    cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataNowPlaying.results[indexPath.row].posterPath)"), completed: nil)
+                    cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataNowPlaying.results[indexPath.row].posterPath ?? "")"), completed: nil)
                     cell.lblNameFilm.text = mydataNowPlaying.results[indexPath.row].originalTitle
                     cell.lblRated.text = String(Double((mydataNowPlaying.results[indexPath.row].voteAverage)))
                 }
@@ -203,7 +203,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                 if let mydataNowPlaying = myDataNowLaying{
                     cell.layer.cornerRadius = 15
                     cell.layer.masksToBounds = true
-                    cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataNowPlaying.results[indexPath.row].posterPath)"), completed: nil)
+                    cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataNowPlaying.results[indexPath.row].posterPath ?? "")"), completed: nil)
                     cell.lblName.text = mydataNowPlaying.results[indexPath.row].originalTitle
                     
                 }

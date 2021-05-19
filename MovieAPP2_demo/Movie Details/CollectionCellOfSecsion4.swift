@@ -12,7 +12,8 @@ class CollectionCellOfSecsion4: UICollectionViewCell {
     @IBOutlet weak var myImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        myImage.layer.cornerRadius = 10
+        myImage.layer.masksToBounds = true
     }
 
 }

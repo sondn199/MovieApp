@@ -17,16 +17,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fv2-zT-g94">
-                        <rect key="frame" x="0.0" y="0.0" width="194" height="161"/>
+                        <rect key="frame" x="10" y="10" width="174" height="141"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="fv2-zT-g94" secondAttribute="trailing" id="IXO-bb-oGl"/>
-                <constraint firstItem="fv2-zT-g94" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Kgd-U2-roS"/>
-                <constraint firstItem="fv2-zT-g94" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OEc-X1-Lfh"/>
-                <constraint firstAttribute="bottom" secondItem="fv2-zT-g94" secondAttribute="bottom" id="pqD-qz-bMD"/>
+                <constraint firstAttribute="trailing" secondItem="fv2-zT-g94" secondAttribute="trailing" constant="10" id="IXO-bb-oGl"/>
+                <constraint firstItem="fv2-zT-g94" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Kgd-U2-roS"/>
+                <constraint firstItem="fv2-zT-g94" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="OEc-X1-Lfh"/>
+                <constraint firstAttribute="bottom" secondItem="fv2-zT-g94" secondAttribute="bottom" constant="10" id="pqD-qz-bMD"/>
             </constraints>
             <size key="customSize" width="194" height="161"/>
             <connections>
