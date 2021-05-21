@@ -12,6 +12,8 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     var myDataSearch : SearchMovieByTitle?
     var listSearch = [Result2]()
     var recent = [String]()
+    var searchtext : String = ""
+    var delegate: reload?
     
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var SearchBarController: UISearchBar!
@@ -20,20 +22,38 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        SearchBarController.barTintColor = UIColor.init(hex: "200F37")
+        headerView.backgroundColor = UIColor.init(hex: "200F37")
+        view.backgroundColor = UIColor.init(hex: "17082A")
+        SearchBarController.text = searchtext
+        setupData()
         setupUI()
+
     }
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func setupData(){
+        DispatchQueue.main.async {
+            self.SearchTable.reloadData()
+        }
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
        
-        let searchItems = searchBar.text?.lowercased() ?? ""
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 
-        Tools.SaveObjectUserDefault(searchItems, key: "search")
-        recent.append(Tools.GetObjectUserDefault(key: "search") as! String)
-        print("")
-        
+        var searchItems = searchBar.text?.lowercased() ?? ""
+
+        searchItems = searchItems.replacingOccurrences(of: " ", with: "%20")
+        Tools.SaveObjectUserDefault(searchItems.replacingOccurrences(of: "%20", with: " "), key: "search")
+        self.recent.append(Tools.GetObjectUserDefault(key: "search") as! String )
+        //print("🤩\(self.recent)")
+
         //Cat chuoi truoc dau cach " " va dau cach ""
 //        guard let first = searchItems.firstIndex(of: " ") else { return  }
 //        let firstPart = searchItems.prefix(upTo: first)
@@ -41,28 +61,30 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
 //        guard let end = searchItems.firstIndex(of: " ") else { return  }
 //        var endPart1 = searchItems.suffix(from: end)
 //        print("😂end\(endPart1)")
-        print("😂\(searchItems)")
+        
+        
         FetchData.shared.getDataSearchMovie(urlString: "https://api.themoviedb.org/3/search/movie?api_key=d9894dad6e8acb82a7c54a35185356bf&query=\(searchItems)&page=1") { (data, true) in
+            print("https://api.themoviedb.org/3/search/movie?api_key=d9894dad6e8acb82a7c54a35185356bf&query=\(searchItems)&page=1")
             self.myDataSearch = data
             self.listSearch = self.myDataSearch?.results ?? []
-           // print("❤️\(self.listSearch)")
+           
             DispatchQueue.main.async {
                 self.SearchTable.reloadData()
             }
         }
-    
+
     }
-    
     func setupUI(){
         SearchTable.delegate = self
         SearchTable.dataSource = self
         SearchBarController.showsScopeBar = true
         SearchBarController.delegate = self
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         SearchTable.register(UINib(nibName: "ListMovieByGenreCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
         return listSearch.count
     }
     
@@ -87,25 +109,20 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 125
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = HomeDetailViewController()
+        let movie = listSearch[indexPath.row]
+        vc.DetailID = movie.id
+        present(vc, animated: true, completion: nil)
+    }
    
     @IBAction func btnBack(_ sender: Any) {
+        delegate?.reloaddata(data: self.recent)
         self.dismiss(animated: true, completion: nil)
     }
     
 }
-//extension String {
-//    private static let slugSafeCharacters = CharacterSet(charactersIn: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-")
-//
-//    public func convertedToSlug() -> String? {
-//        if let latin = self.applyingTransform(StringTransform("Any-Latin; Latin-ASCII; Lower;"), reverse: false) {
-//            let urlComponents = latin.components(separatedBy: String.slugSafeCharacters.inverted)
-//            let result = urlComponents.filter { $0 != "" }.joined(separator: "-")
-//
-//            if result.count > 0 {
-//                return result
-//            }
-//        }
-//
-//        return nil
-//    }
-//}
+
+protocol reload {
+    func reloaddata(data: [String])
+}

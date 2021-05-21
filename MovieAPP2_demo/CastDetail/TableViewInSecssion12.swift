@@ -80,5 +80,19 @@ class TableViewInSecssion12: UITableViewCell,UICollectionViewDelegate,UICollecti
         }
         return CGSize(width: 0, height: 0)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if index == 1 {
+            let vc = PreViewImage()
+            vc.modalPresentationStyle = .fullScreen
+            let image = listImage1[indexPath.row]
+            vc.nameCast = image.filePath
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+        }else if index == 2 {
+            let vc = HomeDetailViewController()
+            let movie = listMostSuccessFullMovie1[indexPath.row]
+            vc.DetailID = movie.id
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+        }
+    }
     
 }

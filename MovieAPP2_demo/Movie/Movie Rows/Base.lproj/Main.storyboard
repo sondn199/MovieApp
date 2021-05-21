@@ -109,7 +109,7 @@
                                 </constraints>
                                 <state key="normal" image="Vector-3"/>
                                 <connections>
-                                    <action selector="didTapButtonSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gxr-9o-aGp"/>
+                                    <action selector="ClickButtonSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CKy-Ng-La4"/>
                                 </connections>
                             </button>
                         </barButtonItem>

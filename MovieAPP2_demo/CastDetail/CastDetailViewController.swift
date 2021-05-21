@@ -34,7 +34,8 @@ class CastDetailViewController: UIViewController,UITableViewDelegate,UITableView
     func setupData(){
         FetchData.shared.getDataCastDetail(url: "https://api.themoviedb.org/3/person/\(person_id)?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
             self.dataCast = data
-          //  print("😇\(data)")
+//            print("😇\(self.person_id)")
+//            print("😇\(data)")
             DispatchQueue.main.async {
                 self.myTable.reloadData()
             }
@@ -68,7 +69,7 @@ class CastDetailViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     @IBAction func btnBack(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
@@ -108,7 +109,7 @@ class CastDetailViewController: UIViewController,UITableViewDelegate,UITableView
             let cell = myTable.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewInSecssion12
             cell.index = indexPath.section
             cell.listImage1 = listImageOfCast
-            print("🥶\(cell.listImage1)")
+          //  print("🥶\(cell.listImage1)")
             let ss = listMovieByCast.sorted { (s1, s2) -> Bool in
                 if s1.voteAverage > s2.voteAverage {
                     return true
@@ -129,6 +130,14 @@ class CastDetailViewController: UIViewController,UITableViewDelegate,UITableView
             return 200
         }
         return 125
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 3{
+            let vc = HomeDetailViewController()
+            let movie = listMovieByCast[indexPath.row]
+            vc.DetailID = movie.id
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+        }
     }
 
 }

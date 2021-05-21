@@ -54,6 +54,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                 self.lisGenre = self.myDataGenre?.genres ?? []
                 DispatchQueue.main.async {
                     self.myCollection.reloadData()
+                    
                 }
             }
             
@@ -82,7 +83,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                 DispatchQueue.main.async {
                     self.myCollection.reloadData()
                 }
-  
+                
             }
         }else if index == 5{
             FetchData.shared.getDataNowPlaying(url: "https://api.themoviedb.org/3/movie/upcoming?api_key=3956f50a726a2f785334c24759b97dc6&page=1") { (data, success, error) in
@@ -91,7 +92,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                 DispatchQueue.main.async {
                     self.myCollection.reloadData()
                 }
-  
+                
             }
         }
         
@@ -120,11 +121,11 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
             
         }else if index == 2 {
             return popular2.count
-                      
+            
             
         }else if index == 3 {
             return popular3.count
-          
+            
             
         }else if index == 4 {
             return nowPlaying1.count
@@ -138,27 +139,27 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-     
+        
         if  index == 1  {
-           
             
-                        if let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "genreCell", for: indexPath) as? GenreCell{
-                            if let mydataGenre = myDataGenre{
-                                cell.layer.cornerRadius = 10
-                                cell.layer.masksToBounds = true
-                                cell.GenreImage.image = UIImage(named: "Mask Group\(indexPath.row + 1)")
-                                cell.BackgoundImage.image = UIImage(named: "Rectangle 140\(indexPath.row + 1)")
-                               
-                                cell.lblName.text = mydataGenre.genres [indexPath.row].name
-                            }
-                            return cell
-                        }
+            
+            if let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "genreCell", for: indexPath) as? GenreCell{
+                if let mydataGenre = myDataGenre{
+                    cell.layer.cornerRadius = 10
+                    cell.layer.masksToBounds = true
+                    cell.GenreImage.image = UIImage(named: "Mask Group\(indexPath.row + 1)")
+                    cell.BackgoundImage.image = UIImage(named: "Rectangle 140\(indexPath.row + 1)")
+                    
+                    cell.lblName.text = mydataGenre.genres [indexPath.row].name
+                }
+                return cell
+            }
             
         }else  if index == 2 {
             if let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as? myCollectionCell{
                 if let mydataPopular = myDataPopular{
                     cell.layer.cornerRadius = 8
-                   
+                    
                     cell.layer.masksToBounds = true
                     cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataPopular.results[indexPath.row].posterPath ?? "")"), completed: nil)
                     cell.lblNameFilm.text = mydataPopular.results[indexPath.row].originalTitle
@@ -173,7 +174,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                 if let mydataPopular = myDataPopular{
                     cell.lblTop.isHidden = true
                     cell.layer.cornerRadius = 8
-                   
+                    
                     cell.layer.masksToBounds = true
                     cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataPopular.results[indexPath.row].posterPath ?? "")"), completed: nil)
                     cell.lblNameFilm.text = mydataPopular.results[indexPath.row].originalTitle
@@ -183,11 +184,11 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
             }
             
         }else if index == 4 {
-  
+            
             if let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as? myCollectionCell{
                 if let mydataNowPlaying = myDataNowLaying{
                     cell.layer.cornerRadius = 8
-                   
+                    
                     cell.layer.masksToBounds = true
                     cell.lblTop.isHidden = true
                     cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataNowPlaying.results[indexPath.row].posterPath ?? "")"), completed: nil)
@@ -217,16 +218,16 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if index == 1 {
             
-             return CGSize(width: myCollection.frame.width/3 - 10, height: myCollection.frame.height - 40  )
+            return CGSize(width: myCollection.frame.width/3 - 10, height: myCollection.frame.height - 40  )
             
             
         }else if index == 2 {
             return CGSize(width: myCollection.frame.width/3 - 10  , height: myCollection.frame.height )
-          
+            
             
         }else if index == 3 {
             return CGSize(width: myCollection.frame.width/3 - 10 , height: myCollection.frame.height  )
-           
+            
             
         }else if index == 4 {
             return CGSize(width: myCollection.frame.width/3 - 10, height: myCollection.frame.height )
@@ -267,14 +268,17 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
             UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
         }else if index == 1{
             let vcGenre = ListMovieByGenreView()
+            
+            
             let movie = myDataGenre?.genres[indexPath.row]
             vcGenre.dataGenre = movie
             vcGenre.id = movie?.id ?? 0
-          //  vcGenre.NameFilm = "List Movie \(movie?.name ?? "")"
+            
+            //  vcGenre.NameFilm = "List Movie \(movie?.name ?? "")"
             UIApplication.getTopViewController()?.present(vcGenre, animated: true, completion: nil)
         }
-    
-}
+        
+    }
 }
 
 

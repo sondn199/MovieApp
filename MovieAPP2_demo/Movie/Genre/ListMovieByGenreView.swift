@@ -14,13 +14,17 @@ class ListMovieByGenreView: UIViewController, UITableViewDelegate,UITableViewDat
     var dataGenre : Genre!
     var id : Int = 0
     var data1 = [Result]()
+    var lisGenre1 = [Genre]()
 
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var NameFilm: UILabel!
     @IBOutlet weak var myTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        NameFilm.text = "List Movie \(dataGenre.name)"
+        myTable.contentInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+        if dataGenre != nil{
+            NameFilm.text = "List Movie \(dataGenre.name )"
+        }
         headerView.backgroundColor = UIColor.init(hex: "200F37")
         view.backgroundColor = UIColor.init(hex: "17082A")
         myTable.backgroundColor = UIColor.init(hex: "200F37")

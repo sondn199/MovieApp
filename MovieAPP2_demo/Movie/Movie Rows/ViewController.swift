@@ -59,12 +59,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         setupData()
         setupUI()
     }
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
     
-    @IBAction func didTapButtonSearch(_ sender: Any) {
-        let vc = SearchViewController()
+    @IBAction func ClickButtonSearch(_ sender: Any) {
+        let vc = FirtVIewWhenclickButtonSearch()
         vc.modalPresentationStyle = .fullScreen
         UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
     }
+   
     
     
     class MenuList : UITableViewController {
@@ -97,14 +101,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             cell.backgroundColor = UIColor.init(hex: "2B1462")
             return cell
         }
-        @IBAction func btnSearch(_ sender: Any) {
-            let vc = SearchViewController()
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-        }
-        
-
-        
+       
         override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             let headerview = UIView()
             headerview.backgroundColor = UIColor.clear

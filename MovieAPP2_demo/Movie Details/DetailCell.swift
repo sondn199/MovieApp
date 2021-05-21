@@ -156,6 +156,12 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
             let movie = listCast1[indexPath.row]
             vc.person_id = movie.id
             UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
+        }else if index == 4 {
+            let vc = PreViewImage()
+            vc.modalPresentationStyle = .fullScreen
+            let image = listImageforMovie[indexPath.row]
+            vc.name = image.filePath
+            UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
         }
     }
 }

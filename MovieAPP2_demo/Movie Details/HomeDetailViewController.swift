@@ -40,8 +40,8 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        view.backgroundColor = UIColor.init(hex: "18072A")
+        //myTable.contentInset = UIEdgeInsets(top: 5, left: 15, bottom: 10, right: 15)
+        view.backgroundColor = UIColor.init(hex: "200F37")
         myTable.backgroundColor = UIColor.init(hex: "200F37")
         titleView.backgroundColor = UIColor.init(hex: "200F37")
         self.lblNameFilm.textColor = .white
@@ -56,6 +56,9 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
         myTable.dataSource = self
         myTable.register(UINib(nibName: "CellOfSecsion0", bundle: nil), forCellReuseIdentifier: "cell0")
         myTable.register(UINib(nibName: "DetailCell", bundle: nil), forCellReuseIdentifier: "cell")
+    }
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     func setupData(){
         let cellDetail = DetailCell()
@@ -175,17 +178,23 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
         let title = UILabel(frame: CGRect(x: 10, y: 0, width: 200, height: 20))
         let countImage = UILabel(frame: CGRect(x: 80, y: 0, width: 100, height: 15))
         countImage.textColor = UIColor.init(hex: "#CBB5FF")
+        let btnNext = UIButton(frame: CGRect(x: myTable.frame.size.width - 35 , y: 5, width: 20, height: 15))
+        btnNext.setImage(UIImage(named: "Vector-2"), for: .normal)
         title.textColor = .white
         switch section {
+        case 0 :
+            btnNext.isHidden = true
         case 1:
             title.text = "Trailers"
-            
+            btnNext.isHidden = true
         case 2:
             title.text = "Cast"
+            btnNext.addTarget(self, action: #selector(OpenListAllCast), for: .touchUpInside)
         case 3:
             title.text = "Cusrent Seasion"
         case 4:
             title.text = "Images"
+            btnNext.addTarget(self, action: #selector(OpenListAllImage), for: .touchUpInside)
             FetchData.shared.getDataMovieImages(url: "https://api.themoviedb.org/3/movie/\(DetailID)/images?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
                 self.myDataMovieImage = data
                 self.listImageforMovie = self.myDataMovieImage?.backdrops ?? []
@@ -200,7 +209,18 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
         }
         view.addSubview(title)
         view.addSubview(countImage)
+        view.addSubview(btnNext)
         return view
+    }
+    @objc func OpenListAllCast(){
+        let vc = HomeListCast()
+        vc.listAllCast = listCast
+        present(vc, animated: true, completion: nil)
+    }
+    @objc func OpenListAllImage(){
+        let vc = HomeListImage()
+        vc.listAllImage = listImageforMovie
+        present(vc, animated: true, completion: nil)
     }
 
 }

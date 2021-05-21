@@ -41,7 +41,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-Zx-Th5">
-                    <rect key="frame" x="10" y="138" width="394" height="724"/>
+                    <rect key="frame" x="0.0" y="128" width="414" height="734"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -49,12 +49,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="1gh-f8-Cat" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DA2-PD-2Q9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PW5-Zx-Th5" secondAttribute="trailing" constant="10" id="Mdx-4n-96S"/>
-                <constraint firstItem="PW5-Zx-Th5" firstAttribute="top" secondItem="1gh-f8-Cat" secondAttribute="bottom" constant="10" id="PGI-S1-0LH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PW5-Zx-Th5" secondAttribute="trailing" id="Mdx-4n-96S"/>
+                <constraint firstItem="PW5-Zx-Th5" firstAttribute="top" secondItem="1gh-f8-Cat" secondAttribute="bottom" id="PGI-S1-0LH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PW5-Zx-Th5" secondAttribute="bottom" id="Yzw-LO-gdR"/>
                 <constraint firstItem="1gh-f8-Cat" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eRs-Gr-qvY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1gh-f8-Cat" secondAttribute="trailing" id="gaW-dN-yDt"/>
-                <constraint firstItem="PW5-Zx-Th5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="y8L-Df-gdI"/>
+                <constraint firstItem="PW5-Zx-Th5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="y8L-Df-gdI"/>
             </constraints>
             <point key="canvasLocation" x="4" y="55"/>
         </view>

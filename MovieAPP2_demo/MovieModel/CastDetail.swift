@@ -16,12 +16,12 @@ import Foundation
 struct Person: Codable {
     let adult: Bool
     let alsoKnownAs: [String]
-    let biography, birthday: String
+    let biography, birthday: String?
     let deathday: String?
     let gender: Int
     let homepage: String?
     let id: Int
-    let imdbID, knownForDepartment, name, placeOfBirth: String
+    let imdbID, knownForDepartment, name, placeOfBirth: String?
     let popularity: Double
     let profilePath: String
 
