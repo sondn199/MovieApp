@@ -161,8 +161,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         myMovie.delegate = self
         myMovie.dataSource = self
         myMovie.register(UINib(nibName: "myTableCell", bundle: nil), forCellReuseIdentifier: "TableCell")
-        myMovie.register(UINib(nibName: "CarouCell", bundle: nil), forCellReuseIdentifier: "carouCell")
-        
+       // myMovie.register(UINib(nibName: "CarouCell", bundle: nil), forCellReuseIdentifier: "carouCell")
+        myMovie.register(UINib(nibName: "PagerViewCell", bundle: nil), forCellReuseIdentifier: "pagerCell")
     }
     func setupData(){
         myMovie.reloadData()
@@ -179,8 +179,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         if indexPath.section == 0 {
-            let cell = myMovie.dequeueReusableCell(withIdentifier: "carouCell", for: indexPath) as! CarouCell
-            
+//            let cell = myMovie.dequeueReusableCell(withIdentifier: "carouCell", for: indexPath) as! CarouCell
+//
+//            return cell
+            let cell = myMovie.dequeueReusableCell(withIdentifier: "pagerCell", for: indexPath)
             return cell
         }
         else {
@@ -197,7 +199,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 250
+            return 370
         }else if indexPath.section == 1{
             return myMovie.frame.size.height/3 - 30
         }else if indexPath.section == 5{

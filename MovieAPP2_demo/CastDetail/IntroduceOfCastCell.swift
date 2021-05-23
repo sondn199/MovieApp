@@ -13,15 +13,14 @@ class IntroduceOfCastCell: UITableViewCell {
     @IBOutlet weak var lblNameCast: UILabel!
     @IBOutlet weak var lblDateOfBirth: UILabel!
     @IBOutlet weak var lblAddress: UILabel!
-    @IBOutlet weak var lblIntruduce: UILabel!
+    @IBOutlet weak var readMoreView: ReadMoreLessView!
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.backgroundColor = UIColor.init(hex: "200F37")
-        lblIntruduce.numberOfLines = 0
         lblNameCast.textColor = .white
         lblDateOfBirth.textColor = .white
         lblAddress.textColor = .white
-        lblIntruduce.textColor = .white
+        readMoreView.backgroundColor = UIColor.init(hex: "200F37")
         // Initialization code
         myImage.layer.borderWidth = 1.0
         myImage.layer.masksToBounds = false

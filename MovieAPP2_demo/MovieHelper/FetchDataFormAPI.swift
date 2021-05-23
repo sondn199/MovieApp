@@ -221,5 +221,29 @@ class FetchData {
             }.resume()
         }
     }
+    func getDataDiscover(url : String, completed: @escaping (Discover?, Bool, Error?)->Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+                
+                guard let data =  data else {return}
+                
+                do{
+                    
+                    let postsData = try JSONDecoder().decode(Discover.self,from: data)
+                    DispatchQueue.main.async {
+                        completed(postsData, true, nil)
+                    }
+                    
+                    
+                }catch{
+                    completed(nil, false, error)
+                }
+            }.resume()
+        }
+    }
 }
 

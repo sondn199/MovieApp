@@ -19,13 +19,11 @@ class CellOfSecsion0: UITableViewCell {
     @IBOutlet weak var lblNameFilm: UILabel!
     @IBOutlet weak var lblDateOfYear: UILabel!
     @IBOutlet weak var lblTime: UILabel!
-    @IBOutlet weak var txtOverView: UITextView!
-    @IBOutlet weak var heightForOververView: NSLayoutConstraint!
+    @IBOutlet weak var readMoreView: ReadMoreLessView!
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.backgroundColor = UIColor.init(hex: "200F37")
-        txtOverView.backgroundColor = UIColor.init(hex: "200F37")
-        txtOverView.textColor = .systemGray4
+        readMoreView.backgroundColor = UIColor.init(hex: "200F37")
         lblNameFilm.textColor = .white
         lblTime.textColor = .white
         lblDateOfYear.textColor = .white

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -50,27 +51,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsg-84-sYu">
-                        <rect key="frame" x="30" y="175" width="383" height="100"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIu-X7-O7k" customClass="ReadMoreLessView" customModule="MovieAPP2_demo" customModuleProvider="target">
+                        <rect key="frame" x="10" y="170" width="423" height="160"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="fCr-gk-VwJ"/>
+                            <constraint firstAttribute="height" constant="160" id="3b7-cI-CV4"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Otv-MG-rW3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="3j6-oI-izL"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="lsg-84-sYu" secondAttribute="trailing" constant="10" id="Fp1-Nm-767"/>
+                    <constraint firstAttribute="trailing" secondItem="rIu-X7-O7k" secondAttribute="trailing" constant="10" id="Ejd-BA-yZL"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bC9-yy-Th9" secondAttribute="trailing" constant="10" id="GnK-Az-Q67"/>
                     <constraint firstAttribute="trailing" secondItem="Otv-MG-rW3" secondAttribute="trailing" constant="10" id="KLv-f9-juc"/>
                     <constraint firstItem="bC9-yy-Th9" firstAttribute="leading" secondItem="ZS3-Bi-OfQ" secondAttribute="trailing" constant="15" id="Lz5-Pw-Nbw"/>
                     <constraint firstItem="ZS3-Bi-OfQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Mb4-E5-Tst"/>
-                    <constraint firstItem="lsg-84-sYu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="NCm-LD-K83"/>
                     <constraint firstItem="eKV-61-IW6" firstAttribute="leading" secondItem="ZS3-Bi-OfQ" secondAttribute="trailing" constant="10" id="O1z-LN-aeP"/>
                     <constraint firstItem="bC9-yy-Th9" firstAttribute="top" secondItem="eKV-61-IW6" secondAttribute="bottom" constant="5" id="XGN-Bm-3Gf"/>
-                    <constraint firstItem="lsg-84-sYu" firstAttribute="top" secondItem="ZS3-Bi-OfQ" secondAttribute="bottom" constant="15" id="ZN0-mj-c48"/>
+                    <constraint firstItem="rIu-X7-O7k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ZEZ-CO-46A"/>
+                    <constraint firstItem="rIu-X7-O7k" firstAttribute="top" secondItem="ZS3-Bi-OfQ" secondAttribute="bottom" constant="10" id="iA6-gR-HeZ"/>
                     <constraint firstItem="ZS3-Bi-OfQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="k3H-fn-Voh"/>
                     <constraint firstItem="eKV-61-IW6" firstAttribute="top" secondItem="Otv-MG-rW3" secondAttribute="bottom" constant="5" id="lbk-bK-RQG"/>
                     <constraint firstAttribute="trailingMargin" secondItem="eKV-61-IW6" secondAttribute="trailing" constant="10" id="wSP-lN-GxR"/>
@@ -81,11 +80,16 @@
             <connections>
                 <outlet property="lblAddress" destination="bC9-yy-Th9" id="TjC-YY-dbf"/>
                 <outlet property="lblDateOfBirth" destination="eKV-61-IW6" id="DzB-kh-tGv"/>
-                <outlet property="lblIntruduce" destination="lsg-84-sYu" id="Y56-fz-pUd"/>
                 <outlet property="lblNameCast" destination="Otv-MG-rW3" id="znU-Uo-QfR"/>
                 <outlet property="myImage" destination="ZS3-Bi-OfQ" id="7ra-bU-PiD"/>
+                <outlet property="readMoreView" destination="rIu-X7-O7k" id="gNh-PE-MLO"/>
             </connections>
             <point key="canvasLocation" x="92.028985507246389" y="67.96875"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

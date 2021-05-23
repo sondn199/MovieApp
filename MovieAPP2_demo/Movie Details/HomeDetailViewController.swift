@@ -129,7 +129,8 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(image)"), completed: nil)
             cell.lblDateOfYear.text = String(year.prefix(4))
             cell.lblTime.text = String(time/60 ) + "h" + String(time%60) + "mins"
-            cell.txtOverView.text = overview
+            let body : String = overview
+            cell.readMoreView.setText("", body: body)
             
             return cell
         }else{

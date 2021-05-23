@@ -80,6 +80,10 @@
 		8AE8E8E726574FD900063CE4 /* FirtVIewWhenclickButtonSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE8E8E526574FD900063CE4 /* FirtVIewWhenclickButtonSearch.xib */; };
 		8AE8E8EC265751D000063CE4 /* FirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE8E8EA265751D000063CE4 /* FirstCell.swift */; };
 		8AE8E8ED265751D000063CE4 /* FirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE8E8EB265751D000063CE4 /* FirstCell.xib */; };
+		8AE8E93B265A632B00063CE4 /* ReadMoreLessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE8E93A265A632A00063CE4 /* ReadMoreLessView.swift */; };
+		8AE8E940265A6C8900063CE4 /* DisoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE8E93F265A6C8900063CE4 /* DisoverModel.swift */; };
+		8AE8E94A265A6FD000063CE4 /* PagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE8E948265A6FD000063CE4 /* PagerViewCell.swift */; };
+		8AE8E94B265A6FD000063CE4 /* PagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE8E949265A6FD000063CE4 /* PagerViewCell.xib */; };
 		8AF4248B26294D0200CB9AA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4248A26294D0200CB9AA3 /* AppDelegate.swift */; };
 		8AF4248D26294D0200CB9AA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4248C26294D0200CB9AA3 /* SceneDelegate.swift */; };
 		8AF4248F26294D0200CB9AA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4248E26294D0200CB9AA3 /* ViewController.swift */; };
@@ -172,6 +176,10 @@
 		8AE8E8E526574FD900063CE4 /* FirtVIewWhenclickButtonSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirtVIewWhenclickButtonSearch.xib; sourceTree = "<group>"; };
 		8AE8E8EA265751D000063CE4 /* FirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCell.swift; sourceTree = "<group>"; };
 		8AE8E8EB265751D000063CE4 /* FirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCell.xib; sourceTree = "<group>"; };
+		8AE8E93A265A632A00063CE4 /* ReadMoreLessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadMoreLessView.swift; path = "../../../../../Downloads/ReadMoreLessView-master/Example/LabelMoreLess/ReadMoreLessView.swift"; sourceTree = "<group>"; };
+		8AE8E93F265A6C8900063CE4 /* DisoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisoverModel.swift; sourceTree = "<group>"; };
+		8AE8E948265A6FD000063CE4 /* PagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewCell.swift; sourceTree = "<group>"; };
+		8AE8E949265A6FD000063CE4 /* PagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerViewCell.xib; sourceTree = "<group>"; };
 		8AF4248726294D0200CB9AA3 /* MovieAPP2_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieAPP2_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF4248A26294D0200CB9AA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AF4248C26294D0200CB9AA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -333,6 +341,7 @@
 				8A44BBB52654AE6F00E56588 /* MovieImages.swift */,
 				8A44BBCD2654BE7D00E56588 /* CastDetail.swift */,
 				8AE8E8B92655596800063CE4 /* CastImage.swift */,
+				8AE8E93F265A6C8900063CE4 /* DisoverModel.swift */,
 			);
 			path = MovieModel;
 			sourceTree = "<group>";
@@ -367,6 +376,8 @@
 			children = (
 				8A1A0589263ABA1C009A9302 /* CarouCell.swift */,
 				8A1A058A263ABA1C009A9302 /* CarouCell.xib */,
+				8AE8E948265A6FD000063CE4 /* PagerViewCell.swift */,
+				8AE8E949265A6FD000063CE4 /* PagerViewCell.xib */,
 				8AF424A426294F2800CB9AA3 /* myTableCell.swift */,
 				8AF424A526294F2800CB9AA3 /* myTableCell.xib */,
 				8AF424A926294FA000CB9AA3 /* myCollectionCell.swift */,
@@ -389,6 +400,7 @@
 				8ABB27682643A8EF00A05F0E /* HomeDetailViewController.xib */,
 				8ABB27722643AA0700A05F0E /* CellOfSecsion0.swift */,
 				8ABB27732643AA0700A05F0E /* CellOfSecsion0.xib */,
+				8AE8E93A265A632A00063CE4 /* ReadMoreLessView.swift */,
 				8ABB276D2643A9CE00A05F0E /* DetailCell.swift */,
 				8ABB276E2643A9CE00A05F0E /* DetailCell.xib */,
 				8ABB27872643AB0800A05F0E /* CollectionCellOfSecsion1.swift */,
@@ -555,6 +567,7 @@
 				8ABB276A2643A8EF00A05F0E /* HomeDetailViewController.xib in Resources */,
 				8AF4249726294D0400CB9AA3 /* LaunchScreen.storyboard in Resources */,
 				8AE8E8E12656738B00063CE4 /* PreViewImage.xib in Resources */,
+				8AE8E94B265A6FD000063CE4 /* PagerViewCell.xib in Resources */,
 				8AE8E8ED265751D000063CE4 /* FirstCell.xib in Resources */,
 				8AE8E8B72655513500063CE4 /* CellForIndex2.xib in Resources */,
 				8ABB278A2643AB0800A05F0E /* CollectionCellOfSecsion1.xib in Resources */,
@@ -638,6 +651,7 @@
 				8AF424D5262BDC5300CB9AA3 /* NowPlaying.swift in Sources */,
 				8ABB276F2643A9CE00A05F0E /* DetailCell.swift in Sources */,
 				8AE8E8CC2656032300063CE4 /* HomeListImage.swift in Sources */,
+				8AE8E93B265A632B00063CE4 /* ReadMoreLessView.swift in Sources */,
 				8A473BA8264F746400BAF021 /* ListMovieByGenreCell.swift in Sources */,
 				8A557EA42632757F00F299C4 /* Color.swift in Sources */,
 				8A344B3226341AE500D971E9 /* UpComingCell.swift in Sources */,
@@ -666,11 +680,13 @@
 				8AF424AB26294FA000CB9AA3 /* myCollectionCell.swift in Sources */,
 				8A1A058B263ABA1C009A9302 /* CarouCell.swift in Sources */,
 				8ABB270D26425AD500A05F0E /* HomeNowPlaying.swift in Sources */,
+				8AE8E94A265A6FD000063CE4 /* PagerViewCell.swift in Sources */,
 				8A44BBCE2654BE7D00E56588 /* CastDetail.swift in Sources */,
 				8AF424C9262B1A5900CB9AA3 /* GenreCell.swift in Sources */,
 				8AF424A626294F2800CB9AA3 /* myTableCell.swift in Sources */,
 				8AE8E8C12655F7E000063CE4 /* HomeListCast.swift in Sources */,
 				8AF4248D26294D0200CB9AA3 /* SceneDelegate.swift in Sources */,
+				8AE8E940265A6C8900063CE4 /* DisoverModel.swift in Sources */,
 				8AE8E8B62655513500063CE4 /* CellForIndex2.swift in Sources */,
 				8AE8E8B12655512900063CE4 /* CellForIndex1.swift in Sources */,
 				8ABB27942644E0B700A05F0E /* Extension.swift in Sources */,

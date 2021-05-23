@@ -92,7 +92,9 @@ class CastDetailViewController: UIViewController,UITableViewDelegate,UITableView
             cell.lblNameCast.text = dataCast?.name
             cell.lblAddress.text = dataCast?.placeOfBirth
             cell.lblDateOfBirth.text = dataCast?.birthday
-            cell.lblIntruduce.text = dataCast?.biography
+                let body : String = dataCast?.biography ?? ""
+                cell.readMoreView.setText("", body: body)
+           
             return cell
             }
         }else if indexPath.section == 3 {
@@ -125,7 +127,7 @@ class CastDetailViewController: UIViewController,UITableViewDelegate,UITableView
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0{
-            return 300
+            return 350
         }else if indexPath.section == 2 {
             return 200
         }

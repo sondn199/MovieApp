@@ -41,6 +41,9 @@ class ListMovieByGenreView: UIViewController, UITableViewDelegate,UITableViewDat
         }
        // print("🙃\(data1)")
     }
+    @IBAction func brnBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     func setupData(){
         FetchData.shared.getDataPopular(url: "https://api.themoviedb.org/3/discover/movie?api_key=3956f50a726a2f785334c24759b97dc6&with_genres=28&page=1") { (data, true, error) in
             self.genre = data
