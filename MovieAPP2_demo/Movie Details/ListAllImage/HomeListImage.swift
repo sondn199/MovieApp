@@ -25,39 +25,13 @@ class HomeListImage: UIViewController,UICollectionViewDelegate,UICollectionViewD
         }
     }
     func setupUI(){
+        view.backgroundColor = UIColor.init(hex: "17082A")
         myCollection.delegate = self
         myCollection.dataSource = self
         myCollection.register(UINib(nibName: "CellAllImage", bundle: nil), forCellWithReuseIdentifier: "cell")
         myCollection.collectionViewLayout = generateLayout()
     }
-//    func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
-//
-//      let inset: CGFloat = 2
-//
-//      // Large item on top
-//      let topItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.4))
-//      let topItem = NSCollectionLayoutItem(layoutSize: topItemSize)
-//      topItem.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
-//
-//      // Bottom item
-//      let bottomItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0))
-//      let bottomItem = NSCollectionLayoutItem(layoutSize: bottomItemSize)
-//      bottomItem.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
-//
-//      // Group for bottom item, it repeats the bottom item twice
-//      let bottomGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.3))
-//      let bottomGroup = NSCollectionLayoutGroup.horizontal(layoutSize: bottomGroupSize, subitem: bottomItem, count: 3)
-//
-//      // Combine the top item and bottom group
-//      let fullGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.4 + 0.3))
-//      let nestedGroup = NSCollectionLayoutGroup.vertical(layoutSize: fullGroupSize, subitems: [topItem, bottomGroup])
-//
-//      let section = NSCollectionLayoutSection(group: nestedGroup)
-//
-//      let layout = UICollectionViewCompositionalLayout(section: section)
-//
-//      return layout
-//    }
+
     private func generateLayout() -> UICollectionViewLayout {
         
         
