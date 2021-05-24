@@ -24,7 +24,7 @@ class PreViewImage: UIViewController {
        
         //zoom image
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlerPinch(sender :)))
-        view.addGestureRecognizer(pinch)
+        ViewContent.addGestureRecognizer(pinch)
     }
     @objc func handlerPinch(sender : UIPinchGestureRecognizer ){
         guard  sender.view != nil else {
