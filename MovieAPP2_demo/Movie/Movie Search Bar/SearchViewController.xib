@@ -34,7 +34,7 @@
                                 <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="7s1-Tj-9Ug"/>
                             </connections>
                         </button>
-                        <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARB-Sz-BCK">
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ARB-Sz-BCK">
                             <rect key="frame" x="71" y="15" width="333" height="54"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <textInputTraits key="textInputTraits"/>

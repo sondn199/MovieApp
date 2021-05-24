@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirtVIewWhenclickButtonSearch: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UISearchBarDelegate {
+class FirtVIewWhenclickButtonSearch: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UISearchBarDelegate,UISearchControllerDelegate {
     
     var myDataSearch : SearchMovieByTitle?
     var listSearch = [Result2]()
@@ -22,6 +22,7 @@ class FirtVIewWhenclickButtonSearch: UIViewController,UICollectionViewDelegate,U
     @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
         RecentTable.largeContentTitle = "Recent"
         RecentTable.isHidden  = true
         RecentTable.backgroundColor = UIColor.init(hex: "17082A")
@@ -36,8 +37,14 @@ class FirtVIewWhenclickButtonSearch: UIViewController,UICollectionViewDelegate,U
         setupData()
         setupUI()
     }
+   
     override func viewWillAppear(_ animated: Bool) {
         myCollection.reloadData()
+    }
+    func didPresentSearchController(_ searchController: UISearchController) {
+        DispatchQueue.main.async {
+            searchController.searchBar.becomeFirstResponder()
+        }
     }
     func setupData(){
         DispatchQueue.main.async {
@@ -73,9 +80,11 @@ class FirtVIewWhenclickButtonSearch: UIViewController,UICollectionViewDelegate,U
         
 
     }
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+       // searchBar.searchTextField.becomeFirstResponder()
         var searchItems = searchBar.text?.lowercased() ?? ""
+     //   searchBar.becomeFirstResponder()
         searchItems = searchItems.replacingOccurrences(of: " ", with: "%20")
 
         FetchData.shared.getDataSearchMovie(urlString: "https://api.themoviedb.org/3/search/movie?api_key=d9894dad6e8acb82a7c54a35185356bf&query=\(searchItems)&page=1") { (data, true) in
