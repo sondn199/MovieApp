@@ -23,8 +23,8 @@ class PagerViewCell: UITableViewCell,FSPagerViewDelegate,FSPagerViewDataSource {
         pagerView.delegate = self
         pagerView.dataSource = self
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
-        pagerView.transformer = FSPagerViewTransformer(type: .coverFlow)
-        pagerView.itemSize = CGSize(width: 250, height: 370)
+        pagerView.transformer = FSPagerViewTransformer(type: .linear)
+        pagerView.itemSize = CGSize(width: 220, height: 370)
         pagerView.interitemSpacing = 20
         pagerView.isInfinite = true
         pagerView.automaticSlidingInterval = 2
@@ -40,8 +40,9 @@ class PagerViewCell: UITableViewCell,FSPagerViewDelegate,FSPagerViewDataSource {
     func setupData(){
         FetchData.shared.getDataDiscover(url: "https://api.themoviedb.org/3/discover/movie?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
             self.myDataDiscover = data
+           // print("😤\(self.myDataDiscover)")
             self.listDiscover = self.myDataDiscover?.results ?? []
-          
+          //  print("😤\(self.listDiscover)")
             DispatchQueue.main.async {
                 self.pagerView.reloadData()
             }

@@ -1,10 +1,3 @@
-//
-//  DisoverModel.swift
-//  MovieAPP2_demo
-//
-//  Created by ngoc son on 23/05/2021.
-//
-
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
@@ -57,7 +50,6 @@ struct Result3: Codable {
 
 enum OriginalLanguage2: String, Codable {
     case en = "en"
-    case fr = "fr"
+    case es = "es"
     case ja = "ja"
 }
-
