@@ -141,5 +141,38 @@ class CastDetailViewController: UIViewController,UITableViewDelegate,UITableView
             UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
         }
     }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//
+//        switch section {
+//        case 1:
+//            return "Photo"
+//        case 2:
+//            return "Most Sucessful Movies"
+//        case 3:
+//            return "All Movie"
+//        default:
+//            return ""
+//        }
+//
+//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: myTable.frame.width, height: 40))
+        let title = UILabel(frame: CGRect(x: 10, y: 0, width: headerView.frame.width, height: 24))
+        headerView.backgroundColor = UIColor.init(hex: "200F37")
+        title.textColor = .white
+        switch section {
+        case 1:
+            title.text = "Photo"
+        case 2:
+            title.text = "Most Sucessful Movies"
+        case 3:
+            title.text = "All Movie"
+        default:
+            title.isHidden = true
+        }
+        headerView.addSubview(title)
+        return headerView
+    }
+   
 
 }

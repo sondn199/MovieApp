@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="width" constant="20" id="IiX-fw-amC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -85,6 +85,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

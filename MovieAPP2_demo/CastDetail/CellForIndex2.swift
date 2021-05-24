@@ -20,7 +20,7 @@ class CellForIndex2: UICollectionViewCell {
         FooterView.backgroundColor = UIColor.init(hex: "200F37")
         lblNameFilm.textColor = .white
         lblDate.textColor = .white
-        lblRated.textColor = .white
+        //lblRated.textColor = .white
         // Initialization code
     }
 
