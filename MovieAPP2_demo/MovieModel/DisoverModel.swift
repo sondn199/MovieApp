@@ -24,7 +24,7 @@ struct Result3: Codable {
     let backdropPath: String
     let genreIDS: [Int]
     let id: Int
-    let originalLanguage: OriginalLanguage2
+    let originalLanguage: OriginalLanguage3
     let originalTitle, overview: String
     let popularity: Double
     let posterPath, releaseDate, title: String
@@ -48,8 +48,9 @@ struct Result3: Codable {
     }
 }
 
-enum OriginalLanguage2: String, Codable {
+enum OriginalLanguage3: String, Codable {
     case en = "en"
-    case es = "es"
+    case fr = "fr"
     case ja = "ja"
+    case nl = "nl"
 }
