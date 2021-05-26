@@ -1,3 +1,10 @@
+//
+//  MovieDiscover.swift
+//  MovieAPP2_demo
+//
+//  Created by ngoc son on 26/05/2021.
+//
+
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
@@ -24,8 +31,7 @@ struct Result3: Codable {
     let backdropPath: String
     let genreIDS: [Int]
     let id: Int
-    let originalLanguage: OriginalLanguage3
-    let originalTitle, overview: String
+    let originalLanguage, originalTitle, overview: String
     let popularity: Double
     let posterPath, releaseDate, title: String
     let video: Bool
@@ -48,9 +54,3 @@ struct Result3: Codable {
     }
 }
 
-enum OriginalLanguage3: String, Codable {
-    case en = "en"
-    case fr = "fr"
-    case ja = "ja"
-    case nl = "nl"
-}

@@ -245,5 +245,6 @@ class FetchData {
             }.resume()
         }
     }
+  
 }
 

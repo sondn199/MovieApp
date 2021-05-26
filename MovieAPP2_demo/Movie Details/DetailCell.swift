@@ -159,8 +159,8 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
         }else if index == 4 {
             let vc = PreViewImage()
             vc.modalPresentationStyle = .fullScreen
-            let image = listImageforMovie[indexPath.row]
-            vc.name = image.filePath
+            vc.listImageMovie = listImageforMovie
+            vc.index = indexPath.row
             UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
         }
     }

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,9 +16,29 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="300" height="181"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJP-k1-n7V" customClass="iCarousel">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="181"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LJP-k1-n7V" secondAttribute="trailing" id="JOF-hc-9Y1"/>
+                    <constraint firstItem="LJP-k1-n7V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZVL-xS-I9z"/>
+                    <constraint firstItem="LJP-k1-n7V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aII-l4-COD"/>
+                    <constraint firstAttribute="bottom" secondItem="LJP-k1-n7V" secondAttribute="bottom" id="q3I-Q0-FBm"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="myCarousel" destination="LJP-k1-n7V" id="slh-nx-Jaj"/>
+            </connections>
             <point key="canvasLocation" x="-49.275362318840585" y="25.111607142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

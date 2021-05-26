@@ -9,8 +9,6 @@ import UIKit
 
 class TableViewInSecssion12: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
    
-    
-    
     var index : Int = 0
     var listImage1 = [Profile]()
     var listMostSuccessFullMovie1 = [Result]()
@@ -39,6 +37,9 @@ class TableViewInSecssion12: UITableViewCell,UICollectionViewDelegate,UICollecti
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if index == 1{
@@ -82,10 +83,17 @@ class TableViewInSecssion12: UITableViewCell,UICollectionViewDelegate,UICollecti
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if index == 1 {
+            print("🥶\(indexPath.row)")
             let vc = PreViewImage()
             vc.modalPresentationStyle = .fullScreen
-            let image = listImage1[indexPath.row]
-            vc.nameCast = image.filePath
+            vc.listImageCast = listImage1
+            vc.index = indexPath.row
+//           
+           
+            //vc.myCollection.scrollToItem(at: indexPath, at: .right, animated: true)
+//            let image = listImage1[indexPath.row]
+//            vc.nameCast = image.filePath
+            
             UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
         }else if index == 2 {
             let vc = HomeDetailViewController()
@@ -94,5 +102,8 @@ class TableViewInSecssion12: UITableViewCell,UICollectionViewDelegate,UICollecti
             UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
         }
     }
-    
+
 }
+
+
+

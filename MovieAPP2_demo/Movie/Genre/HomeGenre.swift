@@ -69,7 +69,8 @@ class HomeGenre: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         let vcGenre = ListMovieByGenreView()
         let movie = listGenre[indexPath.row]
         vcGenre.dataGenre = movie
-        vcGenre.id = movie.id 
+        vcGenre.id = movie.id
+        print("😇\(vcGenre.id)")
       //  vcGenre.NameFilm = "List Movie \(movie?.name ?? "")"
         UIApplication.getTopViewController()?.present(vcGenre, animated: true, completion: nil)
     }

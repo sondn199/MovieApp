@@ -106,7 +106,7 @@ open class FSPagerView: UIView,UICollectionViewDataSource,UICollectionViewDelega
     
     /// The spacing to use between items in the pager view. Default is 0.
     @IBInspectable
-    open var interitemSpacing: CGFloat = 0 {
+    open var interitemSpacing: CGFloat = 30 {
         didSet {
             self.collectionViewLayout.forceInvalidate()
         }

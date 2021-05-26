@@ -161,11 +161,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         myMovie.delegate = self
         myMovie.dataSource = self
         myMovie.register(UINib(nibName: "myTableCell", bundle: nil), forCellReuseIdentifier: "TableCell")
-       // myMovie.register(UINib(nibName: "CarouCell", bundle: nil), forCellReuseIdentifier: "carouCell")
-        myMovie.register(UINib(nibName: "PagerViewCell", bundle: nil), forCellReuseIdentifier: "pagerCell")
+        myMovie.register(UINib(nibName: "CarouCell", bundle: nil), forCellReuseIdentifier: "carouCell")
+        //myMovie.register(UINib(nibName: "PagerViewCell", bundle: nil), forCellReuseIdentifier: "pagerCell")
     }
     func setupData(){
-        myMovie.reloadData()
+        DispatchQueue.main.async {
+            self.myMovie.reloadData()
+            
+            
+        }
+         
 //        myTVShow.reloadData()
        
     }
@@ -179,10 +184,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         if indexPath.section == 0 {
-//            let cell = myMovie.dequeueReusableCell(withIdentifier: "carouCell", for: indexPath) as! CarouCell
-//
-//            return cell
-            let cell = myMovie.dequeueReusableCell(withIdentifier: "pagerCell", for: indexPath)
+            let cell = myMovie.dequeueReusableCell(withIdentifier: "carouCell", for: indexPath) as! CarouCell
+
+            return cell
+//            let cell = myMovie.dequeueReusableCell(withIdentifier: "pagerCell", for: indexPath) as! PagerViewCell
+//            cell.setupData()
+//            cell.setupUI()
             return cell
         }
         else {

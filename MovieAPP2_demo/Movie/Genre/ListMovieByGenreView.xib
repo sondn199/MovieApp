@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="NameFilm" destination="DfF-GY-L83" id="hfh-5j-s5a"/>
                 <outlet property="headerView" destination="1gh-f8-Cat" id="crL-r9-PZE"/>
-                <outlet property="myTable" destination="PW5-Zx-Th5" id="2rd-Er-BHS"/>
+                <outlet property="myCollection" destination="D7S-q0-itf" id="4Mt-2y-OHW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -52,21 +52,27 @@
                         <constraint firstItem="C23-Rq-671" firstAttribute="leading" secondItem="1gh-f8-Cat" secondAttribute="leading" constant="10" id="bz2-e5-zTo"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-Zx-Th5">
-                    <rect key="frame" x="0.0" y="128" width="414" height="734"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="D7S-q0-itf">
+                    <rect key="frame" x="10" y="138" width="394" height="714"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="blP-LU-1XT">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D7S-q0-itf" secondAttribute="trailing" constant="10" id="5GV-2g-176"/>
+                <constraint firstItem="D7S-q0-itf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="7f4-HV-Hvv"/>
                 <constraint firstItem="1gh-f8-Cat" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DA2-PD-2Q9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PW5-Zx-Th5" secondAttribute="trailing" id="Mdx-4n-96S"/>
-                <constraint firstItem="PW5-Zx-Th5" firstAttribute="top" secondItem="1gh-f8-Cat" secondAttribute="bottom" id="PGI-S1-0LH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PW5-Zx-Th5" secondAttribute="bottom" id="Yzw-LO-gdR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="D7S-q0-itf" secondAttribute="bottom" constant="10" id="WgQ-9f-1uT"/>
                 <constraint firstItem="1gh-f8-Cat" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eRs-Gr-qvY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1gh-f8-Cat" secondAttribute="trailing" id="gaW-dN-yDt"/>
-                <constraint firstItem="PW5-Zx-Th5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="y8L-Df-gdI"/>
+                <constraint firstItem="D7S-q0-itf" firstAttribute="top" secondItem="1gh-f8-Cat" secondAttribute="bottom" constant="10" id="otd-Xj-yAh"/>
             </constraints>
             <point key="canvasLocation" x="4" y="55"/>
         </view>

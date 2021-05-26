@@ -102,8 +102,9 @@ class HomeListImage: UIViewController,UICollectionViewDelegate,UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = PreViewImage()
         vc.modalPresentationStyle = .fullScreen
-        let Image = listAllImage[indexPath.row]
-        vc.name = Image.filePath
+        vc.listImageMovie = listAllImage
+//        let Image = listAllImage[indexPath.row]
+//        vc.name = Image.filePath
         present(vc, animated: true, completion: nil)
     }
 
