@@ -8,17 +8,20 @@
 import UIKit
 import iCarousel
 import SDWebImage
+import FSPagerView
 
 class CarouCell: UITableViewCell,iCarouselDataSource, iCarouselDelegate {
 
     var myDataDiscover : Discover?
     var listDiscover = [Result3]()
     
+    @IBOutlet weak var pageControl: FSPageControl!
     @IBOutlet weak var myCarousel: iCarousel!
-    @IBOutlet weak var myImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         setupData()
+        pageControl.backgroundColor = UIColor.init(hex: "200F37")
         myCarousel.backgroundColor = UIColor.init(hex: "200F37")
         myCarousel.delegate = self
         myCarousel.dataSource = self
@@ -28,8 +31,16 @@ class CarouCell: UITableViewCell,iCarouselDataSource, iCarouselDelegate {
       //  myCarousel.scrollToItem(at: 1, animated: true)
         myCarousel.isPagingEnabled = true
        // myCarousel.autoscroll = -0.5
+        pageControl.numberOfPages = 6
+        pageControl.currentPage = 1
     
+        pageControl.contentHorizontalAlignment = .center
+        pageControl.setStrokeColor(UIColor.init(hex: "CBB5FF"), for: .normal)
+        pageControl.setFillColor(UIColor.init(hex: "CBB5FF"), for: .normal)
+        pageControl.itemSpacing = 10
         contentView.backgroundColor = UIColor.init(hex: "200F37")
+        
+        //myCarousel.reloadData()
         
 
     }
@@ -43,13 +54,15 @@ class CarouCell: UITableViewCell,iCarouselDataSource, iCarouselDelegate {
             //  print("😤\(self.listDiscover)")
             DispatchQueue.main.async {
                 self.myCarousel.reloadData()
+                self.myCarousel.scrollToItem(at: 1, animated: false)
+
             }
         }
     }
-    override func prepareForReuse() {
-        imageView?.sd_cancelCurrentImageLoad()
-        imageView?.image = nil
-    }
+//    override func prepareForReuse() {
+//        imageView?.sd_cancelCurrentImageLoad()
+//        imageView?.image = nil
+//    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -60,20 +73,25 @@ class CarouCell: UITableViewCell,iCarouselDataSource, iCarouselDelegate {
        
     }
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let view  = UIView(frame: CGRect(x: 20, y: 20, width: myCarousel.frame.size.width/2 + 30 , height: myCarousel.frame.size.height - 50))
+        let view  = UIView(frame: CGRect(x: 20, y: 20, width: myCarousel.frame.size.width/2 + 30 , height: myCarousel.frame.size.height - 10))
         let myImage = UIImageView(frame: view.bounds)
         
         view.addSubview(myImage)
-        myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listDiscover[index].posterPath )"), placeholderImage: UIImage(named: "Rectangle 1412"), options: .continueInBackground, completed: .none)
-//        myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listDiscover[index].posterPath )"), completed: nil)
+//        myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listDiscover[index].posterPath )"), placeholderImage: UIImage(named: "Rectangle 1412"), options: .continueInBackground, completed: .none)
+        myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listDiscover[index].posterPath )"), completed: nil)
       //  myImage.contentMode = .scaleAspectFill
        // myImage.image = UIImage(named: "\(index+1)")
 //
-        myCarousel.scrollToItem(at: 1, animated: false)
 
         return view
     }
     func carouselItemWidth(_ carousel: iCarousel) -> CGFloat {
         return 370
+    }
+    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
+        let vc = HomeDetailViewController()
+        let movie = listDiscover[index]
+        vc.DetailID = movie.id
+        UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
     }
 }

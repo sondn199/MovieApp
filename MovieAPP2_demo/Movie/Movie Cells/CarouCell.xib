@@ -18,20 +18,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJP-k1-n7V" customClass="iCarousel">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="181"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="131"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZx-bl-aZC" customClass="FSPageControl" customModule="FSPagerView">
+                        <rect key="frame" x="0.0" y="136" width="300" height="45"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="YZx-bl-aZC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5iT-az-iqH"/>
                     <constraint firstAttribute="trailing" secondItem="LJP-k1-n7V" secondAttribute="trailing" id="JOF-hc-9Y1"/>
+                    <constraint firstItem="YZx-bl-aZC" firstAttribute="top" secondItem="LJP-k1-n7V" secondAttribute="bottom" constant="5" id="S7E-Nj-PYn"/>
+                    <constraint firstAttribute="bottom" secondItem="YZx-bl-aZC" secondAttribute="bottom" id="YHn-iW-0Vb"/>
                     <constraint firstItem="LJP-k1-n7V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZVL-xS-I9z"/>
                     <constraint firstItem="LJP-k1-n7V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aII-l4-COD"/>
-                    <constraint firstAttribute="bottom" secondItem="LJP-k1-n7V" secondAttribute="bottom" id="q3I-Q0-FBm"/>
+                    <constraint firstAttribute="trailing" secondItem="YZx-bl-aZC" secondAttribute="trailing" id="lYW-KK-lCq"/>
+                    <constraint firstAttribute="bottom" secondItem="LJP-k1-n7V" secondAttribute="bottom" constant="50" id="q3I-Q0-FBm"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="myCarousel" destination="LJP-k1-n7V" id="slh-nx-Jaj"/>
+                <outlet property="pageControl" destination="YZx-bl-aZC" id="xC9-yF-IDE"/>
             </connections>
             <point key="canvasLocation" x="-49.275362318840585" y="25.111607142857142"/>
         </tableViewCell>
