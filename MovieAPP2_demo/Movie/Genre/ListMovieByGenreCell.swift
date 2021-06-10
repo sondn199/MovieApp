@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Cosmos
 
 class ListMovieByGenreCell: UITableViewCell {
 
+    @IBOutlet weak var cosMosView: CosmosView!
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var lblNameFilm: UILabel!
     @IBOutlet weak var lblDate: UILabel!
@@ -22,6 +24,10 @@ class ListMovieByGenreCell: UITableViewCell {
         footerView.backgroundColor = UIColor.init(hex: "200F37")
         footerView.layer.borderWidth = 0.5
         footerView.layer.borderColor = UIColor.white.cgColor
+        cosMosView.backgroundColor = UIColor.init(hex: "200F37")
+        cosMosView.settings.updateOnTouch = false
+        cosMosView.settings.fillMode = .precise
+        
        
         
     }

@@ -24,6 +24,9 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZx-bl-aZC" customClass="FSPageControl" customModule="FSPagerView">
                         <rect key="frame" x="0.0" y="136" width="300" height="45"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <action selector="updatePageControl:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Agl-kn-6lE"/>
+                        </connections>
                     </view>
                 </subviews>
                 <constraints>

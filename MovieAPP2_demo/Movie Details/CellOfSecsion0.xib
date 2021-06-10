@@ -44,46 +44,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSJ-1L-AIJ">
-                        <rect key="frame" x="30" y="286" width="15" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="eQZ-wf-eXk"/>
-                            <constraint firstAttribute="width" constant="15" id="h79-7j-17y"/>
-                        </constraints>
-                        <state key="normal" image="Star-1"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6il-VS-7Xl">
-                        <rect key="frame" x="93" y="286" width="15" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="7iJ-XP-VGb"/>
-                            <constraint firstAttribute="width" constant="15" id="E0q-Hv-YpS"/>
-                        </constraints>
-                        <state key="normal" image="Star-1"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6T-wC-Xlq">
-                        <rect key="frame" x="68" y="286" width="15" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="53K-Hr-fsm"/>
-                            <constraint firstAttribute="width" constant="15" id="bLe-FJ-cXl"/>
-                        </constraints>
-                        <state key="normal" image="Star-1"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLK-hN-1dB">
-                        <rect key="frame" x="49" y="286" width="15" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="aa1-Tc-VZq"/>
-                            <constraint firstAttribute="width" constant="15" id="bGw-Um-Buf"/>
-                        </constraints>
-                        <state key="normal" image="Star-1"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TF-Kx-Uhf">
-                        <rect key="frame" x="118" y="286" width="15" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="15" id="JBv-ko-sMT"/>
-                            <constraint firstAttribute="height" constant="15" id="xfa-Lx-56g"/>
-                        </constraints>
-                        <state key="normal" image="Star"/>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyB-2b-TIJ">
                         <rect key="frame" x="368" y="286" width="85" height="20"/>
                         <constraints>
@@ -155,6 +115,26 @@
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="DRAMA"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4K-Gd-Asg" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="35" y="286" width="150" height="15"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="nNL-2S-Qrf"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                <real key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="Star-1"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Star"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="JyB-2b-TIJ" firstAttribute="leading" secondItem="NZy-O5-xbt" secondAttribute="trailing" constant="4" id="0Id-z8-T0H"/>
@@ -164,26 +144,19 @@
                     <constraint firstItem="kOZ-uD-flh" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="4wz-sr-cbF"/>
                     <constraint firstItem="Ldf-za-OzW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7CC-3z-UZN"/>
                     <constraint firstItem="v16-0L-IIp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="9uv-ZW-4WJ"/>
-                    <constraint firstItem="fLK-hN-1dB" firstAttribute="leading" secondItem="QSJ-1L-AIJ" secondAttribute="trailing" constant="4" id="ASe-io-jUs"/>
+                    <constraint firstItem="t4K-Gd-Asg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="E3e-ne-Uti"/>
                     <constraint firstItem="v16-0L-IIp" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="2:3" id="Fab-q3-Bq5"/>
                     <constraint firstItem="QT0-Ly-MEe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="48" id="Iaz-sv-09Z"/>
                     <constraint firstItem="JyB-2b-TIJ" firstAttribute="top" secondItem="kOZ-uD-flh" secondAttribute="bottom" constant="10" id="J65-I1-CLF"/>
-                    <constraint firstItem="X6T-wC-Xlq" firstAttribute="leading" secondItem="fLK-hN-1dB" secondAttribute="trailing" constant="4" id="Jx4-wZ-jaW"/>
-                    <constraint firstItem="7TF-Kx-Uhf" firstAttribute="leading" secondItem="6il-VS-7Xl" secondAttribute="trailing" constant="10" id="Kgi-09-0Z0"/>
-                    <constraint firstItem="QSJ-1L-AIJ" firstAttribute="top" secondItem="v16-0L-IIp" secondAttribute="bottom" constant="10" id="L1K-hA-9cE"/>
+                    <constraint firstItem="JyB-2b-TIJ" firstAttribute="baseline" secondItem="k9n-td-m10" secondAttribute="baseline" id="Kq9-d0-Zoo"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ve6-7D-0nU" secondAttribute="trailing" constant="10" id="P8G-RC-EIH"/>
-                    <constraint firstItem="6il-VS-7Xl" firstAttribute="leading" secondItem="X6T-wC-Xlq" secondAttribute="trailing" constant="10" id="Ta1-Nd-7Pz"/>
-                    <constraint firstItem="fLK-hN-1dB" firstAttribute="top" secondItem="v16-0L-IIp" secondAttribute="bottom" constant="10" id="XaR-I4-Hyy"/>
                     <constraint firstItem="lFS-XK-UrW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="145" id="Xki-Kj-vBP"/>
                     <constraint firstItem="Ldf-za-OzW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YsK-Lm-uUI"/>
-                    <constraint firstItem="X6T-wC-Xlq" firstAttribute="top" secondItem="v16-0L-IIp" secondAttribute="bottom" constant="10" id="bO0-ic-7PA"/>
                     <constraint firstItem="v16-0L-IIp" firstAttribute="top" secondItem="lFS-XK-UrW" secondAttribute="bottom" constant="10" id="c1i-yx-E3U"/>
                     <constraint firstItem="ve6-7D-0nU" firstAttribute="top" secondItem="JyB-2b-TIJ" secondAttribute="bottom" constant="5" id="cUH-vI-q2a"/>
                     <constraint firstItem="lFS-XK-UrW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="dqd-le-dwg"/>
                     <constraint firstItem="Ldf-za-OzW" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:2" id="fQi-gt-Vy4"/>
                     <constraint firstItem="k9n-td-m10" firstAttribute="top" secondItem="v16-0L-IIp" secondAttribute="bottom" constant="10" id="fbU-5S-5sJ"/>
-                    <constraint firstItem="7TF-Kx-Uhf" firstAttribute="top" secondItem="v16-0L-IIp" secondAttribute="bottom" constant="10" id="fti-3Y-Xdd"/>
-                    <constraint firstItem="6il-VS-7Xl" firstAttribute="top" secondItem="v16-0L-IIp" secondAttribute="bottom" constant="10" id="goh-2U-OeV"/>
                     <constraint firstItem="ve6-7D-0nU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="h2y-E1-3eJ"/>
                     <constraint firstItem="QT0-Ly-MEe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="165" id="ha4-xv-aZh"/>
                     <constraint firstItem="NZy-O5-xbt" firstAttribute="leading" secondItem="k9n-td-m10" secondAttribute="trailing" constant="4" id="l5X-L2-vuy"/>
@@ -192,15 +165,16 @@
                     <constraint firstAttribute="trailingMargin" secondItem="JyB-2b-TIJ" secondAttribute="trailing" constant="10" id="qWB-1h-z9n"/>
                     <constraint firstItem="QJp-Sq-sOV" firstAttribute="leading" secondItem="t26-Wu-6CK" secondAttribute="trailing" constant="10" id="qyj-pP-OdC"/>
                     <constraint firstItem="E0S-3f-hbS" firstAttribute="top" secondItem="ve6-7D-0nU" secondAttribute="bottom" constant="10" id="r6W-av-6FB"/>
+                    <constraint firstItem="ve6-7D-0nU" firstAttribute="top" secondItem="t4K-Gd-Asg" secondAttribute="bottom" constant="10" id="uiU-9o-xbJ"/>
                     <constraint firstItem="NZy-O5-xbt" firstAttribute="top" secondItem="v16-0L-IIp" secondAttribute="bottom" constant="22" id="vL0-9O-rdF"/>
-                    <constraint firstItem="QSJ-1L-AIJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="yho-6J-qx1"/>
-                    <constraint firstItem="JyB-2b-TIJ" firstAttribute="top" secondItem="7TF-Kx-Uhf" secondAttribute="top" id="ymr-kd-gH3"/>
+                    <constraint firstItem="t4K-Gd-Asg" firstAttribute="top" secondItem="v16-0L-IIp" secondAttribute="bottom" constant="10" id="vy5-8P-tOP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="btnHeart" destination="kOZ-uD-flh" id="feL-fA-Ve0"/>
                 <outlet property="btnPlay" destination="QT0-Ly-MEe" id="7yd-6B-YpR"/>
+                <outlet property="cosMosView" destination="t4K-Gd-Asg" id="qkg-bh-TEf"/>
                 <outlet property="lblDateOfYear" destination="k9n-td-m10" id="SWd-wl-REp"/>
                 <outlet property="lblNameFilm" destination="v16-0L-IIp" id="r6b-rA-BTx"/>
                 <outlet property="lblTime" destination="JyB-2b-TIJ" id="TOn-tY-GuS"/>

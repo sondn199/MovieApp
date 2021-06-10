@@ -74,9 +74,10 @@ class ListMovieByGenreView: UIViewController, UICollectionViewDelegate,UICollect
         if let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? myCollectionCell{
             if listGenre.count != 0 {
             
-                cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listGenre[indexPath.row].backdropPath ?? "")"), completed: nil)
+                cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listGenre[indexPath.row].posterPath ?? "")"), completed: nil)
                 cell.myImage.layer.cornerRadius = 10
                 cell.lblTop.isHidden = true
+                cell.cosMosView.rating = (listGenre[indexPath.row].voteAverage) / 2
                     cell.lblNameFilm.text = listGenre [indexPath.row].originalTitle
                     cell.lblRated.text = String(listGenre[indexPath.row].voteAverage)
                    

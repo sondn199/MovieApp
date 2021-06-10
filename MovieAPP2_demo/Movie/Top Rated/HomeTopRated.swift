@@ -49,6 +49,7 @@ class HomeTopRated: UIViewController,UICollectionViewDelegate,UICollectionViewDa
             cell.layer.cornerRadius = 8
             cell.layer.masksToBounds = true
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listTopRated[indexPath.row].posterPath ?? "")"), completed: nil)
+            cell.cosMosView.rating = (listTopRated[indexPath.row].voteAverage)/2
             cell.lblNameFilm.text = listTopRated[indexPath.row].originalTitle
             cell.lblRated.text = String(Double(listTopRated[indexPath.row].voteAverage))
             return cell

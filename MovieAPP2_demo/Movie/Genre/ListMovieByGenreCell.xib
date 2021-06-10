@@ -35,63 +35,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJ7-Md-s2l">
-                        <rect key="frame" x="168" y="112.5" width="15" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="15" id="vcu-tm-laL"/>
-                            <constraint firstAttribute="height" constant="20" id="vdj-Oh-l8e"/>
-                        </constraints>
-                        <state key="normal" image="Star-1"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdq-ij-hxv">
-                        <rect key="frame" x="187" y="112.5" width="15" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="15" id="Ev3-QY-DAT"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="gMz-sc-jSF"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="h5c-Zs-t9i"/>
-                            <constraint firstAttribute="height" constant="20" id="yVf-OU-rM1"/>
-                        </constraints>
-                        <state key="normal" image="Star-1"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o74-u3-YUj">
-                        <rect key="frame" x="206" y="112.5" width="15" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="15" id="Efl-bF-d2v"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="fDt-Z6-VO3"/>
-                            <constraint firstAttribute="height" constant="20" id="mtl-mS-Imu"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="sDq-Hu-zl6"/>
-                        </constraints>
-                        <state key="normal" image="Star-1"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n59-l2-Kxj">
-                        <rect key="frame" x="225" y="112.5" width="15" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="3xb-2B-oFC"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="Dbv-8X-SLi"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="P0a-01-OLy"/>
-                            <constraint firstAttribute="width" constant="15" id="sMQ-zY-uxS"/>
-                        </constraints>
-                        <state key="normal" image="Star-1"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KN-F0-vRr">
-                        <rect key="frame" x="244" y="112.5" width="15" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="awH-Wz-M5z"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="f2c-7M-mkZ"/>
-                            <constraint firstAttribute="width" constant="15" id="laG-e0-LTS"/>
-                            <constraint firstAttribute="height" constant="20" id="lxs-gw-Zzq"/>
-                        </constraints>
-                        <state key="normal" image="Star"/>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z35-5X-eek">
-                        <rect key="frame" x="263" y="112.5" width="161" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="SRB-xT-Pml"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ha-4c-Q21">
                         <rect key="frame" x="168" y="220" width="276" height="2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -99,39 +42,62 @@
                             <constraint firstAttribute="height" constant="2" id="iFH-FH-Esi"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-tB-mfd" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="168" y="112.5" width="148" height="32"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="sIE-CP-teh"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                <real key="value" value="17"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="Star-1"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Star"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z35-5X-eek">
+                        <rect key="frame" x="316" y="114.5" width="98" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="onv-C9-Kve"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="UA6-mj-yZ7" secondAttribute="trailing" id="1pE-z3-pEd"/>
-                    <constraint firstItem="Z35-5X-eek" firstAttribute="top" secondItem="UA6-mj-yZ7" secondAttribute="bottom" constant="10" id="3RP-f9-C1Q"/>
-                    <constraint firstItem="o74-u3-YUj" firstAttribute="top" secondItem="UA6-mj-yZ7" secondAttribute="bottom" constant="10" id="3iW-vl-dYz"/>
-                    <constraint firstItem="bdq-ij-hxv" firstAttribute="leading" secondItem="KJ7-Md-s2l" secondAttribute="trailing" constant="4" id="4Fy-zc-Lf4"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Z35-5X-eek" secondAttribute="trailing" id="6gW-ah-2Nt"/>
-                    <constraint firstItem="KJ7-Md-s2l" firstAttribute="leading" secondItem="ZkQ-aG-QXW" secondAttribute="trailing" constant="20" id="6oA-ib-Hlv"/>
+                    <constraint firstItem="gtb-tB-mfd" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:3" id="Bxz-ZN-gKo"/>
                     <constraint firstAttribute="trailing" secondItem="Dnb-1u-cp2" secondAttribute="trailing" id="D2w-4b-vkX"/>
                     <constraint firstItem="ZkQ-aG-QXW" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:3" id="E2l-my-aaG"/>
+                    <constraint firstItem="gtb-tB-mfd" firstAttribute="top" secondItem="UA6-mj-yZ7" secondAttribute="bottom" constant="10" id="HdJ-L4-YI0"/>
                     <constraint firstItem="ZkQ-aG-QXW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HnO-Aj-mea"/>
                     <constraint firstItem="ZkQ-aG-QXW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ir6-EB-eYm"/>
                     <constraint firstAttribute="trailing" secondItem="3Ha-4c-Q21" secondAttribute="trailing" id="K9h-Uk-OU6"/>
                     <constraint firstItem="UA6-mj-yZ7" firstAttribute="top" secondItem="Dnb-1u-cp2" secondAttribute="bottom" constant="6" id="KsD-LG-uyS"/>
                     <constraint firstAttribute="bottom" secondItem="3Ha-4c-Q21" secondAttribute="bottom" id="NrQ-oN-lBN"/>
-                    <constraint firstItem="KJ7-Md-s2l" firstAttribute="top" secondItem="UA6-mj-yZ7" secondAttribute="bottom" constant="10" id="SIX-me-4Uv"/>
-                    <constraint firstItem="o74-u3-YUj" firstAttribute="leading" secondItem="bdq-ij-hxv" secondAttribute="trailing" constant="4" id="aES-WP-V6O"/>
-                    <constraint firstItem="bdq-ij-hxv" firstAttribute="top" secondItem="UA6-mj-yZ7" secondAttribute="bottom" constant="10" id="aNp-fP-GWf"/>
-                    <constraint firstItem="4KN-F0-vRr" firstAttribute="leading" secondItem="n59-l2-Kxj" secondAttribute="trailing" constant="4" id="bGM-UO-OPg"/>
+                    <constraint firstItem="Z35-5X-eek" firstAttribute="top" secondItem="UA6-mj-yZ7" secondAttribute="bottom" constant="12" id="OCj-4Y-gqx"/>
                     <constraint firstItem="Dnb-1u-cp2" firstAttribute="leading" secondItem="ZkQ-aG-QXW" secondAttribute="trailing" constant="20" id="bK5-k1-Ydy"/>
+                    <constraint firstItem="gtb-tB-mfd" firstAttribute="leading" secondItem="ZkQ-aG-QXW" secondAttribute="trailing" constant="20" id="bND-f8-gVX"/>
                     <constraint firstItem="Dnb-1u-cp2" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:4" id="byk-de-FX3"/>
                     <constraint firstAttribute="bottom" secondItem="ZkQ-aG-QXW" secondAttribute="bottom" constant="15" id="cF7-od-ru8"/>
-                    <constraint firstItem="Z35-5X-eek" firstAttribute="leading" secondItem="4KN-F0-vRr" secondAttribute="trailing" constant="4" id="kOp-98-qoz"/>
                     <constraint firstItem="Dnb-1u-cp2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="l2P-zT-1b8"/>
-                    <constraint firstItem="n59-l2-Kxj" firstAttribute="leading" secondItem="o74-u3-YUj" secondAttribute="trailing" constant="4" id="lFG-Ba-j5Z"/>
-                    <constraint firstItem="n59-l2-Kxj" firstAttribute="top" secondItem="UA6-mj-yZ7" secondAttribute="bottom" constant="10" id="rSM-jz-8HC"/>
+                    <constraint firstItem="Z35-5X-eek" firstAttribute="leading" secondItem="gtb-tB-mfd" secondAttribute="trailing" id="nyP-If-yKj"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Z35-5X-eek" secondAttribute="trailing" constant="10" id="qSH-lI-gF2"/>
                     <constraint firstItem="UA6-mj-yZ7" firstAttribute="leading" secondItem="ZkQ-aG-QXW" secondAttribute="trailing" constant="20" id="tnN-0u-6Sb"/>
-                    <constraint firstItem="4KN-F0-vRr" firstAttribute="top" secondItem="UA6-mj-yZ7" secondAttribute="bottom" constant="10" id="uMb-y2-OXS"/>
                     <constraint firstItem="3Ha-4c-Q21" firstAttribute="leading" secondItem="ZkQ-aG-QXW" secondAttribute="trailing" constant="20" id="wqg-s8-ny2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cosMosView" destination="gtb-tB-mfd" id="iIA-SP-uDY"/>
                 <outlet property="footerView" destination="3Ha-4c-Q21" id="Sdr-KC-u1k"/>
                 <outlet property="lblDate" destination="UA6-mj-yZ7" id="v1M-0p-MjY"/>
                 <outlet property="lblNameFilm" destination="Dnb-1u-cp2" id="pMx-el-vQl"/>

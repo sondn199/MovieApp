@@ -17,73 +17,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rm-gE-KFT" userLabel="MovieView">
-                                <rect key="frame" x="0.0" y="138" width="207" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMZ-Io-FOC">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="   Movie"/>
-                                        <connections>
-                                            <action selector="DidTapbuttonMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x78-O3-5Ls"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="GMZ-Io-FOC" firstAttribute="leading" secondItem="6rm-gE-KFT" secondAttribute="leading" id="Lq0-hD-tnf"/>
-                                    <constraint firstItem="GMZ-Io-FOC" firstAttribute="top" secondItem="6rm-gE-KFT" secondAttribute="top" id="aKN-XM-o4U"/>
-                                    <constraint firstAttribute="trailing" secondItem="GMZ-Io-FOC" secondAttribute="trailing" id="mrx-AG-uey"/>
-                                    <constraint firstAttribute="height" constant="30" id="tdT-e9-CvA"/>
-                                    <constraint firstAttribute="bottom" secondItem="GMZ-Io-FOC" secondAttribute="bottom" id="yi8-64-8ht"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1b-La-b5a" userLabel="TvShowView">
-                                <rect key="frame" x="207" y="138" width="207" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwB-n7-qAx">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="   Tv Show">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="DidTapButtonTvShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rxD-pX-N77"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="fwB-n7-qAx" firstAttribute="leading" secondItem="w1b-La-b5a" secondAttribute="leading" id="9WQ-V2-sJu"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="CSU-6m-GL0"/>
-                                    <constraint firstAttribute="height" constant="30" id="G4n-si-0qz"/>
-                                    <constraint firstItem="fwB-n7-qAx" firstAttribute="top" secondItem="w1b-La-b5a" secondAttribute="top" id="Oy0-qQ-hDv"/>
-                                    <constraint firstAttribute="bottom" secondItem="fwB-n7-qAx" secondAttribute="bottom" id="P1y-T8-Lt7"/>
-                                    <constraint firstAttribute="trailing" secondItem="fwB-n7-qAx" secondAttribute="trailing" id="aP2-zV-5tk"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hwx-1x-6Sm" userLabel="Movie">
-                                <rect key="frame" x="0.0" y="168" width="414" height="694"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="hwx-1x-6Sm" userLabel="Movie">
+                                <rect key="frame" x="0.0" y="151" width="414" height="711"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fYg-7H-wQP">
+                                <rect key="frame" x="0.0" y="151" width="414" height="711"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x71-kb-SV4">
+                                <rect key="frame" x="0.0" y="88" width="207" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="voc-YH-xF5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="  Movies">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="DidTapbuttonMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFy-a8-vtt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpm-sE-wpa" userLabel="MovieClickView">
+                                <rect key="frame" x="0.0" y="138" width="207" height="3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="IyW-7h-Brs"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcp-9x-55g">
+                                <rect key="frame" x="207" y="88" width="207" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BBm-JF-tEy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="  TV Show">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="DidTapButtonTvShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bxz-wk-gUw"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-3B-ZHC" userLabel="TvShowclickVIew">
+                                <rect key="frame" x="207" y="138" width="207" height="3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="yFY-6a-5cu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p0q-pF-HB8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6rm-gE-KFT" firstAttribute="width" secondItem="vDu-79-jnN" secondAttribute="width" multiplier="1:2" id="2mW-Bv-qMw"/>
-                            <constraint firstItem="w1b-La-b5a" firstAttribute="top" secondItem="p0q-pF-HB8" secondAttribute="top" constant="50" id="5lZ-ee-QTo"/>
-                            <constraint firstItem="w1b-La-b5a" firstAttribute="top" secondItem="6rm-gE-KFT" secondAttribute="top" id="CHf-Sa-c6x"/>
-                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="top" secondItem="6rm-gE-KFT" secondAttribute="bottom" id="SBn-CY-TEq"/>
-                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="bottom" secondItem="p0q-pF-HB8" secondAttribute="bottom" id="VzN-nA-lZ1"/>
-                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="trailing" secondItem="p0q-pF-HB8" secondAttribute="trailing" id="XGN-Dr-pd2"/>
-                            <constraint firstItem="w1b-La-b5a" firstAttribute="width" secondItem="6rm-gE-KFT" secondAttribute="width" id="XNL-cw-HMp"/>
-                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="bottom" secondItem="p0q-pF-HB8" secondAttribute="bottom" id="Xkq-89-TYE"/>
-                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="trailing" secondItem="p0q-pF-HB8" secondAttribute="trailing" id="e3k-On-WgB"/>
-                            <constraint firstItem="6rm-gE-KFT" firstAttribute="leading" secondItem="p0q-pF-HB8" secondAttribute="leading" id="fG4-vW-f8o"/>
-                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="top" secondItem="6rm-gE-KFT" secondAttribute="bottom" id="k7J-Ij-4Zs"/>
-                            <constraint firstItem="p0q-pF-HB8" firstAttribute="trailing" secondItem="w1b-La-b5a" secondAttribute="trailing" id="lQm-tG-SnA"/>
-                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="leading" secondItem="p0q-pF-HB8" secondAttribute="leading" id="rmh-sM-mef"/>
-                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="leading" secondItem="p0q-pF-HB8" secondAttribute="leading" id="tcj-ai-1KA"/>
+                            <constraint firstItem="fYg-7H-wQP" firstAttribute="top" secondItem="bpm-sE-wpa" secondAttribute="bottom" constant="10" id="74k-aC-wIl"/>
+                            <constraint firstItem="bpm-sE-wpa" firstAttribute="leading" secondItem="vDu-79-jnN" secondAttribute="leading" id="7Nu-NK-2Fg"/>
+                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="top" secondItem="bpm-sE-wpa" secondAttribute="bottom" constant="10" id="Auo-vj-QfI"/>
+                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="leading" secondItem="p0q-pF-HB8" secondAttribute="leading" id="Dyj-Qn-sXB"/>
+                            <constraint firstItem="x71-kb-SV4" firstAttribute="leading" secondItem="p0q-pF-HB8" secondAttribute="leading" id="JhN-74-958"/>
+                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="trailing" secondItem="p0q-pF-HB8" secondAttribute="trailing" id="Q5O-Yy-XhG"/>
+                            <constraint firstItem="Mcp-9x-55g" firstAttribute="leading" secondItem="x71-kb-SV4" secondAttribute="trailing" id="Qt4-A6-y8e"/>
+                            <constraint firstAttribute="trailing" secondItem="DVA-3B-ZHC" secondAttribute="trailing" id="Qua-gG-axR"/>
+                            <constraint firstItem="Mcp-9x-55g" firstAttribute="trailing" secondItem="p0q-pF-HB8" secondAttribute="trailing" id="R8Q-wm-sa4"/>
+                            <constraint firstItem="x71-kb-SV4" firstAttribute="top" secondItem="p0q-pF-HB8" secondAttribute="top" id="Sz7-f9-FHX"/>
+                            <constraint firstItem="hwx-1x-6Sm" firstAttribute="top" secondItem="DVA-3B-ZHC" secondAttribute="bottom" constant="10" id="XQR-vp-6rh"/>
+                            <constraint firstItem="bpm-sE-wpa" firstAttribute="width" secondItem="vDu-79-jnN" secondAttribute="width" multiplier="1:2" id="XeG-nZ-ukQ"/>
+                            <constraint firstItem="DVA-3B-ZHC" firstAttribute="width" secondItem="vDu-79-jnN" secondAttribute="width" multiplier="1:2" id="Yox-jy-HEJ"/>
+                            <constraint firstItem="bpm-sE-wpa" firstAttribute="top" secondItem="x71-kb-SV4" secondAttribute="bottom" id="aud-QS-rfa"/>
+                            <constraint firstItem="DVA-3B-ZHC" firstAttribute="top" secondItem="Mcp-9x-55g" secondAttribute="bottom" id="dW4-aF-Ut6"/>
+                            <constraint firstItem="x71-kb-SV4" firstAttribute="width" secondItem="vDu-79-jnN" secondAttribute="width" multiplier="1:2" id="nRQ-Ei-M6D"/>
+                            <constraint firstItem="p0q-pF-HB8" firstAttribute="bottom" secondItem="hwx-1x-6Sm" secondAttribute="bottom" id="oyj-RT-8H6"/>
+                            <constraint firstItem="Mcp-9x-55g" firstAttribute="top" secondItem="p0q-pF-HB8" secondAttribute="top" id="qEz-Ap-lMt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FQS-HR-IZb">
@@ -115,12 +119,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="MovieView" destination="6rm-gE-KFT" id="Spd-wZ-zNx"/>
-                        <outlet property="TvShowView" destination="w1b-La-b5a" id="ssz-lL-Ai8"/>
+                        <outlet property="MovieView" destination="bpm-sE-wpa" id="mu1-gd-6M7"/>
+                        <outlet property="TvShowView" destination="DVA-3B-ZHC" id="5L9-MV-Yqk"/>
                         <outlet property="btnMenu" destination="rcu-Tw-CEu" id="amZ-h9-RHa"/>
-                        <outlet property="btnMovie" destination="GMZ-Io-FOC" id="mmB-0L-mRP"/>
-                        <outlet property="btnTvShow" destination="fwB-n7-qAx" id="fDF-aW-lyO"/>
+                        <outlet property="btnMovie" destination="x71-kb-SV4" id="a7V-Rw-vm3"/>
+                        <outlet property="btnSearch" destination="jE5-zR-3T1" id="huO-VF-ZRQ"/>
+                        <outlet property="btnTvShow" destination="Mcp-9x-55g" id="QLW-xZ-VSx"/>
                         <outlet property="myMovie" destination="hwx-1x-6Sm" id="hH3-iL-jAs"/>
+                        <outlet property="myTVShow" destination="fYg-7H-wQP" id="Jtk-iM-PBX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

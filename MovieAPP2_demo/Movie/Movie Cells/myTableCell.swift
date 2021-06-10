@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 import iCarousel
 
-class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,iCarouselDelegate,iCarouselDataSource {
+class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     var myDataPopular : Popular?
     var myDataNowLaying : NowPlaying?
@@ -103,17 +103,17 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
         super.setSelected(selected, animated: animated)
         
     }
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return 6
-    }
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let view  = UIView(frame: CGRect(x: 20, y: 0, width: 150 , height: 150))
-        let myImage = UIImageView(frame: view.bounds)
-        view.addSubview(myImage)
-        myImage.contentMode = .scaleAspectFill
-        myImage.image = UIImage(named: "\(index+1)")
-        return view
-    }
+//    func numberOfItems(in carousel: iCarousel) -> Int {
+//        return 6
+//    }
+//    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+//        let view  = UIView(frame: CGRect(x: 20, y: 0, width: 150 , height: 150))
+//        let myImage = UIImageView(frame: view.bounds)
+//        view.addSubview(myImage)
+//        myImage.contentMode = .scaleAspectFill
+//        myImage.image = UIImage(named: "\(index+1)")
+//        return view
+//    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if index == 1{
             return lisGenre.count
@@ -159,8 +159,8 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
             if let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as? myCollectionCell{
                 if let mydataPopular = myDataPopular{
                     cell.layer.cornerRadius = 8
-                    
                     cell.layer.masksToBounds = true
+                    cell.cosMosView.rating = (mydataPopular.results[indexPath.row].voteAverage) / 2
                     cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataPopular.results[indexPath.row].posterPath ?? "")"), completed: nil)
                     cell.lblNameFilm.text = mydataPopular.results[indexPath.row].originalTitle
                     cell.lblRated.text = String(Double(mydataPopular.results[indexPath.row].voteAverage))
@@ -176,6 +176,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                     cell.layer.cornerRadius = 8
                     
                     cell.layer.masksToBounds = true
+                    cell.cosMosView.rating = (mydataPopular.results[indexPath.row].voteAverage) / 2
                     cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataPopular.results[indexPath.row].posterPath ?? "")"), completed: nil)
                     cell.lblNameFilm.text = mydataPopular.results[indexPath.row].originalTitle
                     cell.lblRated.text = String(Double((mydataPopular.results[indexPath.row].voteAverage)))
@@ -191,6 +192,7 @@ class myTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewData
                     
                     cell.layer.masksToBounds = true
                     cell.lblTop.isHidden = true
+                    cell.cosMosView.rating = (mydataNowPlaying.results[indexPath.row].voteAverage) / 2
                     cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(mydataNowPlaying.results[indexPath.row].posterPath ?? "")"), completed: nil)
                     cell.lblNameFilm.text = mydataNowPlaying.results[indexPath.row].originalTitle
                     cell.lblRated.text = String(Double((mydataNowPlaying.results[indexPath.row].voteAverage)))

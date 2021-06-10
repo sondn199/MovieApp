@@ -34,7 +34,7 @@ struct Dates: Codable {
 
 enum OriginalLanguage: String, Codable {
     case en = "en"
-    case es = "es"
-    case ja = "ja"
-    case ru = "ru"
+//    case es = "es"
+//    case ja = "ja"
+//    case ru = "ru"
 }

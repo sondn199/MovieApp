@@ -103,6 +103,7 @@ class HomeListImage: UIViewController,UICollectionViewDelegate,UICollectionViewD
         let vc = PreViewImage()
         vc.modalPresentationStyle = .fullScreen
         vc.listImageMovie = listAllImage
+        vc.index = indexPath.row
 //        let Image = listAllImage[indexPath.row]
 //        vc.name = Image.filePath
         present(vc, animated: true, completion: nil)

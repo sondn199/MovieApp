@@ -25,11 +25,6 @@ class PreViewImage: UIViewController,UICollectionViewDelegate,UICollectionViewDa
         setupData()
         setupUI()
         ViewContent.backgroundColor = UIColor.black
-//        if name != ""{
-//        myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(name)"), completed: nil)
-//        }else{
-//            myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(nameCast)"), completed: nil)
-//        }
        
         //zoom image
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlerPinch(sender :)))

@@ -245,6 +245,77 @@ class FetchData {
             }.resume()
         }
     }
-  
+    func getDataTvAir_Today(url : String, completed: @escaping (TvAirToday?, Bool, Error?)->Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+                
+                guard let data =  data else {return}
+                
+                do{
+                    
+                    let postsData = try JSONDecoder().decode(TvAirToday.self,from: data)
+                    DispatchQueue.main.async {
+                        completed(postsData, true, nil)
+                    }
+                    
+                    
+                }catch{
+                    completed(nil, false, error)
+                }
+            }.resume()
+        }
+    }
+    func getDataTvPopular(url : String, completed: @escaping (TvPopular?, Bool, Error?)->Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+                
+                guard let data =  data else {return}
+                
+                do{
+                    
+                    let postsData = try JSONDecoder().decode(TvPopular.self,from: data)
+                    DispatchQueue.main.async {
+                        completed(postsData, true, nil)
+                    }
+                    
+                    
+                }catch{
+                    completed(nil, false, error)
+                }
+            }.resume()
+        }
+    }
+    func GetDataTVDetail(url : String, completed: @escaping (TvShowDetail?, Bool, Error?)->Void){
+        if let url = URL(string: url){
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.timeoutInterval = 120
+            
+            URLSession.shared.dataTask(with: url) { (data, reponse, error) in
+                
+                guard let data =  data else {return}
+                
+                do{
+                    
+                    let postsData = try JSONDecoder().decode(TvShowDetail.self,from: data)
+                    DispatchQueue.main.async {
+                        completed(postsData, true, nil)
+                    }
+                    
+                    
+                }catch{
+                    completed(nil, false, error)
+                }
+            }.resume()
+        }
+    }
 }
 

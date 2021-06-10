@@ -50,6 +50,7 @@ class HomeNowPlaying: UIViewController,UICollectionViewDelegate,UICollectionView
             cell.layer.cornerRadius = 8
             cell.layer.masksToBounds = true
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listNowPlaying[indexPath.row].posterPath ?? "")"), completed: nil)
+            cell.cosMosView.rating = (listNowPlaying[indexPath.row].voteAverage)/2
             cell.lblNameFilm.text = listNowPlaying[indexPath.row].originalTitle
             cell.lblRated.text = String(Double(listNowPlaying[indexPath.row].voteAverage))
             return cell

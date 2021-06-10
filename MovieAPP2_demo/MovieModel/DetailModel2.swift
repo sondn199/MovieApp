@@ -9,16 +9,17 @@ import Foundation
 struct MovieDetails: Codable {
     let adult: Bool
     let backdropPath: String
-    let belongsToCollection: BelongsToCollection
+    let belongsToCollection: BelongsToCollection?
     let budget: Int
     let genres: [Genre1]
     let homepage: String
     let id: Int
-    let imdbID, originalLanguage, originalTitle, overview: String
+    let originalLanguage: OriginalLanguage
+    let imdbID, originalTitle, overview: String
     let popularity: Double
     let posterPath: String
     let productionCompanies: [ProductionCompany]
-    let productionCountries: [JSONAny]
+    let productionCountries: [ProductionCountry]
     let releaseDate: String
     let revenue, runtime: Int
     let spokenLanguages: [SpokenLanguage]
@@ -54,7 +55,8 @@ struct MovieDetails: Codable {
 // MARK: - BelongsToCollection
 struct BelongsToCollection: Codable {
     let id: Int
-    let name, posterPath, backdropPath: String
+    let name: String
+    let  posterPath, backdropPath : JSONNull?
 
     enum CodingKeys: String, CodingKey {
         case id, name
@@ -62,6 +64,11 @@ struct BelongsToCollection: Codable {
         case backdropPath = "backdrop_path"
     }
 }
+
+
+// MARK: - Result
+
+
 
 // MARK: - Credits
 //struct Credits: Codable {

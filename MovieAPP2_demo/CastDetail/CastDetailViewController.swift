@@ -101,6 +101,7 @@ class CastDetailViewController: UIViewController,UITableViewDelegate,UITableView
             if listMovieByCast.count != 0{
                // print("😆\(listMovieByCast)")
             let cell = myTable.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! ListMovieByGenreCell
+                cell.cosMosView.rating = (listMovieByCast[indexPath.row].voteAverage)/2
                 cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listMovieByCast[indexPath.row].backdropPath ?? "")"), completed: nil)
                 cell.lblNameFilm.text = listMovieByCast[indexPath.row].originalTitle
             cell.lblDate.text = listMovieByCast[indexPath.row].releaseDate
@@ -156,8 +157,8 @@ class CastDetailViewController: UIViewController,UITableViewDelegate,UITableView
 //
 //    }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: myTable.frame.width, height: 40))
-        let title = UILabel(frame: CGRect(x: 10, y: 0, width: headerView.frame.width, height: 24))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: myTable.frame.width, height: 50))
+        let title = UILabel(frame: CGRect(x: 0, y: -10 , width: headerView.frame.width, height: 24))
         headerView.backgroundColor = UIColor.init(hex: "200F37")
         title.textColor = .white
         switch section {

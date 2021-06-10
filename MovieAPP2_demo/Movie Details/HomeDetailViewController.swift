@@ -12,12 +12,15 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
     var mydataPopular : Result!
     var mydataNowPlaying : Result!
     var DetailID : Int = 0
+    var Tv_id : Int = 0
     var myDataDetail : MovieDetail?
     var myDataDetail2 : MovieDetails?
+    var myDataTvDetail : TvShowDetail?
     var nameFilm : String = ""
     var image : String = ""
     var year : String = ""
     var time : Int = 0
+    var TvTime = [Int]()
     var overview : String = ""
     var drop_path : String = ""
     var poter_path : String = ""
@@ -61,31 +64,31 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
         return .lightContent
     }
     func setupData(){
-        let cellDetail = DetailCell()
+       // let cellDetail = DetailCell()
         FetchData.shared.getDataDetail(url: "https://api.themoviedb.org/3/movie/\(DetailID)?api_key=f64c520a006b21aa8ea0f224091f1bfc&append_to_response=videos,credits") { [self] (data, sucsess, error) in
             if data != nil{
-            self.myDataDetail = data
-            self.listCast = self.myDataDetail?.credits.cast ?? []
-            self.nameFilm = self.myDataDetail?.originalTitle ?? ""
-            self.image = self.myDataDetail?.posterPath ?? ""
-            self.year = self.myDataDetail?.releaseDate ?? ""
-            self.time = self.myDataDetail?.runtime ?? 0
-            self.overview = self.myDataDetail?.overview ?? ""
-            self.drop_path = self.myDataDetail?.backdropPath ?? ""
-            self.poter_path = self.myDataDetail?.posterPath ?? ""
-            self.vote_average = self.myDataDetail?.voteAverage ?? 0.0
-            self.nameTitle = self.myDataDetail?.title ?? ""
-            self.thumbnailYTB = self.myDataDetail?.videos.results ?? []
-           
-            DispatchQueue.main.async {
+                self.myDataDetail = data
+                self.listCast = self.myDataDetail?.credits.cast ?? []
+                self.nameFilm = self.myDataDetail?.originalTitle ?? ""
+                self.image = self.myDataDetail?.posterPath ?? ""
+                self.year = self.myDataDetail?.releaseDate ?? ""
+                self.time = self.myDataDetail?.runtime ?? 0
+                self.overview = self.myDataDetail?.overview ?? ""
+                self.drop_path = self.myDataDetail?.backdropPath ?? ""
+                self.poter_path = self.myDataDetail?.posterPath ?? ""
+                self.vote_average = self.myDataDetail?.voteAverage ?? 0.0
+                self.nameTitle = self.myDataDetail?.title ?? ""
+                self.thumbnailYTB = self.myDataDetail?.videos.results ?? []
                 
-                cellDetail.listCast1 = self.listCast
-                self.myTable.reloadData()
-                self.lblNameFilm.text = self.myDataDetail?.originalTitle
-                
-                
-            }
-            } else  {
+                DispatchQueue.main.async {
+                    
+                  //  cellDetail.listCast1 = self.listCast
+                    self.myTable.reloadData()
+                    self.lblNameFilm.text = self.myDataDetail?.originalTitle
+                    
+                    
+                }
+            } else {
                 FetchData.shared.getDataDetail2(url: "https://api.themoviedb.org/3/movie/\(DetailID)?api_key=f64c520a006b21aa8ea0f224091f1bfc&append_to_response=videos,credits") { (data, sucsess, error) in
                     self.myDataDetail2 = data
                     self.nameFilm = self.myDataDetail2?.originalTitle ?? ""
@@ -100,14 +103,30 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
                     self.nameTitle = self.myDataDetail2?.title ?? ""
                     self.thumbnailYTB = self.myDataDetail2?.videos.results ?? []
                     DispatchQueue.main.async {
-                        cellDetail.listCast1 = self.listCast
+                      //  cellDetail.listCast1 = self.listCast
                         self.myTable.reloadData()
                         self.lblNameFilm.text = self.myDataDetail2?.originalTitle
                         
                     }
                 }
             }
-            
+        }
+        FetchData.shared.GetDataTVDetail(url: "https://api.themoviedb.org/3/tv/\(Tv_id)?api_key=3956f50a726a2f785334c24759b97dc6&language=en-US") { (data, sucess, error) in
+            self.myDataTvDetail = data
+            self.nameFilm = self.myDataTvDetail?.originalName ?? ""
+           // self.listCast = self.myDataDetail2?.credits.cast ?? []
+            self.image = self.myDataTvDetail?.posterPath ?? ""
+            self.year = self.myDataTvDetail?.lastAirDate ?? ""
+            self.time = self.myDataTvDetail?.numberOfEpisodes ?? 0
+            self.overview = self.myDataTvDetail?.overview ?? ""
+            self.drop_path = self.myDataTvDetail?.backdropPath ?? ""
+            self.poter_path = self.myDataTvDetail?.posterPath ?? ""
+            self.vote_average = self.myDataTvDetail?.voteAverage ?? 0.0
+            self.nameTitle = self.myDataTvDetail?.originalName ?? ""
+            DispatchQueue.main.async {
+                self.myTable.reloadData()
+                self.lblNameFilm.text = self.myDataTvDetail?.originalName
+            }
         }
     }
     
@@ -120,6 +139,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+   
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -128,9 +148,16 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
             cell.lblNameFilm.text = nameFilm
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(image)"), completed: nil)
             cell.lblDateOfYear.text = String(year.prefix(4))
+            cell.cosMosView.rating = (vote_average)/2
             cell.lblTime.text = String(time/60 ) + "h" + String(time%60) + "mins"
             let body : String = overview
             cell.readMoreView.setText("", body: body)
+            cell.id_movie = DetailID
+            cell.setupImageFavorite()
+            cell.name = nameFilm
+            
+            
+            
             
             return cell
         }else{
@@ -176,10 +203,10 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: myTable.frame.width, height: 200))
-        let title = UILabel(frame: CGRect(x: 10, y: 0, width: 200, height: 20))
-        let countImage = UILabel(frame: CGRect(x: 80, y: 0, width: 100, height: 15))
+        let title = UILabel(frame: CGRect(x: 10, y: -10, width: 200, height: 20))
+        let countImage = UILabel(frame: CGRect(x: 80, y: -10, width: 100, height: 15))
         countImage.textColor = UIColor.init(hex: "#CBB5FF")
-        let btnNext = UIButton(frame: CGRect(x: myTable.frame.size.width - 35 , y: 5, width: 20, height: 15))
+        let btnNext = UIButton(frame: CGRect(x: myTable.frame.size.width - 35 , y: -10, width: 30, height: 30))
         btnNext.setImage(UIImage(named: "Vector-2"), for: .normal)
         title.textColor = .white
         switch section {

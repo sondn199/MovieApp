@@ -11,7 +11,7 @@ import Foundation
 struct MovieDetail: Codable {
     let adult: Bool
     let backdropPath: String
-    let belongsToCollection: JSONNull?
+    let belongsToCollection: BelongsToCollection?
     let budget: Int
     let genres: [Genre1]
     let homepage: String
@@ -134,9 +134,10 @@ struct Videos: Codable {
 // MARK: - Result
 struct Result1: Codable {
     let id, iso639_1, iso3166_1, key: String
-    let name, site: String
+    let name: String
+    let site : Site?
     let size: Int
-    let type: String
+    let type: TypeEnum?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -146,6 +147,16 @@ struct Result1: Codable {
     }
 }
 
+enum Site: String, Codable {
+    case youTube = "YouTube"
+}
+
+enum TypeEnum: String, Codable {
+    case clip = "Clip"
+    case featurette = "Featurette"
+    case teaser = "Teaser"
+    case trailer = "Trailer"
+}
 // MARK: - Encode/decode helpers
 
 class JSONNull: Codable, Hashable {

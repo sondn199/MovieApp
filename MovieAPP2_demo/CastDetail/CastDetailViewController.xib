@@ -53,7 +53,7 @@
                         <constraint firstAttribute="bottom" secondItem="1i3-gG-suR" secondAttribute="bottom" id="yUh-JF-L8u"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="35K-nI-njO">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="35K-nI-njO">
                     <rect key="frame" x="10" y="138" width="394" height="724"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
