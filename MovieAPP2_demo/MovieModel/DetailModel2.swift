@@ -56,7 +56,7 @@ struct MovieDetails: Codable {
 struct BelongsToCollection: Codable {
     let id: Int
     let name: String
-    let  posterPath, backdropPath : JSONNull?
+    let  posterPath, backdropPath : String?
 
     enum CodingKeys: String, CodingKey {
         case id, name

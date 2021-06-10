@@ -128,16 +128,16 @@ struct SpokenLanguage: Codable {
 
 // MARK: - Videos
 struct Videos: Codable {
-    let results: [Result1]
+    let results: [Result1]?
 }
 
 // MARK: - Result
 struct Result1: Codable {
     let id, iso639_1, iso3166_1, key: String
     let name: String
-    let site : Site?
+    let site : String?
     let size: Int
-    let type: TypeEnum?
+    let type: String?
 
     enum CodingKeys: String, CodingKey {
         case id

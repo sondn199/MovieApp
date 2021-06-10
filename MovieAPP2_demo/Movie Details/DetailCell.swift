@@ -11,6 +11,7 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var myCollection: UICollectionView!
     
     var id : Int = 0
+    var tv_id : Int = 0
     var index : Int = 0
     var listCast1 = [Cast]()
     var myDataPopular : Popular?
@@ -21,7 +22,9 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
     var nameTitle1 : String = ""
     var ThumbnailYoutube = [Result1]()
     var myDataMovieImage : MovieImages?
+    var myDataTvImage : MovieImages?
     var listImageforMovie = [Backdrop]()
+    var listImageforTv = [Backdrop]()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,7 +36,7 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
     
     }
     func setupData(){
-        if index == 4{
+        
             FetchData.shared.getDataMovieImages(url: "https://api.themoviedb.org/3/movie/\(id)/images?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
                 self.myDataMovieImage = data
                 self.listImageforMovie = self.myDataMovieImage?.backdrops ?? []
@@ -41,8 +44,18 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
                     self.myCollection.reloadData()
                 }
             }
-        }
-       else if index == 5 {
+           
+                FetchData.shared.getDataMovieImages(url: "https://api.themoviedb.org/3/tv/\(tv_id)/images?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
+                    print("😭\(data)")
+                    self.myDataTvImage = data
+                    self.listImageforTv = self.myDataTvImage?.backdrops ?? []
+                    DispatchQueue.main.async {
+                        self.myCollection.reloadData()
+                    }
+                }
+            
+        
+      
             FetchData.shared.getDataPopular(url: "https://api.themoviedb.org/3/discover/movie?api_key=3956f50a726a2f785334c24759b97dc6&with_genres=28&page=1") { (data, success, error) in
                 self.myDataPopular = data
                 self.popular2 = self.myDataPopular?.results ?? []
@@ -51,10 +64,8 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
                 }
                 
             }
-        }
-        DispatchQueue.main.async {
-            self.myCollection.reloadData()
-        }
+        
+       
     }
     func setupUI(){
         myCollection.delegate = self
@@ -78,7 +89,10 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
         }else if index == 1 {
             return ThumbnailYoutube.count
         }else if index == 4{
-            return listImageforMovie.count
+            if listImageforMovie.count != 0 {
+                return listImageforMovie.count
+            }
+            return listImageforTv.count
         }
         return listCast1.count
     }
@@ -103,8 +117,11 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
             return cell
         }else if index == 4 {
             let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! CollectionCellOfSecsion4
+            if listImageforMovie.count != 0 {
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listImageforMovie[indexPath.row].filePath)"), completed: nil)
-            
+            }else{
+                cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listImageforTv[indexPath.row].filePath)"), completed: nil)
+            }
             return cell
         }else if index == 3 {
             let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell35", for: indexPath) as! CollectionCellOfSecsion35

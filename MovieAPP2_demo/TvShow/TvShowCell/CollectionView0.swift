@@ -64,6 +64,7 @@ class CollectionView0: UITableViewCell,UICollectionViewDelegate,UICollectionView
         let vc = HomeDetailViewController()
         let tvshow = listAir_Today[indexPath.row]
         vc.Tv_id = tvshow.id
+        print("😇\(vc.Tv_id)")
         UIApplication.getTopViewController()?.present(vc, animated: true, completion: nil)
     }
 }

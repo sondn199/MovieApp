@@ -16,6 +16,7 @@ class HomeListImage: UIViewController,UICollectionViewDelegate,UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         headerView.backgroundColor = UIColor.init(hex: "200F37")
+        myCollection.backgroundColor = UIColor.init(hex: "17082A")
         setupData()
         setupUI()
     }

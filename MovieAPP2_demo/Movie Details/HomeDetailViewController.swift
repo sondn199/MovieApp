@@ -111,10 +111,10 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
                 }
             }
         }
-        FetchData.shared.GetDataTVDetail(url: "https://api.themoviedb.org/3/tv/\(Tv_id)?api_key=3956f50a726a2f785334c24759b97dc6&language=en-US") { (data, sucess, error) in
+        FetchData.shared.GetDataTVDetail(url: "https://api.themoviedb.org/3/tv/\(Tv_id)?api_key=f64c520a006b21aa8ea0f224091f1bfc&append_to_response=videos,credits") { (data, sucess, error) in
             self.myDataTvDetail = data
             self.nameFilm = self.myDataTvDetail?.originalName ?? ""
-           // self.listCast = self.myDataDetail2?.credits.cast ?? []
+            self.listCast = self.myDataTvDetail?.credits.cast ?? []
             self.image = self.myDataTvDetail?.posterPath ?? ""
             self.year = self.myDataTvDetail?.lastAirDate ?? ""
             self.time = self.myDataTvDetail?.numberOfEpisodes ?? 0
@@ -123,6 +123,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
             self.poter_path = self.myDataTvDetail?.posterPath ?? ""
             self.vote_average = self.myDataTvDetail?.voteAverage ?? 0.0
             self.nameTitle = self.myDataTvDetail?.originalName ?? ""
+            self.thumbnailYTB = self.myDataTvDetail?.videos.results ?? []
             DispatchQueue.main.async {
                 self.myTable.reloadData()
                 self.lblNameFilm.text = self.myDataTvDetail?.originalName
@@ -164,6 +165,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
             let cell = myTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DetailCell
             cell.index = indexPath.section
             cell.id = self.DetailID
+            cell.tv_id = self.Tv_id
             cell.listCast1 = self.listCast
             cell.backdrop_path = self.drop_path
             cell.poter_path1 = self.poter_path
@@ -226,8 +228,19 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
             FetchData.shared.getDataMovieImages(url: "https://api.themoviedb.org/3/movie/\(DetailID)/images?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
                 self.myDataMovieImage = data
                 self.listImageforMovie = self.myDataMovieImage?.backdrops ?? []
-            
-                countImage.text = String(self.listImageforMovie.count)
+                DispatchQueue.main.async {
+                    countImage.text = String(self.listImageforMovie.count)
+                }
+                
+            }
+            if myDataMovieImage == nil {
+                FetchData.shared.getDataMovieImages(url: "https://api.themoviedb.org/3/tv/\(Tv_id)/images?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
+                    self.myDataMovieImage = data
+                    self.listImageforMovie = self.myDataMovieImage?.backdrops ?? []
+                    DispatchQueue.main.async {
+                        countImage.text = String(self.listImageforMovie.count)
+                    }
+                }
             }
             
         case 5:

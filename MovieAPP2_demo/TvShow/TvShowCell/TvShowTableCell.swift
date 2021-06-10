@@ -87,6 +87,7 @@ class TvShowTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionView
             return cell
         }else if index == 2 {
             let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myCollectionCell
+            cell.lblTop.isHidden = true
             cell.layer.cornerRadius = 8
             cell.layer.masksToBounds = true
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listTVOntheAir[indexPath.row].posterPath ?? "")"), completed: nil)
@@ -96,6 +97,7 @@ class TvShowTableCell: UITableViewCell,UICollectionViewDelegate,UICollectionView
             return cell
         }else if index == 3 {
             let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myCollectionCell
+            cell.lblTop.isHidden = true
             cell.layer.cornerRadius = 8
             cell.layer.masksToBounds = true
             cell.myImage.sd_setImage(with: URL(string: "http://image.tmdb.org/t/p/original\(listTvPopular[indexPath.row].posterPath )"), completed: nil)

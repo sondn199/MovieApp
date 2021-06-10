@@ -7,32 +7,34 @@ import Foundation
 
 // MARK: - TvShowDetail
 struct TvShowDetail: Codable {
-    let backdropPath: String
-    let createdBy: [CreatedBy]
+    let backdropPath: String?
+    let createdBy: [CreatedBy]?
     let episodeRunTime: [Int]
     let firstAirDate: String
-    let genres: [Genre]
+    let genres: [Genre1]
     let homepage: String
     let id: Int
     let inProduction: Bool
-    let languages: [String]
+    let languages: [String?]
     let lastAirDate: String
-    let lastEpisodeToAir: TEpisodeToAir
+    let lastEpisodeToAir: LastEpisodeToAir
     let name: String
-    let nextEpisodeToAir: TEpisodeToAir
+    let nextEpisodeToAir: LastEpisodeToAir?
     let networks: [Network]
     let numberOfEpisodes, numberOfSeasons: Int
-    let originCountry: [String]
+    let originCountry: [String?]
     let originalLanguage, originalName, overview: String
     let popularity: Double
     let posterPath: String
     let productionCompanies: [Network]
-    let productionCountries: [ProductionCountry]
+    let productionCountries: [ProductionCountry]?
     let seasons: [Season]
     let spokenLanguages: [SpokenLanguage]
-    let status, tagline, type: String
+    let status, tagline, type: String?
     let voteAverage: Double
     let voteCount: Int
+    let videos: Videos
+    let credits: Credits
 
     enum CodingKeys: String, CodingKey {
         case backdropPath = "backdrop_path"
@@ -61,10 +63,10 @@ struct TvShowDetail: Codable {
         case status, tagline, type
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
+        case videos, credits
     }
 }
-
-// MARK: - CreatedBy
+// MARK : - CreatedBy
 struct CreatedBy: Codable {
     let id: Int
     let creditID, name: String
@@ -79,17 +81,24 @@ struct CreatedBy: Codable {
     }
 }
 
+// MARK: - Credits
+
+
+// MARK: - Cast
+
+
 // MARK: - Genre
 
 
-// MARK: - TEpisodeToAir
-struct TEpisodeToAir: Codable {
+// MARK: - LastEpisodeToAir
+struct LastEpisodeToAir: Codable {
     let airDate: String
     let episodeNumber, id: Int
     let name, overview, productionCode: String
     let seasonNumber: Int
-    let stillPath: String
-    let voteAverage, voteCount: Int
+    let stillPath: String?
+    let voteAverage : Double?
+    let voteCount: Int
 
     enum CodingKeys: String, CodingKey {
         case airDate = "air_date"
@@ -107,7 +116,8 @@ struct TEpisodeToAir: Codable {
 struct Network: Codable {
     let name: String
     let id: Int
-    let logoPath, originCountry: String
+    let logoPath: String?
+    let originCountry: String
 
     enum CodingKeys: String, CodingKey {
         case name, id
@@ -116,14 +126,12 @@ struct Network: Codable {
     }
 }
 
-// MARK: - ProductionCountry
-
-
 // MARK: - Season
 struct Season: Codable {
-    let airDate: String
+    let airDate: String?
     let episodeCount, id: Int
-    let name, overview, posterPath: String
+    let name, overview: String
+    let posterPath: String?
     let seasonNumber: Int
 
     enum CodingKeys: String, CodingKey {
@@ -136,4 +144,17 @@ struct Season: Codable {
 }
 
 // MARK: - SpokenLanguage
+
+
+// MARK: - Videos
+
+
+// MARK: - Result
+
+
+// MARK: - Encode/decode helpers
+
+
+
+
 
