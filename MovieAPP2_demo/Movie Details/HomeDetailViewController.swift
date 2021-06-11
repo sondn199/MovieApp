@@ -224,7 +224,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
             title.text = "Cusrent Seasion"
         case 4:
             title.text = "Images"
-            btnNext.addTarget(self, action: #selector(OpenListAllImage), for: .touchUpInside)
+           
             FetchData.shared.getDataMovieImages(url: "https://api.themoviedb.org/3/movie/\(DetailID)/images?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
                 self.myDataMovieImage = data
                 self.listImageforMovie = self.myDataMovieImage?.backdrops ?? []
@@ -242,6 +242,7 @@ class HomeDetailViewController: UIViewController,UITableViewDelegate,UITableView
                     }
                 }
             }
+            btnNext.addTarget(self, action: #selector(OpenListAllImage), for: .touchUpInside)
             
         case 5:
             title.text = "Related"

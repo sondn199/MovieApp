@@ -46,7 +46,7 @@ class DetailCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
             }
            
                 FetchData.shared.getDataMovieImages(url: "https://api.themoviedb.org/3/tv/\(tv_id)/images?api_key=3956f50a726a2f785334c24759b97dc6") { (data, true, error) in
-                    print("😭\(data)")
+                  //  print("😭\(data)")
                     self.myDataTvImage = data
                     self.listImageforTv = self.myDataTvImage?.backdrops ?? []
                     DispatchQueue.main.async {

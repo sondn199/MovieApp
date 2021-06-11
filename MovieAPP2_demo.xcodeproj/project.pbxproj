@@ -48,6 +48,8 @@
 		8A812ED4266F632400168A12 /* CollectionView0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A812ED2266F632400168A12 /* CollectionView0.swift */; };
 		8A812ED5266F632400168A12 /* CollectionView0.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A812ED3266F632400168A12 /* CollectionView0.xib */; };
 		8A812EE22671A69700168A12 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8A812EE12671A69700168A12 /* SDWebImage */; };
+		8A812EF426730ADE00168A12 /* HomeOnTheAir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A812EF226730ADD00168A12 /* HomeOnTheAir.swift */; };
+		8A812EF526730ADE00168A12 /* HomeOnTheAir.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A812EF326730ADD00168A12 /* HomeOnTheAir.xib */; };
 		8AA0DDD6265C8BFE001C6E0A /* ReadMoreLessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA0DDD5265C8BFE001C6E0A /* ReadMoreLessView.swift */; };
 		8ABB26ED2642323A00A05F0E /* HomeGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABB26EB2642323A00A05F0E /* HomeGenre.swift */; };
 		8ABB26EE2642323A00A05F0E /* HomeGenre.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ABB26EC2642323A00A05F0E /* HomeGenre.xib */; };
@@ -158,6 +160,8 @@
 		8A812EC9266E177B00168A12 /* TvDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvDetail.swift; sourceTree = "<group>"; };
 		8A812ED2266F632400168A12 /* CollectionView0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView0.swift; sourceTree = "<group>"; };
 		8A812ED3266F632400168A12 /* CollectionView0.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionView0.xib; sourceTree = "<group>"; };
+		8A812EF226730ADD00168A12 /* HomeOnTheAir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOnTheAir.swift; sourceTree = "<group>"; };
+		8A812EF326730ADD00168A12 /* HomeOnTheAir.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeOnTheAir.xib; sourceTree = "<group>"; };
 		8AA0DDD5265C8BFE001C6E0A /* ReadMoreLessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadMoreLessView.swift; sourceTree = "<group>"; };
 		8ABB26EB2642323A00A05F0E /* HomeGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGenre.swift; sourceTree = "<group>"; };
 		8ABB26EC2642323A00A05F0E /* HomeGenre.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeGenre.xib; sourceTree = "<group>"; };
@@ -296,6 +300,10 @@
 		8A812EB1266CBF7F00168A12 /* TvShow */ = {
 			isa = PBXGroup;
 			children = (
+				8A812EED26724D9000168A12 /* AirToday */,
+				8A812EF026724DD300168A12 /* OnTheAir */,
+				8A812EEF26724DCA00168A12 /* Popular */,
+				8A812EEE26724DA000168A12 /* TopRated */,
 				8A812EB2266CBFCE00168A12 /* TvShowCell */,
 			);
 			path = TvShow;
@@ -324,6 +332,36 @@
 				8A812EC9266E177B00168A12 /* TvDetail.swift */,
 			);
 			path = TvShowModel;
+			sourceTree = "<group>";
+		};
+		8A812EED26724D9000168A12 /* AirToday */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AirToday;
+			sourceTree = "<group>";
+		};
+		8A812EEE26724DA000168A12 /* TopRated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TopRated;
+			sourceTree = "<group>";
+		};
+		8A812EEF26724DCA00168A12 /* Popular */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Popular;
+			sourceTree = "<group>";
+		};
+		8A812EF026724DD300168A12 /* OnTheAir */ = {
+			isa = PBXGroup;
+			children = (
+				8A812EF226730ADD00168A12 /* HomeOnTheAir.swift */,
+				8A812EF326730ADD00168A12 /* HomeOnTheAir.xib */,
+			);
+			path = OnTheAir;
 			sourceTree = "<group>";
 		};
 		8ABB26E7264231D000A05F0E /* Movie */ = {
@@ -618,6 +656,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A812EF526730ADE00168A12 /* HomeOnTheAir.xib in Resources */,
 				8ABB27082642570A00A05F0E /* HomePopular.xib in Resources */,
 				8A473BA4264F744600BAF021 /* ListMovieByGenreView.xib in Resources */,
 				8ABB271526425F4800A05F0E /* HomeUpComing.xib in Resources */,
@@ -761,6 +800,7 @@
 				8AF424AB26294FA000CB9AA3 /* myCollectionCell.swift in Sources */,
 				8A812ECA266E177B00168A12 /* TvDetail.swift in Sources */,
 				8A1A058B263ABA1C009A9302 /* CarouCell.swift in Sources */,
+				8A812EF426730ADE00168A12 /* HomeOnTheAir.swift in Sources */,
 				8ABB270D26425AD500A05F0E /* HomeNowPlaying.swift in Sources */,
 				8AE8E94A265A6FD000063CE4 /* PagerViewCell.swift in Sources */,
 				8A44BBCE2654BE7D00E56588 /* CastDetail.swift in Sources */,
